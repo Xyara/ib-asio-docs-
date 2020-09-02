@@ -128,6 +128,24 @@ ADD Universidad PROPERTY numeroAlumnos
 }
 ```
 
+`Añadir una nueva entidad 'localización' a la entidad 'Universidad'`
+
+```js
+1) ADD Localizacion
+{
+  "operation": "ADD",
+  "source": "Localizacion"
+}
+
+2) ADD Universidad PROPERTY localizacion
+{
+  "operation": "ADD",
+  "source": "Universidad"
+  "type": "PROPERTY",
+  "value": "localizacion"
+}
+```
+
 ### Modificaciones en la infraestructura semántica
 
 Tras modificaciones en la red de ontologías, como ya se ha mencionado anteriormente es necesario realizar las siguientes acciones:

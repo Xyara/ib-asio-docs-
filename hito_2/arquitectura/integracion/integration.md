@@ -22,7 +22,7 @@ dibujo de todo el proceso
 
 - Subida del artefacto al repositorio [MVN Central](https://mvnrepository.com/repos/central) para su posterior consumo por parte de la arquitectura semántica.
 
-## Despligue inicial arquitectura semántica
+## Despliegue inicial arquitectura semántica
 
 No requiere de acciones adicionales a las ya descritas en el documento [despliegue_inicial](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura/arquitectura_semantica/despliegues/entorno_desarrollo/despliege_inicial.md).
 
@@ -30,7 +30,7 @@ No requiere de acciones adicionales a las ya descritas en el documento [desplieg
 
 ### Modificaciones en la infraestructura ontológica
 
-Cualquier modificación en la ontología implica modificaciones en las shape expressions, que son las que se encargan de validar la semántica de la ontología. Estos cambios tambien provocan modificaciones a realizar en la arquitectura semántica (ETL y adaptación de los datos existentes en Trellis y Wikibase)
+Cualquier modificación en la ontología implica modificaciones en las shape expressions, las cuales tienen por un lado la tarea definir un esquema para los datos a partir de la ontología y por tanto tienen la capacidad de validarlos, y por otro, permite definir el dominio de datos compartido por toda la solución, a partir de la generación de POJOs. Estos cambios también provocan modificaciones a realizar en la arquitectura semántica (ETL y adaptación de los datos existentes en Trellis y Wikibase).
 
 #### Procesos manuales
 
@@ -55,11 +55,11 @@ Estas modificaciones en la ontología dan como resultado un listado de cambios a
 
 #### Procesos automáticos
 
-La construcción y el despligue de la ontología están controlados a traves de [workflows de integración continua](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) de GitHub. Son las que se encargan de mantener actualizada la ontología en Wikibase.
+La construcción y el despliegue de la ontología están controlados a traves de [workflows de integración continua](https://docs.github.com/en/actions/configuring-and-managing-workflows/configuring-a-workflow) de GitHub. Son las que se encargan de mantener actualizada la ontología en Wikibase.
 
 ![](resources/workflow.png)
 
-La generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx) se realizará de forma automática cada vez que la rama [master](https://github.com/HerculesCRUE/ib-hercules-ontology/tree/master/scripts) donde se hubican las Shape Expressions detecta que ha habido cambios.
+La generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx) se realizará de forma automática cada vez que la rama [master](https://github.com/HerculesCRUE/ib-hercules-ontology/tree/master/scripts) donde se ubican las Shape Expressions detecta que ha habido cambios.
 
 El resultado de esta iteración es la regeneración de **todo el modelo de dominio**, posterior empaquetado y subida al repositorio [MVN Central](https://mvnrepository.com/repos/central).
 
@@ -81,7 +81,7 @@ La siguiente tabla muestra ejemplos de posibles respuestas a las peticiones ante
 | `GET`     | /versions                                          | { 1.0.0, 1.0.1, 1.0.2, 1.0.3}                   |
 | `GET`     | /ontology/{**currentVersion**}/{**targetVersion**} | { targetClass: Activity, operation: add field } |
 
-Este módulo será un servicio REST auténticado accesible desde **triple-store-delta** hubicado en la arquitectura semántica.
+Este módulo será un servicio REST autenticado accesible desde **triple-store-delta** ubicado en la arquitectura semántica.
 
 ![](./resources/comunication_IO_vs_AE.png)
 
@@ -89,9 +89,33 @@ Este módulo será un servicio REST auténticado accesible desde **triple-store-
 
 Los ficheros delta son objetos JSON cuya información contiene las modificaciones a realizar en la ETL tras cambios en la ontología. Estos ficheros son interpretables por el nuevo módulo de la arquitectura semántica **triple-store-delta** de tal forma que es capaz de modificar el contenido de los datos actuales en Trellis y Wikibase de forma automática para adaptarlos a la nueva semántica de la ontología.
 
-### Formato e instrucciones DELTA
+### Instrucciones DELTA
 
-**TODO**
+#### Ejemplos:
+
+`Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
+
+```js
+ADD University PROPERTY numeroAlumnos
+{
+  "operation": "ADD",
+  "source": "Universidad"
+  "type": "PROPERTY",
+  "value": "numeroAlumnos"
+}
+```
+
+`Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
+
+```js
+ADD University PROPERTY numeroAlumnos
+{
+  "operation": "ADD",
+  "source": "Universidad"
+  "type": "PROPERTY",
+  "value": "numeroAlumnos"
+}
+```
 
 ### Modificaciones en la infraestructura semántica
 
@@ -110,7 +134,7 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
    > Estas modificaciones no se despliegan hasta no completar los pasos 2 y 3.
 
-2. Parada del servidor donde se escuentran alojados los microservicios de la arquitectura semántica.
+2. Parada del servidor donde se encuentran alojados los microservicios de la arquitectura semántica.
 
 3. Invocación del proceso para la realización de backups.
 

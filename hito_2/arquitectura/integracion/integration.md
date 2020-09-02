@@ -91,24 +91,35 @@ Los ficheros delta son objetos JSON cuya información contiene las modificacione
 
 ### Instrucciones DELTA
 
-#### Ejemplos:
+Operaciones soportadas:
 
-`Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
+- Creaciones de entidades o propiedades. `ADD`
+- Modificaciones de entidades o propiedades. `UPDATE`
+- Borrado de entidades o propiedades. `DELETE`
+- Renombrado de entidades o propiedades. `RENAME`
+
+#### ADD
 
 ```js
-ADD University PROPERTY numeroAlumnos
+ADD Entidad [PROPERTY] [value]
+```
+
+#### Ejemplos:
+
+`Añadir una nueva entidad 'Outsourcing'`
+
+```js
+ADD Outsourcing
 {
   "operation": "ADD",
-  "source": "Universidad"
-  "type": "PROPERTY",
-  "value": "numeroAlumnos"
+  "source": "Outsourcing"
 }
 ```
 
 `Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
 
 ```js
-ADD University PROPERTY numeroAlumnos
+ADD Universidad PROPERTY numeroAlumnos
 {
   "operation": "ADD",
   "source": "Universidad"

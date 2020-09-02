@@ -123,3 +123,13 @@ public class MessageStepDefinitions {
 WebElement myAccountLink = driver.findElement(By.className("account_icon"));
 myAccountLink.click();
 ```
+
+# Enlaces
+
+| Enlace      |                                                                                   |
+| ----------- | --------------------------------------------------------------------------------- |
+| `ontología` | https://github.com/HerculesCRUE/ib-hercules-sync/blob/master/docs/testing.md      |
+| `ontología` | https://github.com/HerculesCRUE/ib-shex-lite/blob/master/doc/testing.md           |
+| `semántica` | https://github.com/HerculesCRUE/ib-uris-generator/blob/develop/docs/testing.md    |
+| `semántica` | https://github.com/HerculesCRUE/ib-management-system/blob/develop/docs/testing.md |
+| `semántica` | https://github.com/HerculesCRUE/ib-event-processor/blob/develop/docs/testing.md   |

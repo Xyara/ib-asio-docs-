@@ -14,8 +14,6 @@ Se precisa que la integración entre ambas infraestructuras requieran del menor 
 
 ## Despliegue inicial ontología (primera instalación)
 
-dibujo de todo el proceso
-
 - Generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx)
 
 - Empaquetado de las clases java en un artefacto **dataset-domain-model-X.X.X.jar** donde X.X.X es su correspondiente versionado.
@@ -107,7 +105,7 @@ ADD Entidad [PROPERTY] [value] TYPE [value]
 `Añadir una nueva entidad 'Outsourcing'`
 
 ```js
-ADD Outsourcing PROPERTY employees TYPE number
+ADD Outsourcing PROPERTY employees TYPE Number
 ```
 
 `Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
@@ -119,19 +117,28 @@ ADD Universidad PROPERTY numeroAlumnos TYPE Number
 `Añadir una nueva entidad 'localización' a la entidad 'Universidad'`
 
 ```js
-1) ADD Localizacion
-{
-  "operation": "ADD",
-  "source": "Localizacion"
-}
+ADD Localidad PROPERTY nombre TYPE String
+ADD Universidad PROPERTY localizacion TYPE Localizacion
+```
 
-2) ADD Universidad PROPERTY localizacion TYPE Localizacion
-{
-  "operation": "ADD",
-  "source": "Universidad"
-  "type": "PROPERTY",
-  "value": "localizacion"
-}
+#### DELETE
+
+```js
+DELETE Entidad [PROPERTY] [value] REFERENCES [value]
+```
+
+#### Ejemplos:
+
+`Borrar una nueva entidad 'GrupoInvestigacion'`
+
+```js
+DELETE GrupoInvestigacion
+```
+
+`Borrar una propiedad 'descripcion' de la entidad 'GrupoInvestigacion'`
+
+```js
+DELETE GrupoInvestigacion PROPERTY descripcion
 ```
 
 ### Modificaciones en la infraestructura semántica

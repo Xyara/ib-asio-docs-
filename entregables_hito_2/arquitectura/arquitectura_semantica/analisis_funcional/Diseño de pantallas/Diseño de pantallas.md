@@ -134,15 +134,23 @@ Consulta de datos
 
 ### Pantalla genérica de consulta de datos
 
-Para consultar datos, los usuarios podrán acceder a una pantalla donde se permitirá hacer consultar en [SPARQL](https://es.wikipedia.org/wiki/SPARQL).
+Para consultar datos, los usuarios podrán acceder a una pantalla donde se permitirá hacer consultas en [SPARQL](https://es.wikipedia.org/wiki/SPARQL). Esta pantalla dispondrá de sistemas para ayudar al usuario (colores, autocompletes, etc) a editar las consultas, acceso a las consultas predefinidas, opción para guardar la consulta como predefinida, si se dispone de permisos, y acceso a la ayuda sobre SPARQL.
+
+Los resultados de la consulta se podrán mostrar en diferentes formatos dependiendo de los datos que se muestren. Estos formatos podrán ser una tabla, mapa, timeline o gráfica.
 
 ![Pantalla SPARQL](./images/mocks/consulta.png)
 
 
 
-En esta pantalla habrá la opción de seleccionar una consulta de datos predeterminada y de modificarla.
+Si se accede a la opción de consultas predefinidas se tendrá la opción de seleccionar una consulta de datos predeterminada, de visualizarla o de modificarla.
 
 ![Pantalla de consultas](./images/mocks/consulta-predeterminada.png)
+
+
+
+Se podrá guardar la consulta como predefinida, teniendo que confirmar el guardado:
+
+![Pantalla de consultas](./images/mocks/consulta-guardar-predeterminada.png)
 
 
 

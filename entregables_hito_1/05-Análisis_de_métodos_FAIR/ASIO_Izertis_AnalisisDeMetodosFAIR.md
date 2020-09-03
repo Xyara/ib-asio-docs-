@@ -2,7 +2,7 @@
 
 | Entregable     | Análisis de Métodos FAIR                                     |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 25/05/2020                                                   |
+| Fecha          | 19/06/2020                                                   |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
 | Módulo         | Infraestructura Ontológica                                   |
 | Tipo           | Documento                                                    |
@@ -193,6 +193,24 @@ En esta alternativa se puede comprobar fácilmente el nivel de *FAIRness* por á
 ![](./images/FAIR_area_levels.png)
 
 La evaluación conjunta de ambas alternativas puede realizarse a través de un [fichero Excell recientemente publicado por la RDA](https://drive.google.com/file/d/125jD_IWEbbLcwyw83HfMc8oEsILlVdPn/view). Adicionalmente pueden consultarse otros indicadores alternativos que han sido descartados en el octavo workshop del grupo de trabajo [RDA, 2020b] y otros indicadores adicionales a FAIR incluidos en el informe de evaluación de frameworks de evaluación [RDA, 2019].
+
+## Publicación de Ontologías
+
+En concreto, y en referencia al criterio definido de forma explícita en el Anexo V del PPT de ASIO, sobre el principio I2, la publicación de ontologías recoge todos los metadatos de Dublin Core y RDF Schema, quedando pendiente los de la ontología FDP.
+
+La publicación de ontologías se rije por el [modelo de cinco niveles de apertura de datos](http://5stardata.info) y el modelo Wikidata propuesto como contenedor de Ontologías en el nodo central de la arquitectura ASIO. 
+
+Los procedimientos propuestos para publicar las ontologı́as de la ROH de acuerdo a los principios FAIR se detallan, métrica a métrica, en el documento de [Métricas FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_1/06-M%C3%A9tricas_FAIR). De modo general, dicha publicación sigue las siguientes pautas:
+
+- Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org/)).
+- Los metadatos incluyen referencias expícitas a los datos que describen.
+- Se proveen metadatos tanto a nivel de ontología como de los datos importados (OWL/SKOS, Wikibase, Trellis y Memento).
+- Los datos y metadatos están publicados mediante un grafo linked data 5 estrellas (HTTP/LDP) y expresados mediante tecnología linked data (OWL, SKOS, DC, RDF, etc).
+- La combinación de Trellis y Memento permite llevar un registro histórico de modificaciones que garantiza que los metadatos pervivan más allá del ciclo de vida del dato asociado.
+- La ontología referencia otras ontologías, como por ejemplo [PROV-O](https://www.w3.org/TR/prov-o/).
+- Se referencian datos externos, como por ejemplo el uso de DOIs para enlazar documentos y artículos de investigación.
+- Uso de [PROV-O](https://www.w3.org/TR/prov-o/) para especificar información sobre el origen.
+- Uso de licencia [Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
 
 ## Referencias. 
 

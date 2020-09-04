@@ -14,8 +14,6 @@ Se precisa que la integración entre ambas infraestructuras requieran del menor 
 
 ## Despliegue inicial ontología (primera instalación)
 
-dibujo de todo el proceso
-
 - Generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx)
 
 - Empaquetado de las clases java en un artefacto **dataset-domain-model-X.X.X.jar** donde X.X.X es su correspondiente versionado.
@@ -24,13 +22,13 @@ dibujo de todo el proceso
 
 ## Despliegue inicial arquitectura semántica
 
-No requiere de acciones adicionales a las ya descritas en el documento [despliegue_inicial](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/arquitectura/arquitectura_semantica/despliegues/entorno_desarrollo/despliege_inicial.md).
+No requiere de acciones adicionales a las ya descritas en el documento [despliegue_inicial](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_2/arquitectura/arquitectura_semantica/despliegues/entorno_desarrollo/despliege_inicial.md).
 
 ## Cambios en la red de ontología (sucesivas iteraciones)
 
 ### Modificaciones en la infraestructura ontológica
 
-Cualquier modificación en la ontología implica modificaciones en las shape expressions, las cuales tienen por un lado la tarea definir un esquema para los datos a partir de la ontología y por tanto tienen la capacidad de validarlos, y por otro, permite definir el dominio de datos compartido por toda la solución, a partir de la generación de POJOs. Estos cambios también provocan modificaciones a realizar en la arquitectura semántica (ETL y adaptación de los datos existentes en Trellis y Wikibase).
+Cualquier modificación en la ontología implica modificaciones en las shape expressions, las cuales tienen por un lado la tarea de definir un esquema para los datos a partir de la ontología y por tanto tienen la capacidad de validarlos, y por otro, permite definir el dominio de datos compartido por toda la solución, a partir de la generación de POJOs. Estos cambios también provocan modificaciones a realizar en la arquitectura semántica (ETL y adaptación de los datos existentes en Trellis y Wikibase).
 
 #### Procesos manuales
 
@@ -76,10 +74,10 @@ Para que la infraestructura semántica sea consciente de que han habido cambios 
 
 La siguiente tabla muestra ejemplos de posibles respuestas a las peticiones anteriormente descritas.
 
-| Operación | EndPoint                                           | Descripción                                     |
-| --------- | -------------------------------------------------- | ----------------------------------------------- |
-| `GET`     | /versions                                          | { 1.0.0, 1.0.1, 1.0.2, 1.0.3}                   |
-| `GET`     | /ontology/{**currentVersion**}/{**targetVersion**} | { targetClass: Activity, operation: add field } |
+| Operación | EndPoint                                           | Descripción                                                                                                                                            |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `GET`     | /versions                                          | { 1.0.3, 1.0.2, 1.0.1, 1.0.0}                                                                                                                          |
+| `GET`     | /ontology/{**currentVersion**}/{**targetVersion**} | { ADD Outsourcing PROPERTY employees TYPE Number, ADD Universidad PROPERTY numeroAlumnos TYPE Number, DELETE GrupoInvestigacion PROPERTY descripcion } |
 
 Este módulo será un servicio REST autenticado accesible desde **triple-store-delta** ubicado en la arquitectura semántica.
 
@@ -107,7 +105,7 @@ ADD Entidad [PROPERTY] [value] TYPE [value]
 `Añadir una nueva entidad 'Outsourcing'`
 
 ```js
-ADD Outsourcing PROPERTY employees TYPE number
+ADD Outsourcing PROPERTY employees TYPE Number
 ```
 
 `Añadir una nueva propiedad 'numeroAlumnos' a la entidad 'Universidad'`
@@ -119,19 +117,28 @@ ADD Universidad PROPERTY numeroAlumnos TYPE Number
 `Añadir una nueva entidad 'localización' a la entidad 'Universidad'`
 
 ```js
-1) ADD Localizacion
-{
-  "operation": "ADD",
-  "source": "Localizacion"
-}
+ADD Localidad PROPERTY nombre TYPE String
+ADD Universidad PROPERTY localizacion TYPE Localizacion
+```
 
-2) ADD Universidad PROPERTY localizacion TYPE Localizacion
-{
-  "operation": "ADD",
-  "source": "Universidad"
-  "type": "PROPERTY",
-  "value": "localizacion"
-}
+#### DELETE
+
+```js
+DELETE Entidad [PROPERTY] [value] REFERENCES [value]
+```
+
+#### Ejemplos:
+
+`Borrar una nueva entidad 'GrupoInvestigacion'`
+
+```js
+DELETE GrupoInvestigacion
+```
+
+`Borrar una propiedad 'descripcion' de la entidad 'GrupoInvestigacion'`
+
+```js
+DELETE GrupoInvestigacion PROPERTY descripcion
 ```
 
 ### Modificaciones en la infraestructura semántica
@@ -139,7 +146,7 @@ ADD Universidad PROPERTY numeroAlumnos TYPE Number
 Tras modificaciones en la red de ontologías, como ya se ha mencionado anteriormente es necesario realizar las siguientes acciones:
 
 - Cambios en la ETL
-- Adaptación de los datos existentes en el triple-store (Trellis, Wikibase)
+- Adaptación de los datos existentes en el triple-store-adapter (Trellis, Wikibase)
 
 #### Secuencia de cambios a aplicar y entorno.
 
@@ -157,7 +164,7 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
    > Desde que se para el servidor hasta que se inicia el proceso de backup debe pasar un tiempo lo suficientemente largo como para que se vacíen las colas kafka con los datos de entrada para el módulo **management-system** encargado de la generación de ficheros RDF.
 
-4. Invocación desde linea de comandos del modulo **triple-store-delta** con el fichero DELTA como parámetro de entrada, para adaptar los datos del triple-store.
+4. Invocación desde linea de comandos del modulo **triple-store-delta** con el fichero DELTA como parámetro de entrada, para adaptar los datos del triple-store-adapter.
 
 5. Despliegue de la ETL
 
@@ -174,9 +181,9 @@ Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y p
 
 La adaptación de los datos del triple store (Trellis, Wikibase) se harán de forma automática a partir de los ficheros [DELTA](#DELTA) procedentes de la arquitectura ontológica.
 
-Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store** adaptándolos a los nuevos cambios en las ontologías.
+Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
 
-Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store** con la correspondiente reducción de errores en la ejecución manual de scripts.
+Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store-adapter. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store-adapter** con la correspondiente reducción de errores en la ejecución manual de scripts.
 
 ## ShEx
 

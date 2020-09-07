@@ -1,4 +1,4 @@
-![](C:\Users\druiz\repositorios\UM\asio-docs\hito_2\libreria_descubrimiento\images\logos_feder.png)
+![](./img/logos_feder.png)
 
 | Entregable     | Documentación de la librería de descubrimiento               |
 | -------------- | ------------------------------------------------------------ |
@@ -170,7 +170,7 @@ Básicamente una vez ordenada la lista, cada nueva métrica se ponderara de form
 
 Para calcular la similitud entre atributos de tipo numérico, interesa seguir una distribución exponencial inversa
 
-![inverse exponetial](C:\Users\druiz\repositorios\UM\asio-docs\hito_2\libreria_descubrimiento\images\exp_inv.png)
+![inverse exponetial](./img/exp_inv.png)
 
 En la grafica se puede apreciar que los mayores valores de la similitud, se producen cuando mas pequeña es la diferencia, y estos valores disminuyen rápidamente de forma exponencial cuando la diferencia crece, es decir, cuando dos números son iguales su similitud es 1.
 
@@ -182,7 +182,7 @@ En temimos generales para calcular la similitud entre dos números se aplica la 
 $$
 similitud = ({1\over 2})^{nMax-nMin}
 $$
-Donde nMax es el máximo normalizado, es decir el redondeo floor(max/max), es decir 1 y nMin es el mínimo normalizado según la formula floor(min/max), que podrá tomar los siguientes valores discretos [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 y 1]. Para valores iguales, la similitd sera siempre 1, en otro caso la similitud oscilara en el rango [0,0.5].
+Donde nMax es el máximo normalizado, es decir el redondeo floor(max/max), es decir 1 y nMin es el mínimo normalizado según la formula floor(min/max), que podrá tomar los siguientes valores discretos [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 y 1]. Para valores iguales, la similitud sera siempre 1, en otro caso la similitud oscilara en el rango [0,0.5].
 
 ###### Atributos de tipo Booleano
 
@@ -208,7 +208,7 @@ Para ello se seguirá el siguiente algoritmo:
 
 En el siguiente esquema se pueden apreciar a grandes rasgos los bloques funcionales de la librería de descubrimiento, y su integración con el resto de la arquitectura del proyecto ASIO.
 
-![architecture](C:\Users\druiz\repositorios\UM\asio-docs\hito_2\libreria_descubrimiento\images\Reconciliacion de entidades.png)
+![architecture](./img/ReconciliacionDeEntidades.png)
 
 La solución propuesta, será implementada como una tarea programada. Esta tarea esta compuesta por los siguientes bloques funcionales:
 

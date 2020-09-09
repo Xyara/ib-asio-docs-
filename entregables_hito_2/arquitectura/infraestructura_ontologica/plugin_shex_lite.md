@@ -8,7 +8,7 @@ ShEx-Lite es una aplicación que permite generar clases Java (POJOs) que represe
 
 ## Diagrama del plugin
 
-![](../Diagrama_arquitectura_ASIO_-_P%C3%A1gina_10.png)
+![](./Diagrama_arquitectura_ASIO_-_P%C3%A1gina_10.png)
 
 En el diagrama anterior se puede ver que el plugin recibe los datos de salida de ShEx-Lite. A partir de ahí empieza el proceso de creación y subida del artefacto a un repositorio de artefactos tipo Maven o GitHub packages. A demás el plugin recibe un archivo de configuración en el que se especifican las credenciales y dirección para poder desplegar el artefacto en el repositorio.
 

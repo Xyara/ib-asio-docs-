@@ -189,11 +189,6 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
 Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y posteriormente se promocionarán al entorno final de producción.
 
-#### Procesos manuales
-
-- Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
-- Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
-
 #### Procesos automáticos
 
 La adaptación de los datos del triple store (Trellis, Wikibase) se harán de forma automática a partir de los ficheros [DELTA](#DELTA) procedentes de la arquitectura ontológica.
@@ -201,6 +196,11 @@ La adaptación de los datos del triple store (Trellis, Wikibase) se harán de fo
 Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
 
 Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store-adapter. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store-adapter** con la correspondiente reducción de errores en la ejecución manual de scripts.
+
+#### Procesos manuales
+
+- Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
+- Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
 
 ## ShEx
 

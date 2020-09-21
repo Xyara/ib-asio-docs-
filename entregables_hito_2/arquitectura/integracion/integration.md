@@ -123,6 +123,21 @@ ADD Localidad PROPERTY nombre TYPE String
 ADD Universidad PROPERTY localizacion TYPE Localizacion
 ```
 
+#### UPDATE
+
+```js
+UPDATE Entidad [PROPERTY] [value] TYPE [value]
+```
+
+#### Ejemplos:
+
+`Actualizar una entidad 'Persona'`
+
+```js
+UPDATE Persona PROPERTY departamento TYPE String 'Medicina Interna'
+UPDATE Persona PROPERTY codDepartamento TYPE String 'E037'
+```
+
 #### DELETE
 
 ```js

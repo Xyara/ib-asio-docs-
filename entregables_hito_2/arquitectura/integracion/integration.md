@@ -92,7 +92,9 @@ Los ficheros delta son objetos JSON cuya información contiene las modificacione
 Operaciones soportadas:
 
 - Creaciones de entidades o propiedades. `ADD`
+- Actualización de entidades o propiedades. `UPDATE`
 - Borrado de entidades o propiedades. `DELETE`
+- Renombrado de entidades. `RENAME`
 
 #### ADD
 

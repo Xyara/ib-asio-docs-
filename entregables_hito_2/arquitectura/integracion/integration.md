@@ -18,11 +18,15 @@ A continuación se muestra un gráfico con la visión global entre las distintas
 
 ![](resources/overview.png)
 
-El proceso comienza con cambios en la red de ontologías, estos desembocan en flujos de trabajo automáticos de GitHub los cuales construyen y despliegan la ontologia. Como resultado de estas modificaciones se genera un artefacto jar con las classes java que posteriormente la arquitectura semántica utilizará. Junto con este artefacto se crea un fichero de instrucciones Delta con los cambios producidos.
+El proceso comienza con cambios en la red de ontologías, estos desembocan en flujos de trabajo automáticos de GitHub los cuales construyen y despliegan la ontologia. Como resultado de estas modificaciones se genera un artefacto jar con las classes java que posteriormente la arquitectura semántica utilizará. Este artefacto se subirá al repositorio Maven Central.
+
+Además de este artefacto se crea un fichero de instrucciones Delta con los cambios producidos.
 
 La comunicación entre la Infraestructura Ontológica y la Arquitectura Semántica, para recuperar esos ficheros Delta se realizará a través de una API rest `Exchange`.
 
-Cuando el número de cambios en la ontología es suficientemente maduro, un factor humano, se encargará de la parada del servidor y posterior realización de backup de los datos existentes. A continuación TODO
+Cuando el número de cambios en la ontología es suficientemente maduro, un factor humano, se encargará de la parada del servidor y posterior realización de backup de los datos existentes. El siguiente paso sería hacer de forma manual los cambios en la ETL para la importación de datos.
+
+El último paso este de forma automática sería el procesamiento del fichero Delta por parte del módulo `Triple Store Delta` para modificar los datos almacenados en el Triple Store (Wikibase y Trellis).
 
 ## Despliegue inicial ontología (primera instalación)
 

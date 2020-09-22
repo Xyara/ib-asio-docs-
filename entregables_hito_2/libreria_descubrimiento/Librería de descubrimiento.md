@@ -46,11 +46,27 @@ El modulo debe implementar tres funcionalidades independientes, todas ellas se a
 
 ### Reconciliación de entidades
 
+#### Estado del arte
+
+El problema de reconciliación de entidades (record linkage) ha sido profundamente estudiado debido a su gran aplicación, y a pesar de ello, a día de hoy, es una rama de investigación activa y abierta. La proliferación de bases de datos con grandes volúmenes de datos de diversa naturaleza por la World Wide Web, conduce a un interés generalizado de encontrar técnicas precisas y eficientes de detección de entradas equivalentes en aquellos escenarios en los que no se dispone de identificadores únicos confiables. Esto es deseable tanto para la detección de duplicados dentro de la base de datos como para el reconocimiento de entradas en diferentes bases de datos que hacen referencia a la misma entidad. Sin embargo esto dista de ser un problema trivial, ya que es común que dentro de una misma base de datos, una misma entidad, sea referenciada de múltiples formas, como por ejemplo, mediante distintas convenciones a lo largo del tiempo (por ej: nombre apellido1 apellido 2 o apellido1 apellido2 nombre), introducción de caracteres extra (por ejemplo Don, doña, doctor....), erratas ortográficas....
+
+#### Objetivo en el proyecto ASIO
+
 Este modulo, pretende evitar o detectar la creación de distintas URIs para un mismo recurso.
 
-Existen distintos contextos, donde la resolución de este problema, puede ser de especial utilidad, por un lado al insertar una nueva entidad, dentro del sistema, es necesario determinar si esta entidad existe, y en ese caso proceder a la actualización de la entidad existente, en vez de la creación de una entidad nueva. En el contexto de las entidades presentes ya en el triple store, es conveniente realizar también un proceso periódico que evalué si existen duplicados, y en este caso realizar las acciones de fusión entre dichas entidades que puedan ser oportunas. Es deseable un alto grado de automatización en el proceso, pero sin embargo es un proceso sensible, y que podría generar errores. Este aspecto se describirá ampliamente en el apartado [Automatización en la reconciliación de entidades](#Automatización en la reconciliación de entidades).
+Existen distintos contextos, donde la resolución de este problema, puede ser de especial utilidad, por un lado al insertar una nueva entidad, dentro del sistema, es necesario determinar si esta entidad existe, y en ese caso proceder a la actualización de la entidad existente, en vez de la creación de una entidad nueva. En el contexto de las entidades presentes ya en el triple store, es conveniente realizar también un proceso periódico que evalué si existen duplicados, y en este caso realizar las acciones de fusión entre dichas entidades que puedan ser oportunas. Es deseable un alto grado de automatización en el proceso, pero sin embargo es un proceso sensible, y que podría generar errores. Este aspecto se describirá ampliamente en el apartado [Automatización en la reconciliación de entidades](# Automatización en la reconciliación de entidades).
 
 Podemos entender que dos entidades son en realidad la misma entidad, cuando existe un alto grado de similitud entre los atributos de dicha entidad, por lo tanto, para establecer la similitud entre entidades, es  necesario, establecer previamente la similitud entre atributos.
+
+#### Justificación de la solución elegida
+
+Se opta por implementar una solución ad hoc, para la reconciliación de entidades, ya que a pesar de que hay implementaciones de triple stores que de algún modo lo soportan, por ejemplo [Stardog (entity linkig in knowledge graph)](https://www.stardog.com/blog/entity-linking-in-the-knowledge-graph/) o [BalzeGraph (link all the entities)](https://www.stardog.com/blog/link-all-the-entities/) .
+
+La principal motivación para implementar una solución propia, es que las soluciones mencionadas anteriormente (al margen de su idoneidad para el proyecto, que se discutirá en el próximo párrafo), contradicen frontalmente el requisito expresado en el pliego de que ha de ser posible cambiar el triple store. La selección de uno y otro,  implicaría la existencia de un vendor lock-in, hacia estas soluciones, de forma que seria imposible cambiar el triple store y seguir ofreciendo la funcionalidad asociada a la reconciliación de entidades, proporcionada por estos. 
+
+Por otro lado estos no parecen cubrir del todo las necesidades de el proyecto, por ejemplo la solución aportada por BlazeGraph requiere proporcionar una lista de variaciones  para los atributos, obviamente conocer eso, es conocer también de antemano que entidades están duplicadas y que valores tienen dichos atributos. En el caso de Stardog, este proceso esta orientado mas bien a la asociación de entidades externas con entidades dentro del grafo de conocimiento, que siendo interesante, no es exactamente la solución buscada.
+
+Por todo ello, pese a la complejidad asociada, se opta por la opción de realizar una implementación propia, que maximice el cumplimiento de los requisitos del proyecto, y reduzca el vendor lock-in asociado a la elección de una de las soluciones antes comentadas.
 
 ##### Métricas de similitud para atributos
 
@@ -97,7 +113,7 @@ Para evaluar la bondad de los algoritmos, **se han generado conjuntos de datos s
   * Cambio de caracteres: Se generan secuencias de un numero aleatorio de palabras (entre 3 y 6), con un numero aleatorio de caracteres (entre 6 y 12) , y se cambian aleatoriamente para cada palabra entre 2 y 1/2 del número de caracteres de la palabra.
   * Truncado de caracteres: Se generan secuencias de un numero aleatorio de palabras (entre 3 y 6), con un numero aleatorio de caracteres (entre 6 y 12) , y se cambian truncan aleatoriamente para cada palabra entre 1 y 1/2 del número de caracteres de la palabra. También aleatoriamente se trunca solo una palabra o en todas las palabras.
   * Todos los cambios: Se generan secuencias donde se aplican todas las modificaciones antes expuestas.
-* Cadenas distintas: Como grupo de control, se crean cadenas totalmente aleatorias, donde una cadena no es generada en forma alguna a prtir de la otra cadena.
+* Cadenas distintas: Como grupo de control, se crean cadenas totalmente aleatorias, donde una cadena no es generada en forma alguna a partir de la otra cadena.
 
 En cuanto a los resultados se han discretizado en los siguientes valores
 
@@ -190,21 +206,47 @@ Esta similitud es la mas sencilla de implementar, y es en realidad una operació
 
 **Atributos de tipo objeto**
 
-Para los atributos de tipo objeto, se pueden aplicar las métricas descritas en la sección [Métricas de similitud en comparación de entidades](#Métricas de similitud en comparación de entidades) descrita en el siguiente punto. En caso de existir objetos anidados, se aplicara lo descrito recursivamente.
+Para los atributos de tipo objeto, se pueden aplicar las métricas descritas en la sección [Métricas de similitud en comparación de entidades](# Métricas de similitud en comparación de entidades) descrita en el siguiente punto. En caso de existir objetos anidados, se aplicara lo descrito recursivamente.
+
+##### Variabilidad de atributos para una entidad
+
+Es necesario identificar de alguna forma, la relevancia de los atributos de una entidad en el contexto de ser o no determinantes para identificar dicha entidad.
+
+En cualquier entidad podemos encontrar atributos de distintos tipos:
+
+* Identificadores: Identificadores provenientes de la BBDD de origen, que deberían identificar inequívocamente una determinada instancia.
+* Semi-Identificadores: Atributos que sin ser identificadores, tienden a ser únicos entre las instancias, por ejemplo, el nombre, DNI, correo electrónico... 
+* Atributos de información: No son determinantes a la hora de discernir si dos entidades, son en realizad la misma, pero el conjunto de ellos, también da información relevante sobre la probabilidad de que en realidad sea la misma entidad, por lo que no conviene desecharlos.
+
+Partiendo del desconocimiento inicial del rol que ejercen los atributos presentes en la base de datos, se plantea la premisa de que aquellos atributos que ejerzan de identificadores o de semi-identificadores, tendrán una mayor variabilidad dentro de la base de datos, es decir 
+$$
+variabilidad (V) = elementosDistintos/totalElementos
+$$
+Donde obtendremos un resultado de variabilidad en el rango [0,1], estando los identificadores mas próximos a 1, y los atributos, menos relevantes se aproximaran a 0.
+
+De este valor se obtendrá el peso que aplicaremos a el valor de similitud del atributo es decir, el factor de similitud para un atributo dado, quedara determinado por
+$$
+similitudAplicable = variabilidadAtributo*similtudAtributo
+$$
+Para calcular el valor final de similitud (normalizado entre 0 y 1) entre entidades se aplicara la siguiente formula:
+$$
+similitudEntidad = \frac{\sum_{i=1}^{nAtributos} S_i*V_i}{\sum_{i=1}^{nAtributos}V_i}
+$$
+donde S es el valor de similitud para un atributo y V es la variabilidad antes mencionada.
 
 ##### Métricas de similitud en comparación de entidades
 
-Las métricas de similitud para entidades no son mas que la aplicación de similitud para todos los atributos.
+Las métricas de similitud para entidades no son mas que la aplicación de similitud para todos los atributos y la aplicación de las estadísticas de variabilidad de los atributos de una clase.
 
 Para ello se seguirá el siguiente algoritmo:
 
 1. Se generara una lista de atributos únicos presentes en la entidad A o en la entidad B
-2. Para cada atributo, se obtendrá el tipo, y se calculara la métrica dependiente del tipo, descrita en el punto anterior  ([Métricas de similitud para atributos](#Métricas de similitud para atributos)). 
+2. Para cada atributo, se obtendrá el tipo, y se calculara la métrica dependiente del tipo, descrita en el punto anterior  ([Métricas de similitud para atributos](# Métricas de similitud para atributos)). 
    1. En caso de no coincidir los tipos, se realizara siempre la comparación en forma de String, ya que este es el tipo mas general posible.
    2. En caso de ser un objeto, se aplicara el algoritmo para la comparación de entidades aquí descrito recursivamente.
-3. Se ponderara la métrica obtenida, haciendo simplemente la media aritmética, de forma que el resultado de similitud, siempre estará en el rango [0,1]
+3. Se ponderara y normalizara la métrica obtenida (según lo descrito en el apartado [Variabilidad de atributos para una entidad](# Variabilidad de atributos para una entidad), de forma que el resultado de similitud, siempre estará en el rango [0,1]
 
-##### Integración del proceso dentro de la arquitectura general de la aplicación.
+##### Merge event ProcessorIntegración del proceso dentro de la arquitectura general de la aplicación.
 
 En el siguiente esquema se pueden apreciar a grandes rasgos los bloques funcionales de la librería de descubrimiento, y su integración con el resto de la arquitectura del proyecto ASIO.
 
@@ -214,7 +256,7 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 
 * Pertenecientes a la librería de descubrimiento:
   * **Data Fetcher:** Servicio actúa como un conector para recuperar las tripletas almacenadas en los distintos triples stores. El servicio tiene que tener la capacidad de recuperar los deltas, a partir de un cierto instante de tiempo. Para la entidades recuperadas, se evaluara su similitud con respecto a las entidades de el mismo tipo almacenadas en el triple store, por lo tanto este modulo también tiene que tener la capacidad de recuperar dichas entidades.
-  * **Entity comparator:** El servicio implementa la comparación de entidades tal como se indica en [Métricas de similitud en comparación de entidades](#Métricas de similitud en comparación de entidades).
+  * **Entity comparator:** El servicio implementa la comparación de entidades tal como se indica en [Métricas de similitud en comparación de entidades](# Métricas de similitud en comparación de entidades).
   * **Merge handler:** El servicio evalúa el grado de similitud entre entidades. Si la similitud supera el umbral definido para la fusión automática de entidades, se enviara de forma asíncrona (mensaje en cola kafka), una solitud de mergeo, que será procesada por el servicio Merge Event Processor, de la arquitectura ASIO. En caso de no superar el umbral de mergeo automático, si la similitud es significativa, pero requiere validación (umbral para validación manual), se almacena la similitud, en un registro destinado para tal fin, de forma que en algún momento posterior, un usuario, pueda determinar si realmente se trata de la misma entidad (en ese caso se enviara una solicitud de fusión, tal y como se comenta en el punto anterior), o se desecha la operación de fusión (en ese caso quedara almacenado en la base de datos, dicha decisión con el fin de no volver a solicitar la fusión).  En cuanto al objeto resultante de la fusión, se usarán siempre los datos más actuales de los atributos que se encuentren en ambas entidades, en caso de que algún atributo este presente solo en alguna entidad, se conservara dicho atributo, con el valor de la entidad donde esta presente. El mensaje determinara siempre, la entidad que debe ser actualiza, los atributos y los valores a actulizar y la entidad que debe de ser eliminada.
 * Pertenecientes a la arquitectura ASIO
   * **Merge event Processor:** Es el proceso encargado de realizar las operaciones de fusión de entidades (principalmente actualizaciones y borrados), requeridas por el servicio Merge handler o aquellas generadas manualmente por un usuario experto.
@@ -223,8 +265,25 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 
 ### Descubrimiento de enlaces
 
-TODO
+#### Objetivo en el proyecto ASIO
+
+Este modulo, tiene dos módulos principales:
+
+##### Descubrimiento de enlaces entre entidades de distintos Backend SGI
+
+En este caso, los distintos Backend SGI, comparten ontología, y por lo tanto, las entidades disponibles entre distintos backend SGI, son comparables en los términos definidos por el módulo de [Reconciliación de entidades](# Reconciliación de entidades), descrito en el punto anterior, y por lo tanto, tanto la algoritmia, como el diseño de la solución deberá de ser el mismo, siendo necesaria únicamente a priori, la modificación del componente [**Data Fetcher**](# Integración del proceso dentro de la arquitectura general de la aplicación), que en este caso tiene que tener además la capacidad de obtener datos de todas los backend SGI, que estén involucrados. Por otro lado el componente [**Merge event Processor**](# Integración del proceso dentro de la arquitectura general de la aplicación), deberá en este caso de añadir las tripletas necesarias (en ambos componentes), para indicar el enlace entre entidades.
+
+##### Descubrimiento de enlaces entre entidades en la nube LOD
+
+En este caso es necesario trabajar sobre el conjunto de datasets disponibles en la nube LOD, que puedan ser relevantes  para el proyecto, por lo tanto, el primer paso, previo a la implementación, es la identificación de dichos datasets.
+
+En el momento actual, se esta trabajando en dicha selección por lo que no es conveniente profundizar en los pasos posteriores, aunque podemos determinar que será necesario:
+
+* Relacionar nuestra ontología con la ontología de los dataset seleccionados
+* Establecer un modelo de datos común.
+* Aplicar la [Reconciliación de entidades](# Reconciliación de entidades), descrita en el punto anterior
 
 ### Detección de equivalencias
 
-TODO
+Este punto esta en estudio.
+

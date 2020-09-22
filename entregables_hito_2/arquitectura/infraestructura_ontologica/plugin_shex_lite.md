@@ -1,3 +1,5 @@
+![](./resources/logos_feder.png)
+
 # Plugin de generación de artefactos para ShEx-Lite
 
 ## Resumen

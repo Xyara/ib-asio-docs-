@@ -1,3 +1,5 @@
+![](./resources/logos_feder.png)
+
 # Módulo de calculo de deltas entre modelos de dominio en Java
 ## Resumen
 

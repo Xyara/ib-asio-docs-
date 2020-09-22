@@ -12,6 +12,22 @@ Se precisa que la integración entre ambas infraestructuras requieran del menor 
 
 > Es necesario informar que aunque se busque la máxima automatización posible, habrá puntos en los que esta no se podrá llevar acabo como por ejemplo el proceso de creación/actualización de ontologías y la adaptación de estos cambios al proceso de ETL.
 
+## Descripción general
+
+A continuación se muestra un gráfico con la visión global entre las distintas partes.
+
+![](resources/overview.png)
+
+El proceso comienza con cambios en la red de ontologías, estos desembocan en flujos de trabajo automáticos de GitHub los cuales construyen y despliegan la ontologia. Como resultado de estas modificaciones se genera un artefacto jar con las classes java que posteriormente la arquitectura semántica utilizará. Este artefacto se subirá al repositorio Maven Central.
+
+Además de este artefacto se crea un fichero de instrucciones Delta con los cambios producidos.
+
+La comunicación entre la Infraestructura Ontológica y la Arquitectura Semántica, para recuperar esos ficheros Delta se realizará a través de una API rest `Exchange`.
+
+Cuando el número de cambios en la ontología es suficientemente maduro, un factor humano, se encargará de la parada del servidor y posterior realización de backup de los datos existentes. El siguiente paso sería hacer de forma manual los cambios en la ETL para la importación de datos.
+
+El último paso este de forma automática sería el procesamiento del fichero Delta por parte del módulo `Triple Store Delta` para modificar los datos almacenados en el Triple Store (Wikibase y Trellis).
+
 ## Despliegue inicial ontología (primera instalación)
 
 - Generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx)
@@ -92,7 +108,9 @@ Los ficheros delta son objetos JSON cuya información contiene las modificacione
 Operaciones soportadas:
 
 - Creaciones de entidades o propiedades. `ADD`
+- Actualización de entidades o propiedades. `UPDATE`
 - Borrado de entidades o propiedades. `DELETE`
+- Renombrado de entidades. `RENAME`
 
 #### ADD
 
@@ -119,6 +137,21 @@ ADD Universidad PROPERTY numeroAlumnos TYPE Number
 ```js
 ADD Localidad PROPERTY nombre TYPE String
 ADD Universidad PROPERTY localizacion TYPE Localizacion
+```
+
+#### UPDATE
+
+```js
+UPDATE Entidad [PROPERTY] [value] TYPE [value]
+```
+
+#### Ejemplos:
+
+`Actualizar una entidad 'Persona'`
+
+```js
+UPDATE Persona PROPERTY departamento TYPE String 'Medicina Interna'
+UPDATE Persona PROPERTY codDepartamento TYPE String 'E037'
 ```
 
 #### DELETE
@@ -172,11 +205,6 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
 Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y posteriormente se promocionarán al entorno final de producción.
 
-#### Procesos manuales
-
-- Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
-- Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
-
 #### Procesos automáticos
 
 La adaptación de los datos del triple store (Trellis, Wikibase) se harán de forma automática a partir de los ficheros [DELTA](#DELTA) procedentes de la arquitectura ontológica.
@@ -184,6 +212,11 @@ La adaptación de los datos del triple store (Trellis, Wikibase) se harán de fo
 Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
 
 Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store-adapter. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store-adapter** con la correspondiente reducción de errores en la ejecución manual de scripts.
+
+#### Procesos manuales
+
+- Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
+- Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
 
 ## ShEx
 

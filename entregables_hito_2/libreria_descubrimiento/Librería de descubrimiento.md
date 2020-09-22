@@ -54,7 +54,7 @@ El problema de reconciliación de entidades (record linkage) ha sido profundamen
 
 Este modulo, pretende evitar o detectar la creación de distintas URIs para un mismo recurso.
 
-Existen distintos contextos, donde la resolución de este problema, puede ser de especial utilidad, por un lado al insertar una nueva entidad, dentro del sistema, es necesario determinar si esta entidad existe, y en ese caso proceder a la actualización de la entidad existente, en vez de la creación de una entidad nueva. En el contexto de las entidades presentes ya en el triple store, es conveniente realizar también un proceso periódico que evalué si existen duplicados, y en este caso realizar las acciones de fusión entre dichas entidades que puedan ser oportunas. Es deseable un alto grado de automatización en el proceso, pero sin embargo es un proceso sensible, y que podría generar errores. Este aspecto se describirá ampliamente en el apartado [Automatización en la reconciliación de entidades](# Automatización en la reconciliación de entidades).
+Existen distintos contextos, donde la resolución de este problema, puede ser de especial utilidad, por un lado al insertar una nueva entidad, dentro del sistema, es necesario determinar si esta entidad existe, y en ese caso proceder a la actualización de la entidad existente, en vez de la creación de una entidad nueva. En el contexto de las entidades presentes ya en el triple store, es conveniente realizar también un proceso periódico que evalué si existen duplicados, y en este caso realizar las acciones de fusión entre dichas entidades que puedan ser oportunas. Es deseable un alto grado de automatización en el proceso, pero sin embargo es un proceso sensible, y que podría generar errores. Este aspecto se describirá ampliamente en el apartado [Automatización en la reconciliación de entidades](#automatización-en-la-reconciliación-de-entidades).
 
 Podemos entender que dos entidades son en realidad la misma entidad, cuando existe un alto grado de similitud entre los atributos de dicha entidad, por lo tanto, para establecer la similitud entre entidades, es  necesario, establecer previamente la similitud entre atributos.
 
@@ -206,7 +206,7 @@ Esta similitud es la mas sencilla de implementar, y es en realidad una operació
 
 **Atributos de tipo objeto**
 
-Para los atributos de tipo objeto, se pueden aplicar las métricas descritas en la sección [Métricas de similitud en comparación de entidades](# Métricas de similitud en comparación de entidades) descrita en el siguiente punto. En caso de existir objetos anidados, se aplicara lo descrito recursivamente.
+Para los atributos de tipo objeto, se pueden aplicar las métricas descritas en la sección [Métricas de similitud en comparación de entidades](#métricas-de-similitud-en-comparación-de-entidades) descrita en el siguiente punto. En caso de existir objetos anidados, se aplicara lo descrito recursivamente.
 
 ##### Variabilidad de atributos para una entidad
 
@@ -241,12 +241,12 @@ Las métricas de similitud para entidades no son mas que la aplicación de simil
 Para ello se seguirá el siguiente algoritmo:
 
 1. Se generara una lista de atributos únicos presentes en la entidad A o en la entidad B
-2. Para cada atributo, se obtendrá el tipo, y se calculara la métrica dependiente del tipo, descrita en el punto anterior  ([Métricas de similitud para atributos](# Métricas de similitud para atributos)). 
+2. Para cada atributo, se obtendrá el tipo, y se calculara la métrica dependiente del tipo, descrita en el punto anterior  ([Métricas de similitud para atributos](#métricas-de-similitud-para-atributos)). 
    1. En caso de no coincidir los tipos, se realizara siempre la comparación en forma de String, ya que este es el tipo mas general posible.
    2. En caso de ser un objeto, se aplicara el algoritmo para la comparación de entidades aquí descrito recursivamente.
-3. Se ponderara y normalizara la métrica obtenida (según lo descrito en el apartado [Variabilidad de atributos para una entidad](# Variabilidad de atributos para una entidad), de forma que el resultado de similitud, siempre estará en el rango [0,1]
+3. Se ponderara y normalizara la métrica obtenida (según lo descrito en el apartado [Variabilidad de atributos para una entidad](#variabilidad-de-atributos-para-una-entidad), de forma que el resultado de similitud, siempre estará en el rango [0,1]
 
-##### Merge event ProcessorIntegración del proceso dentro de la arquitectura general de la aplicación.
+##### Integración del proceso dentro de la arquitectura general de la aplicación.
 
 En el siguiente esquema se pueden apreciar a grandes rasgos los bloques funcionales de la librería de descubrimiento, y su integración con el resto de la arquitectura del proyecto ASIO.
 
@@ -256,8 +256,8 @@ La solución propuesta, será implementada como una tarea programada. Esta tarea
 
 * Pertenecientes a la librería de descubrimiento:
   * **Data Fetcher:** Servicio actúa como un conector para recuperar las tripletas almacenadas en los distintos triples stores. El servicio tiene que tener la capacidad de recuperar los deltas, a partir de un cierto instante de tiempo. Para la entidades recuperadas, se evaluara su similitud con respecto a las entidades de el mismo tipo almacenadas en el triple store, por lo tanto este modulo también tiene que tener la capacidad de recuperar dichas entidades.
-  * **Entity comparator:** El servicio implementa la comparación de entidades tal como se indica en [Métricas de similitud en comparación de entidades](# Métricas de similitud en comparación de entidades).
-  * **Merge handler:** El servicio evalúa el grado de similitud entre entidades. Si la similitud supera el umbral definido para la fusión automática de entidades, se enviara de forma asíncrona (mensaje en cola kafka), una solitud de mergeo, que será procesada por el servicio Merge Event Processor, de la arquitectura ASIO. En caso de no superar el umbral de mergeo automático, si la similitud es significativa, pero requiere validación (umbral para validación manual), se almacena la similitud, en un registro destinado para tal fin, de forma que en algún momento posterior, un usuario, pueda determinar si realmente se trata de la misma entidad (en ese caso se enviara una solicitud de fusión, tal y como se comenta en el punto anterior), o se desecha la operación de fusión (en ese caso quedara almacenado en la base de datos, dicha decisión con el fin de no volver a solicitar la fusión).  En cuanto al objeto resultante de la fusión, se usarán siempre los datos más actuales de los atributos que se encuentren en ambas entidades, en caso de que algún atributo este presente solo en alguna entidad, se conservara dicho atributo, con el valor de la entidad donde esta presente. El mensaje determinara siempre, la entidad que debe ser actualiza, los atributos y los valores a actulizar y la entidad que debe de ser eliminada.
+  * **Entity comparator:** El servicio implementa la comparación de entidades tal como se indica en [Métricas de similitud en comparación de entidades](#métricas-de-similitud-en-comparación-de-entidades).
+  * **Merge handler:** El servicio evalúa el grado de similitud entre entidades. Si la similitud supera el umbral definido para la fusión automática de entidades, se enviara de forma asíncrona (mensaje en cola kafka), una solitud de mergeo, que será procesada por el servicio Merge Event Processor, de la arquitectura ASIO. En caso de no superar el umbral de mergeo automático, si la similitud es significativa, pero requiere validación (umbral para validación manual), se almacena la similitud, en un registro destinado para tal fin, de forma que en algún momento posterior, un usuario, pueda determinar si realmente se trata de la misma entidad (en ese caso se enviara una solicitud de fusión, tal y como se comenta en el punto anterior), o se desecha la operación de fusión (en ese caso quedara almacenado en la base de datos, dicha decisión con el fin de no volver a solicitar la fusión).  En cuanto al objeto resultante de la fusión, se usarán siempre los datos más actuales de los atributos que se encuentren en ambas entidades, en caso de que algún atributo este presente solo en alguna entidad, se conservara dicho atributo, con el valor de la entidad donde esta presente. El mensaje determinara siempre, la entidad que debe ser actualiza, los atributos y los valores a actualizar y la entidad que debe de ser eliminada.
 * Pertenecientes a la arquitectura ASIO
   * **Merge event Processor:** Es el proceso encargado de realizar las operaciones de fusión de entidades (principalmente actualizaciones y borrados), requeridas por el servicio Merge handler o aquellas generadas manualmente por un usuario experto.
 
@@ -271,7 +271,7 @@ Este modulo, tiene dos módulos principales:
 
 ##### Descubrimiento de enlaces entre entidades de distintos Backend SGI
 
-En este caso, los distintos Backend SGI, comparten ontología, y por lo tanto, las entidades disponibles entre distintos backend SGI, son comparables en los términos definidos por el módulo de [Reconciliación de entidades](# Reconciliación de entidades), descrito en el punto anterior, y por lo tanto, tanto la algoritmia, como el diseño de la solución deberá de ser el mismo, siendo necesaria únicamente a priori, la modificación del componente [**Data Fetcher**](# Integración del proceso dentro de la arquitectura general de la aplicación), que en este caso tiene que tener además la capacidad de obtener datos de todas los backend SGI, que estén involucrados. Por otro lado el componente [**Merge event Processor**](#-integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), deberá en este caso de añadir las tripletas necesarias (en ambos componentes), para indicar el enlace entre entidades.
+En este caso, los distintos Backend SGI, comparten ontología, y por lo tanto, las entidades disponibles entre distintos backend SGI, son comparables en los términos definidos por el módulo de [Reconciliación de entidades](#reconciliación-de-entidades), descrito en el punto anterior, y por lo tanto, tanto la algoritmia, como el diseño de la solución deberá de ser el mismo, siendo necesaria únicamente a priori, la modificación del componente [**Data Fetcher**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), que en este caso tiene que tener además la capacidad de obtener datos de todas los backend SGI, que estén involucrados. Por otro lado el componente [**Merge event Processor**](#integración-del-proceso-dentro-de-la-arquitectura-general-de-la-aplicación), deberá en este caso de añadir las tripletas necesarias (en ambos componentes), para indicar el enlace entre entidades.
 
 ##### Descubrimiento de enlaces entre entidades en la nube LOD
 
@@ -281,7 +281,7 @@ En el momento actual, se esta trabajando en dicha selección por lo que no es co
 
 * Relacionar nuestra ontología con la ontología de los dataset seleccionados
 * Establecer un modelo de datos común.
-* Aplicar la [Reconciliación de entidades](# Reconciliación de entidades), descrita en el punto anterior
+* Aplicar la [Reconciliación de entidades](#reconciliación-de-entidades), descrita en el punto anterior
 
 ### Detección de equivalencias
 

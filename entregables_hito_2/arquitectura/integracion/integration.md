@@ -12,6 +12,18 @@ Se precisa que la integración entre ambas infraestructuras requieran del menor 
 
 > Es necesario informar que aunque se busque la máxima automatización posible, habrá puntos en los que esta no se podrá llevar acabo como por ejemplo el proceso de creación/actualización de ontologías y la adaptación de estos cambios al proceso de ETL.
 
+## Descripción general
+
+A continuación se muestra un gráfico con la visión global entre las distintas partes.
+
+![](resources/overview.png)
+
+El proceso comienza con cambios en la red de ontologías, estos desembocan en flujos de trabajo automáticos de GitHub los cuales construyen y despliegan la ontologia. Como resultado de estas modificaciones se genera un artefacto jar con las classes java que posteriormente la arquitectura semántica utilizará. Junto con este artefacto se crea un fichero de instrucciones Delta con los cambios producidos.
+
+La comunicación entre la Infraestructura Ontológica y la Arquitectura Semántica, para recuperar esos ficheros Delta se realizará a través de una API rest `Exchange`.
+
+Cuando el número de cambios en la ontología es suficientemente maduro, un factor humano, se encargará de la parada del servidor y posterior realización de backup de los datos existentes. A continuación TODO
+
 ## Despliegue inicial ontología (primera instalación)
 
 - Generación de clases POJO a partir de shape expressions con la herramienta [ShEx Lite](#ShEx)

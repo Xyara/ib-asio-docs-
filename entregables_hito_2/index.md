@@ -8,5 +8,5 @@ A continuación se describe el contenido de cada uno de las carpetas para el ent
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [arquitectura](./arquitectura/architecture.md)               | Contiene toda la documentación referente a la arquitectura del proyecto |
 | [testing](./testing/testing.md)                              | Contiene la información referente a la infraestructura de testing BDD |
-| [librería de descubrimiento]("./libreria_descubrimiento/Librería de descubrimiento.md") | Documentación de la librería de descubrimiento               |
+| [librería de descubrimiento](./libreria_descubrimiento/Librería de descubrimiento.md) | Documentación de la librería de descubrimiento               |
 

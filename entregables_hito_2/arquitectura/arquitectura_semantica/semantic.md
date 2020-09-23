@@ -1,4 +1,4 @@
-![](/arquitectura/integracion/resources/logos_feder.png)
+![](./img/logos_feder.png)
 
 # Contenido
 
@@ -12,6 +12,6 @@ Descripción del contenido de la arquitectura semántica
 | [despliegues](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/despliegues)               | Información referentes a los despliegues                               |
 | [dmp](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/dmp)                               | Información relativa a la data                                         |
 | [arquitectura](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/documento_arquitectura)   | Análisis y elección de arquitectura     
-| [federación](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/federación)                               | Análisis de alternativas para la federación de consultas       |
+| [federación](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/federación)                 | Análisis de alternativas para la federación de consultas       |
 | [ldp](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/ldp)                               | Análisis del cumplimiento LDP (Linked Data Platform)                   |
 | [plantilla_arc42](https://github.com/HerculesCRUE/ib-asio-docs-/tree/master/entregables_hito_2/arquitectura/arquitectura_semantica/plantilla_arc42)       | Template para documentación                                            |

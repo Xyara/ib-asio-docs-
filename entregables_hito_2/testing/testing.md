@@ -1,3 +1,5 @@
+![](./img/logos_feder.png)
+
 # Testing BDD con Cucumber
 
 ## Configuración del entorno

@@ -2,10 +2,10 @@
 
 
 
-| Entregable     |      Documento de Análisis ASIO                                 |
+| Entregable     | Documento de Análisis ASIO                                   |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 25/05/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Análisis                                                     |
 | Tipo           | Documento                                                    |
 | Objetivo       | Documento que contiene el análisis                           |
@@ -29,7 +29,7 @@
 
 [Skateholders](#skateholders)
 
-[Casos de uso](./Casos%20de%20uso.md)
+[Casos de uso](./Documents/Casos%20de%20uso.md)
 
 [Requisitos no funcionales](./Documents/Requisitos%20no%20funcionales.md)
 

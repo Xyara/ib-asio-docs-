@@ -7,6 +7,7 @@
 | Módulo    | Infraestructura Ontológica                                   |
 | Tipo      | Manual de despliegue                                         |
 
+
 # Métricas FAIR - Manual de despliegue
 
 El presente documento describe en detalle el proceso de instalación del software para la generación de  métricas y resultados gráficos del análisis de métricas FAIR.

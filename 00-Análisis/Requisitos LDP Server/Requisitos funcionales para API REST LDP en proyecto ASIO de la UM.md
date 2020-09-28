@@ -10,7 +10,7 @@ El presente documento, tiene como propósito detallar los requerimientos funcion
 
 ### Alcance
 
-El presente documento especifica, el su primera versión, los requerimientos funcionales y no funcionales que se deben tener en cuenta, en el diseño e implementación o selección de un API REST LDP, impuestos principalmente por la [Linked Data Platform](https://www.w3.org/TR/ldp/), teniendo en cuenta asimismo el requisito deseable, de tener acceso a cualquier versión histórica de los documentos almacenados en dicho servidor [Memento](https://github.com/HerculesCRUE/ib-asio-docs-.git)).
+El presente documento especifica, el su primera versión, los requerimientos funcionales y no funcionales que se deben tener en cuenta, en el diseño e implementación o selección de un API REST LDP, impuestos principalmente por la [Linked Data Platform](https://www.w3.org/TR/ldp/), teniendo en cuenta asimismo el requisito deseable, de tener acceso a cualquier versión histórica de los documentos almacenados en dicho servidor [Memento](./Memento%20Gu%C3%ADa%20y%20Normativa.md).
 
 El presente documento pretende de esta forma servir de base y justificación, para cualquier decisión arquitectónica que a partir de la definición de dichos requisitos pueda derivarse, ya sea la implementación propia de un servidor linked data, ya sea la justificación de un determinado stack tecnológico que cumpla en gran medida los requisitos aquí enumerados.
 

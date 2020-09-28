@@ -376,7 +376,6 @@ En definitiva, esta decisión, solo pretende una base solida, sobre la que poder
 
 ## Links
 
-- [Trazabilidad de requisitos]([https://izertis100.sharepoint.com/sites/ProyectoHrcules-UM/_layouts/15/doc2.aspx?OR=teams&CT=1585419729807&action=edit&sourcedoc=%7BAB59423A-0EDE-4746-AD68-BEA7F4750CFD%7D](https://izertis100.sharepoint.com/sites/ProyectoHrcules-UM/_layouts/15/doc2.aspx?OR=teams&CT=1585419729807&action=edit&sourcedoc={AB59423A-0EDE-4746-AD68-BEA7F4750CFD}))
 - [Analisis de Test LDP (caso de uso Trellis)](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 - [Propuesta de diseño API LDP y EndPoint SPARQL](./Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
 - [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)

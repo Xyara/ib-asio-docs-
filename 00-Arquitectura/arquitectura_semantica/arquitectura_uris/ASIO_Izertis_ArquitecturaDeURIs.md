@@ -70,7 +70,7 @@ o  para URIs canónicas para un determinado idioma
 donde cada elemento del esquema de URIs a partir del elemento idioma (tipo, concepto y referencia) debe mostrarse en el idioma indicado en la URI, si procede (probablemente no procederá para el caso de los identificadores opacos como la referencia)
 
 * **dominio:** Representa el nivel mayor del espacio de nombres para la resolución del URI, y para aportar información relevante sobre el propietario de la información. (ejemplo http://**hercules**)
-* **subdominio (si procede):** Aporta información sobre la entidad o departamento dentro de la entidad a la cual pertenece el recurso de información. Representa el nivel menor del espacio nombres para la resolución del URI, y para aportar información relevante sobre el propietario de la información. (ejemplo http://hercules/**um**)
+* **subdominio (si procede):** Aporta información sobre la entidad o departamento dentro de la entidad a la cual pertenece el recurso de información. Representa el nivel menor del espacio nombres para la resolución del URI, y para aportar información relevante sobre el propietario de la información. (ejemplo `http://hercules/um` )
 * **idioma (solo en el caso de URI canónica por idioma):** codificación de idioma (según la norma internacional ISO 639-1). Dicha selección afectara a, el literal de todas los demás componentes (tipo, concepto y referencia) que deben mostrarse, si es posible, según el idioma indicado en la URL. Esto implica un mapeo de cada URI canónica, a n URIs canónicas  por idioma de forma que sea posible pasar de una a otra forma canónica. Esta transformación se realizara en la Factoría de URIs.
 
 * **tipo:** Establece el tipo de información que contiene el recurso. Podrá ser uno de los enumerados:

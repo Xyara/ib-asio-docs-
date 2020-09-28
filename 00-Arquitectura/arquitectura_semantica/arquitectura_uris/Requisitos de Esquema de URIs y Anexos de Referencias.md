@@ -28,7 +28,7 @@
 >
 > * Usar URIs completamente opacas, sin idioma. Por ejemplo, http:// www.um.es /q34fderf.
 > * Usar solo URIs en Inglés (No usar ni castellano ni otra lengua oficial de la Unión Europea). Por ejemplo, http:// www.um.es /researcher/ jfernand.
-> * Usar URIs en castellano y la lengua oficial para cada entidad, añadiendo un predicado owl:sameAs entre ambas URIs (Ésta es la solución implementada en las versiones idiomáticas de la DBPedia118). Por ejemplo, http://www.um.es/investigador/jfernand y http://www.univ-paris1.fr/chercheur/jfernand.
+> * Usar URIs en castellano y la lengua oficial para cada entidad, añadiendo un predicado owl:sameAs entre ambas URIs (Ésta es la solución implementada en las versiones idiomáticas de la DBPedia118). Por ejemplo, `http://www.um.es/investigador/jfernand` y `http://www.univ-paris1.fr/chercheur/jfernand`.
 
 ##### Requisito: 15.1.4 Solución escalable y robusta.
 
@@ -38,7 +38,7 @@
 
 > El adjudicatario creará un documento denominado Buenas prácticas para URIs Hércules.
 >
-> Este documento describirá buenas prácticas a seguir en la creación, mantenimiento y gestión de URIs, ofreciendo una síntesis adaptada al proyecto Hércules de las siguientes fuentes y cualquier otra que el adjudicatario crea conveniente: [The Role of "Good URIs" for Linked Data](https://www.w3.org/TR/ld-bp/#HTTP-URIS), [Cool URIs for the Semantic Web](https://www.w3.org/TR/cooluris/), [Cool URIs don’t change](https://www.w3.org/Provider/Style/URI.html), [Understanding URIs](https://www.w3.org/TR/chips/#uri), [Creating URIs](https://data.gov.uk/resources/uris), [Designing URI sets for the public sector](https://www.gov.uk/government/publications/designing-uri-sets-for-the-uk-public-sector), [Study on persistent URIs](http://philarcher.org/diary/2013/uripersistence/), [Towards a NL URI strategy](http://www.pilod.nl/wiki/Bestand:D1-2013-09-19_Towards_a_NL_URI_Strategy.pdf), [URI Design Principles: Creating Persistent URIs for Government Linked Data](https://logd.tw.rpi.edu/instance-hub-uri-design)
+> Este documento describirá buenas prácticas a seguir en la creación, mantenimiento y gestión de URIs, ofreciendo una síntesis adaptada al proyecto Hércules de las siguientes fuentes y cualquier otra que el adjudicatario crea conveniente: [The Role of "Good URIs" for Linked Data](https://www.w3.org/TR/ld-bp/#HTTP-URIS), [Cool URIs for the Semantic Web](https://www.w3.org/TR/cooluris/), [Cool URIs don’t change](https://www.w3.org/Provider/Style/URI.html), [Understanding URIs](https://www.w3.org/TR/chips/#uri), [Creating URIs](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/60975/designing-URI-sets-uk-public-sector.pdf), [Designing URI sets for the public sector](https://www.gov.uk/government/publications/designing-uri-sets-for-the-uk-public-sector), [Study on persistent URIs](http://philarcher.org/diary/2013/uripersistence/), [Towards a NL URI strategy](http://www.pilod.nl/wiki/Bestand:D1-2013-09-19_Towards_a_NL_URI_Strategy.pdf), [URI Design Principles: Creating Persistent URIs for Government Linked Data](https://logd.tw.rpi.edu/instance-hub-uri-design)
 >
 > Hay que implementar asimismo mecanismos que soporten
 >
@@ -143,7 +143,7 @@ A los recursos de información de carácter publico por parte de cualquier órga
 
     * Las URIs tendrán una estructura uniforme que debe ofrecer coherencia al sistema, cubriendo principios básicos en su construcción y conteniendo información intuitiva sobre la procedencia y el tipo de información que identifica.
 
-    * La URI incluirá información básica sobre la procedencia de los datos, es decir sobre la institución que los proporciona (ej. http://universidadmurcia.org) 
+    * La URI incluirá información básica sobre la procedencia de los datos, es decir sobre la institución que los proporciona (ej. `http://universidadmurcia.org`) 
 
     * Es posible que en la URI se defina también el idioma (según la norma internacional correspondiente ISO 639-1), dependiendo de las características o tecnologías empleadas.
 

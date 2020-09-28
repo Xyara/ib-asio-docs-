@@ -14,13 +14,13 @@
 - Utilizar servicios dedicados para generar URIs persistentes. Algunos servicios pueden ser: purl.org, w3id.org, identifiers.org, etc.
 - Las URIs que definan propiedades deben ser dereferenciables. Al acceder al contenido de las URIs de propiedades, al menos se debería obtener un vocabulario RDFS describiendo dicha propiedad.
 - Se recomienda que la representación RDF de los recursos contenga al menos una declaración rdf:type
-- Representar relaciones de pertenencia a un contenedor mediante URIs jerárquicas. Por ejemplo, si existe un contenedor para representar una institución que alberga varios grupos de investigación se utilizarán URIs como [*http://example.org/institucion/*](http://example.org/institucion/) para representar la institución y: [*http://example.org/institucion/grupo1*](http://example.org/institucion/grupo1) para representar a un grupo de dicha institución.
-- Utilizar una barra de separación al final de las URIs que representan contenedores. Por ejemplo, es preferible [*http://example.org/contenedor/*](http://example.org/contenedor/) a [*http://example.org/contenedor*](http://example.org/contenedor), especialmente al utilizar URIs relativas. 
-- Utilizar fragmentos como identificadores de recursos. Un fragmento en una URI se introduce mediante el símbolo # y se denominan URIs hash[[1\]](#_ftn1). Cuando un cliente solicita una URI con un fragmento, el protocolo http descarta el fragmento y hace la solicitud a la servidor utilizando el resto de la URI. El resultado es que la URI original no puede utilizarse para identificar un documento Web concreto y puede utilizarse para identificar recursos que no correspondan a documentos, como personas o conceptos abstractos. Por ejemplo, la URI: [*http://example.org/contenedor#id23*](http://example.org/contenedor#id23) podría utilizarse para identificar el recurso #id23 que podría identificar recursos como personas, objetos, etc. 
+- Representar relaciones de pertenencia a un contenedor mediante URIs jerárquicas. Por ejemplo, si existe un contenedor para representar una institución que alberga varios grupos de investigación se utilizarán URIs como `http://example.org/institucion/` para representar la institución y: `http://example.org/institucion/grupo1` para representar a un grupo de dicha institución.
+- Utilizar una barra de separación al final de las URIs que representan contenedores. Por ejemplo, es preferible `http://example.org/contenedor/` a `http://example.org/contenedor`, especialmente al utilizar URIs relativas. 
+- Utilizar fragmentos como identificadores de recursos. Un fragmento en una URI se introduce mediante el símbolo # y se denominan URIs hash[[1\]](#_ftn1). Cuando un cliente solicita una URI con un fragmento, el protocolo http descarta el fragmento y hace la solicitud a la servidor utilizando el resto de la URI. El resultado es que la URI original no puede utilizarse para identificar un documento Web concreto y puede utilizarse para identificar recursos que no correspondan a documentos, como personas o conceptos abstractos. Por ejemplo, la URI: `http://example.org/contenedor#id23` podría utilizarse para identificar el recurso #id23 que podría identificar recursos como personas, objetos, etc. 
 - Usar purl para apuntar a direcciones url fijas.
 
 
 
 ------
 
-[[1\]](#_ftnref1) [*https://www.w3.org/TR/cooluris/#hashuri*](
+[[1\]](#_ftnref1) [*https://www.w3.org/TR/cooluris/#hashuri*](*https://www.w3.org/TR/cooluris/#hashuri*)

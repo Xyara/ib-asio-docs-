@@ -1,14 +1,13 @@
 ![](./images/logos_feder.png)
 
-| Entregable     | Esquema de URIs Hércules                                     |
-| -------------- | ------------------------------------------------------------ |
-| Fecha          | 25/05/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
-| Módulo         | Infraestructura Ontológica                                   |
-| Tipo           | Documento                                                    |
-| Objetivo       | Este documento recoge la definición del esquema de URIs Hércules siguiendo las recomendaciones de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Modelo Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md). |
-| Estado         | **100%** La denifición del esquema de URIs Hércules se considera finalizado. |
-
+| Entregable | Esquema de URIs Hércules                                     |
+| ---------- | ------------------------------------------------------------ |
+| Fecha      | 25/05/2020                                                   |
+| Proyecto   | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
+| Módulo     | Infraestructura Ontológica                                   |
+| Tipo       | Documento                                                    |
+| Objetivo   | Este documento recoge la definición del esquema de URIs Hércules siguiendo las recomendaciones de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Modelo Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md). |
+| Estado     | **100%** La definición del esquema de URIs Hércules se considera finalizado. |
 
 
 # Esquema de URIs Hércules
@@ -65,7 +64,7 @@ El diseño de un buen esquema de URIs es fundamental para asegurar la escalabili
 
 Para garantizar un buen esquema de URIs, el documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) establece los criterios a seguir, con respecto al uso de protocolos (HTTP/RDF), consistencia, extensibilidad, persistencia, etc.
 
-**El conjunto de buenas practicas tiene aplicación únicamente las URIs externas, para las cuales se define el esquema de URIs en este documento**. En concreto no tienen aplicación en la definición de URIs opacas de Wikibase, definidas en el [Modelo de Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/04-Modelo_multilingüismo/ASIO_Izertis_ModeloMultilinguismo.md), dado que son URIs internas.
+**El conjunto de buenas practicas tiene aplicación únicamente las URIs externas, para las cuales se define el esquema de URIs en este documento**. En concreto no tienen aplicación en la definición de URIs opacas de Wikibase, definidas en el [Modelo de Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md), dado que son URIs internas.
 
 ### Esquema de URIs
 

@@ -74,62 +74,62 @@ Enviará un XML con la siguiente estructura donde:
 
 
 ```xml
-\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
-\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
-\<responseDate\>2002-06-01T19:30:00Z\</responseDate\>
+<responseDate>2002-06-01T19:30:00Z</responseDate>
 
-\<request verb=\"ListIdentifiers\" from=\"1998-01-15\"\> \</request\>
+<request verb=\"ListIdentifiers\" from=\"1998-01-15\"> </request>
 
-\<ListIdentifiers\>
+<ListIdentifiers>
 
-\<header\>
+<header>
 
-\<identifier\>1\</identifier\>
+<identifier>1</identifier>
 
-\<datestamp\>2020-04-23\</datestamp\>
+<datestamp>2020-04-23</datestamp>
 
-\</header\>
+</header>
 
-\<header\>
+<header>
 
-\<identifier\>2\</identifier\>
+<identifier>2</identifier>
 
-\<datestamp\>2020-04-23\</datestamp\>
+<datestamp>2020-04-23</datestamp>
 
-\</header\>
+</header>
 
-\<header\>
+<header>
 
-\<identifier\>3\</identifier\>
+<identifier>3</identifier>
 
-\<datestamp\>2020-04-23\</datestamp\>
+<datestamp>2020-04-23</datestamp>
 
-\</header\>
+</header>
 
-\<header status=\"deleted\"\>
+<header status=\"deleted\">
 
-\<identifier\>4\</identifier\>
+<identifier>4</identifier>
 
-\<datestamp\>2020-04-23\</datestamp\>
+<datestamp>2020-04-23</datestamp>
 
-\</header\>
+</header>
 
-\<header\>
+<header>
 
-\<identifier\>5\</identifier\>
+<identifier>5</identifier>
 
-\<datestamp\>2020-04-23\</datestamp\>
+<datestamp>2020-04-23</datestamp>
 
-\</header\>
+</header>
 
-\</ListIdentifiers\>
+</ListIdentifiers>
 
-\</OAI-PMH\>
+</OAI-PMH>
 ```
 
 
@@ -137,23 +137,23 @@ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
 
 ```xml
-\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
-\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/" >
 
-\<responseDate\>2002-02-08T14:27:19Z\</responseDate\>
+<responseDate>2002-02-08T14:27:19Z</responseDate>
 
-\<request verb=\"ListIdentifiers\" from=\"2001-01-01\" until=\"2001-01-01\"\>
+<request verb=\"ListIdentifiers\" from=\"2001-01-01\" until=\"2001-01-01\">
 
-\</]request\>
+</]request>
 
-\<error code=\"noRecordsMatch\"/\>
+<error code=\"noRecordsMatch\"/>
 
-\</OAI-PMH\>
+</OAI-PMH>
 ```
 **Servicio GetRecord**
 ------------------------------------
@@ -207,163 +207,163 @@ Enviará un XML con la siguiente estructura donde:
 
 
 ```xml
-\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
-\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
-\<responseDate\>2002-02-08T08:55:46Z\</responseDate\>
+<responseDate>2002-02-08T08:55:46Z</responseDate>
 
-\<request verb=\"GetRecord\" identifier=\"1\"\>\</request\>
+<request verb=\"GetRecord\" identifier=\"1\"></request>
 
-\<GetRecord\>
+<GetRecord>
 
-\<record\>
+<record>
 
-\<header\>
+<header>
 
-\<identifier\>1</identifier\>
+<identifier>1</identifier>
 
-\<datestamp\>2001-12-14\</datestamp\>
+<datestamp>2001-12-14</datestamp>
 
-\<setSpec\>cs\</setSpec\>
+<setSpec>cs</setSpec>
 
-\<setSpec\>math\</setSpec\>
+<setSpec>math</setSpec>
 
-\</header\>
+</header>
 
-\<metadata\>
+<metadata>
 
-\<CVN xmlns="http://codes.cvn.fecyt.es/beans" >
+<CVN xmlns="http://codes.cvn.fecyt.es/beans" >
 
-\<CvnItemBean\>
+<CvnItemBean>
 
-\<Code\>060.030.010.000\</Code\>
+<Code>060.030.010.000</Code>
 
-\<CvnDateDayMonthYear\>
+<CvnDateDayMonthYear>
 
-\<Code\>060.030.010.130\</Code\>
+<Code>060.030.010.130</Code>
 
-\<Value\>1999-01-01T00:00:00.000+01:00\</Value\>
+<Value>1999-01-01T00:00:00.000+01:00</Value>
 
-\</CvnDateDayMonthYear\>
+</CvnDateDayMonthYear>
 
-\<CvnDouble\>
+<CvnDouble>
 
-\<Code\>060.030.010.120\</Code\>
+<Code>060.030.010.120</Code>
 
-\<Value\>12020.24\</Value\>
+<Value>12020.24</Value>
 
-\</CvnDouble\>
+</CvnDouble>
 
-\<CvnDuration\>
+<CvnDuration>
 
-\<Code\>060.030.010.140\</Code\>
+<Code>060.030.010.140</Code>
 
-\<Value\>P1Y0M1DT0H0M0S\</Value\>
+<Value>P1Y0M1DT0H0M0S</Value>
 
-\</CvnDuration\>
+</CvnDuration>
 
-\<CvnEntityBean\>
+<CvnEntityBean>
 
-\<Code\>060.030.010.080\</Code\>
+<Code>060.030.010.080</Code>
 
-\<Name\>FUNDACION SENECA\</Name\>
+<Name>FUNDACION SENECA</Name>
 
-\</CvnEntityBean\>
+</CvnEntityBean>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.010\</Code\>
+<Code>060.030.010.010</Code>
 
-\<Value\>AYUDAS A GRUPOS CONSOLIDADOS\</Value\>
+<Value>AYUDAS A GRUPOS CONSOLIDADOS</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.020\</Code\>
+<Code>060.030.010.020</Code>
 
-\<Value\>724\</Value\>
+<Value>724</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.030\</Code\>
+<Code>060.030.010.030</Code>
 
-\<Value\>ES62\</Value\>
+<Value>ES62</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.150\</Code\>
+<Code>060.030.010.150</Code>
 
-\<Value\>MURCIA\</Value\>
+<Value>MURCIA</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.060\</Code\>
+<Code>060.030.010.060</Code>
 
-\<Value\>OTHERS\</Value\>
+<Value>OTHERS</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.070\</Code\>
+<Code>060.030.010.070</Code>
 
-\<Value\>AYUDAS A GRUPOS CONSOLIDADOS Y DE ALTO RENDIMIENTO
-CIENTIFIO\</Value\>
+<Value>AYUDAS A GRUPOS CONSOLIDADOS Y DE ALTO RENDIMIENTO
+CIENTIFIO</Value>
 
-\</CvnString\>
+</CvnString>
 
-\<CvnString\>
+<CvnString>
 
-\<Code\>060.030.010.100\</Code\>
+<Code>060.030.010.100</Code>
 
-\<Value\>070\</Value\>
+<Value>070</Value>
 
-\</CvnString\>
+</CvnString>
 
-\</CvnItemBean\>
+</CvnItemBean>
 
-\</CVN\>
+</CVN>
 
-\</metadata\>
+</metadata>
 
-\</record\>
+</record>
 
-\</GetRecord\>
+</GetRecord>
 
-\</OAI-PMH\>
+</OAI-PMH>
 ```
 
 
 ### Respuesta indicando error:
 ```xml
-\<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
-\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
-\<responseDate\>2002-02-08T08:55:46Z\</responseDate\>
+<responseDate>2002-02-08T08:55:46Z</responseDate>
 
-\<request verb=\"GetRecord\" identifier=\"1"\> \</request\>
+<request verb=\"GetRecord\" identifier=\"1"> </request>
 
-\<error code=\"idDoesNotExist\"\>No matching identifier in
-arXiv\</error\>
+<error code=\"idDoesNotExist\">No matching identifier in
+arXiv</error>
 
-\</OAI-PMH\>
+</OAI-PMH>
 ```
 
 

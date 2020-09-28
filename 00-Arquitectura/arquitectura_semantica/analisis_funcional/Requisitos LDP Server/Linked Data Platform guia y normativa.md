@@ -385,7 +385,7 @@ Link: <http://www.w3.org/ns/ldp#RDFSource>; rel="type", <!--Contiene un RDFSourc
       <http://www.w3.org/ns/ldp#Resource>; rel="type" <!--Contiene un Recurso-->
 ```
 
-Si todo fue bien es se crea el recurso en la URI http://example.org/netWorth/nw1/advisors/george, y se añaden las siguientes tripletas
+Si todo fue bien es se crea el recurso en la URI `http://example.org/netWorth/nw1/advisors/george`, y se añaden las siguientes tripletas
 
 En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:advisor**  <liabilities/george#me> 
 

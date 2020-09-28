@@ -64,7 +64,7 @@ Resource johnSmith = model.createResource("http://example.org/JohnSmith");
 johnSmith.addProperty(VCARD.FN, "John Smith");
 ```
 
-En este caso se crea un modelo para un nuevo elemento de tipo "http://example.org/JohnSmith", al cual se le añade como propiedad el nombre "John Smith".
+En este caso se crea un modelo para un nuevo elemento de tipo `http://example.org/JohnSmith`, al cual se le añade como propiedad el nombre "John Smith".
 
 También sería posible cargar los datos desde un fichero o un input stream en formato RDF:
 
@@ -389,8 +389,8 @@ Mediante la utilización del API de SAIL, es posible conectarse a los stores med
 
 Más información:
 
-* https://rdf4j.org/documentation/sail/
-* https://rdf4j.org/documentation/rest-api/
+* https://rdf4j.org/documentation/reference/sail/
+* https://rdf4j.org/documentation/reference/rest-api/
 * https://rdf4j.org/documentation/programming/repository/
 * http://graphdb.ontotext.com/documentation/free/architecture-components.html#architecture-components-rdf4j
 
@@ -486,7 +486,7 @@ Más información:
 
 - [https://www.w3.org/wiki/LDP_Implementations#TrellisLDP_.28Server.29](https://www.w3.org/wiki/LDP_Implementations#TrellisLDP_.28Server.29)
 
-Por otro lado se evalúa el cumplimento de Trellis sobre la LDP, con la [Suit de Test](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html) que propone la LDP, obteniendo los resultados recogidos en el [Analisis de Test LDP (caso de uso Trellis)](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md)
+Por otro lado se evalúa el cumplimento de Trellis sobre la LDP, con la [Suit de Test](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html) que propone la LDP, obteniendo los resultados recogidos en el [Analisis de Test LDP (caso de uso Trellis)](../ldp/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 
 Los resultados obtenidos se pueden resumir en la siguiente tabla
 
@@ -723,7 +723,7 @@ Se realizan dos pruebas de concepto:
 
 Es el triple store seleccionado para la realizar la PoC. Merece especial atención por las siguientes características:
 
-- Expone un endpoint Sparql (http://localhost:9999/blazegraph/#query), en apariencia, bastante completo
+- Expone un endpoint Sparql (`http://localhost:9999/blazegraph/#query`), en apariencia, bastante completo
 
   ![image-20200226104816659](https://i.ibb.co/WH1KMYP/blazegraph-endpoint.png)
 
@@ -761,7 +761,7 @@ Es el triple store seleccionado para la realizar la PoC. Merece especial atenci�
     </rdf:RDF>  
     ```
   
-- Despliega un [NanoSparqlServer](https://github.com/blazegraph/database/wiki/NanoSparqlServer), (http://localhost:9999/bigdata/sparql) para actuar como API Rest LDP. ¿Puede realizar una función similar a Trellis?
+- Despliega un [NanoSparqlServer](https://github.com/blazegraph/database/wiki/NanoSparqlServer), (`http://localhost:9999/bigdata/sparql`) para actuar como API Rest LDP. ¿Puede realizar una función similar a Trellis?
 
 - Alto rendimiento, soporta 50 Billones de nodos en una sola nodo
 
@@ -971,7 +971,7 @@ Es un servidor SPARQL, que puede proporcionar capa de seguridad por medio de Apa
 
 Integra TDB, como Triple Store, proporcionando una capa transaccional de persistencia robusta. Además, si fuese necesario puede proporcionar una capa SPARQL para cualquier triple store, seria un componente reutilizable.
 
-- Expone un endpoint Sparql (http://localhost:3030/fuseki), en apariencia, bastante completo
+- Expone un endpoint Sparql (`http://localhost:3030/fuseki`), en apariencia, bastante completo
 
   ![image-20200226104816659](https://i.ibb.co/WH1KMYP/blazegraph-endpoint.png)
 

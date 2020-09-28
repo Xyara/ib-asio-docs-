@@ -120,7 +120,7 @@ El borrado de un contenedor implica actualizar los miembros que lo referencien, 
 
  El ejemplo ilustra sobre un contenedor simple con tres recursos, y alguna información propia del contenedor, como su titulo, y el hecho de que es un contenedor
 
-Petición a http://example.org/c1
+Petición a `http://example.org/c1`
 
 ```html
 GET /c1/ HTTP/1.1
@@ -160,7 +160,7 @@ Los **contenedores directos** permiten construcciones mas complejas, donde se pu
 
 El ejemplo ilustra sobre un recurso raiz, **http://example.org/netWorth/nw1** que en este caso modela el balance de un individuo.
 
-Petición a  http://example.org/netWorth/nw1/
+Petición a  `http://example.org/netWorth/nw1/`
 
 ```html
 GET /netWorth/nw1/ HTTP/1.1 
@@ -200,7 +200,7 @@ En el ejemplo se puede observar que todos comparten el mismo sujeto (<http://exa
 
 Accediendo a los assets
 
-Petición a  http://example.org/netWorth/nw1/assets/
+Petición a  `http://example.org/netWorth/nw1/assets/`
 
 ```html
 GET /netWorth/nw1/assets/ HTTP/1.1 
@@ -235,7 +235,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 
 El caso es parecido con los Pasivos
 
-Petición a  http://example.org/netWorth/nw1/assets/
+Petición a  `http://example.org/netWorth/nw1/assets/`
 
 ```html
 GET /netWorth/nw1/liabilities/ HTTP/1.1 
@@ -270,7 +270,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 
 Un POST de uno de los contenedores directos asset/liability sobre el contenedor, deberá crear un nuevo asset, y deberá añadirse a la lista de o:asset en el recurso nw1 y al predicado de ldp:contains
 
-Petición a  **http://example.org/netWorth/nw1/liabilities/**
+Petición a  `http://example.org/netWorth/nw1/liabilities/`
 
 ```html
 <!--HEADERS-->
@@ -301,9 +301,9 @@ Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
 
 También seria necesario actualizar los contenedores
 
-En el recurso net worth <<http://example.org/netWorth/nw1/>> **o:liability**  <liabilities/l4> 
+En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:liability**  <liabilities/l4> 
 
-En el contenedor liability <<**http://example.org/netWorth/nw1/liabilities/**>> ldp:contains  <l4> 
+En el contenedor liability <<`http://example.org/netWorth/nw1/liabilities/`>> ldp:contains  <l4> 
 
 ###### Contenedor Indirecto
 
@@ -387,9 +387,9 @@ Link: <http://www.w3.org/ns/ldp#RDFSource>; rel="type", <!--Contiene un RDFSourc
 
 Si todo fue bien es se crea el recurso en la URI http://example.org/netWorth/nw1/advisors/george, y se añaden las siguientes tripletas
 
-En el recurso net worth <<http://example.org/netWorth/nw1/>> **o:advisor**  <liabilities/george#me> 
+En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:advisor**  <liabilities/george#me> 
 
-En el contenedor liability <<**http://example.org/netWorth/nw1/advisors/**>> ldp:contains  <george> 
+En el contenedor liability <<`http://example.org/netWorth/nw1/advisors/`>> ldp:contains  <george> 
 
 En resumen, en el grafico se muestran los contenedores vistos y sus relaciones con los recursos
 

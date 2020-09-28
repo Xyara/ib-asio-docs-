@@ -6,7 +6,7 @@
 
 ### Propósito
 
-El presente documento tiene como propósito establecer una arquitectura y una propuesta de solución funcional para un API LDP, que cubra los requisitos para el proyecto, expresados en el documento   [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)). Según el diseño de la arquitectura general para el proyecto ASIO, el API LPD, y el End Point SPARQL, serán los dos únicos puntos de acceso, al triple store donde se almacenaran los datos, por lo tanto, tanto los servicios y micro servicios relacionados con el proceso de ingesta, como los aplicaciones que hagan un uso de los mismos, tendrán que  usarlos, convirtiéndose asi (tanto el API REST LDP como el Endpoint SPARQL) en un componente vital en la arquitectura, de forma que las restricciones y funcionalidades de los mismos, serán el Core que dirija el diseño de los componentes de la arquitectura completa de las solución.
+El presente documento tiene como propósito establecer una arquitectura y una propuesta de solución funcional para un API LDP, que cubra los requisitos para el proyecto, expresados en el documento   [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md). Según el diseño de la arquitectura general para el proyecto ASIO, el API LPD, y el End Point SPARQL, serán los dos únicos puntos de acceso, al triple store donde se almacenaran los datos, por lo tanto, tanto los servicios y micro servicios relacionados con el proceso de ingesta, como los aplicaciones que hagan un uso de los mismos, tendrán que  usarlos, convirtiéndose asi (tanto el API REST LDP como el Endpoint SPARQL) en un componente vital en la arquitectura, de forma que las restricciones y funcionalidades de los mismos, serán el Core que dirija el diseño de los componentes de la arquitectura completa de las solución.
 
 ### Alcance
 
@@ -18,7 +18,7 @@ En el presente documento, se plasmara la solución que en este momento creemos q
 
 #### Cumplimiento LDP
 
-La solución propuesta debe de asegurar el mayor nivel de cumplimiento posible de los requisitos dispuestos por la [Linked Data Platform](https://www.w3.org/TR/ldp/), y descritos en el documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)).
+La solución propuesta debe de asegurar el mayor nivel de cumplimiento posible de los requisitos dispuestos por la [Linked Data Platform](https://www.w3.org/TR/ldp/), y descritos en el documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md).
 
 #### Cumplimiento de principios FAIR
 
@@ -38,7 +38,7 @@ Es necesario mantener los distintos estados a los que esta sujeto una entidad, e
 
 #### Arquitectura de URIs
 
-El servidor LDP, debe soportar la arquitectura de URIs para el proyecto ASIO, descrita en el documento [ASIO_Izertis_ArquitecturaDeURIs](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/documentacion_a_revisar/08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md).
+El servidor LDP, debe soportar la arquitectura de URIs para el proyecto ASIO, descrita en el documento [ASIO_Izertis_ArquitecturaDeURIs](../../../../08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md).
 
 #### Negociación de contenidos
 
@@ -87,7 +87,7 @@ Desde el punto de vista del cumplimento LDP, [Trellis](https://github.com/trelli
 
 Para evaluar el cumplimiento de dichos requisitos de primera mano, se ha usado el [LDP Test Suit](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html), creado exprofeso por la LDP, para evaluar el nivel de cumplimiento.
 
-Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md)
+Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 
 **Comentarios sobre resultados de test**
 
@@ -117,13 +117,13 @@ En estos casos se aprecia un patrón en los test fallados por Trellis:
   - **testPutRequiresIfMatch **(SHOULD)
   - **testRestrictPutReUseUri: **(SHOULD)
 
-  En estos casos básicamente el servidor permite la reutilización de URIs. La implementación de este tipo de requisitos entra en conflicto con el requisito para este proyecto de [Versinado de entidades](#Versionado de entidades) implementado por Trellis siguiendo el estándar Memento, especificado en el documento [Memento Guía y Normativa.md]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Memento%20Gu%C3%ADa%20y%20Normativa.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Memento Guía y Normativa.md)) . En dicho estándar aparece el concepto de estados de entidades en distintas líneas temporales, es decir una misma entidad, no será modificada al recibir una modificación (borrado o actualización), sino que se creara un estado nuevo, el una nueva línea temporal, de forma que sea posible acceder al estado de cualquier entidad, en cualquier instante de tiempo. Esto **Obliga** a la reutilización de URIs, y causa el fallo del test, ya que el servidor interpreta la acción del test (borrado y después creación de la entidad), como distintos estados de la misma entidad. En resumen, **no se puede cumplir la recomendación de la LDP**, sin mermar la capacidad del servidor.
+  En estos casos básicamente el servidor permite la reutilización de URIs. La implementación de este tipo de requisitos entra en conflicto con el requisito para este proyecto de [Versinado de entidades](#Versionado de entidades) implementado por Trellis siguiendo el estándar Memento, especificado en el documento [Memento Guía y Normativa.md](./Memento%20Gu%C3%ADa%20y%20Normativa.md) . En dicho estándar aparece el concepto de estados de entidades en distintas líneas temporales, es decir una misma entidad, no será modificada al recibir una modificación (borrado o actualización), sino que se creara un estado nuevo, el una nueva línea temporal, de forma que sea posible acceder al estado de cualquier entidad, en cualquier instante de tiempo. Esto **Obliga** a la reutilización de URIs, y causa el fallo del test, ya que el servidor interpreta la acción del test (borrado y después creación de la entidad), como distintos estados de la misma entidad. En resumen, **no se puede cumplir la recomendación de la LDP**, sin mermar la capacidad del servidor.
 
 - **Casos de fallo interpretativos sobre la LDP **(fallo de 1 test en 1 casos)
 
   - **testTypeRdfSource** (MUST)
 
-  En este caso, se puede considerar fallo o no depende de la interpretación que se realice de los requisitos LDP, ya que aplican 2 requisitos, que al menos en lo evaluado por el test son opuestos. En mi pion, aplica el requisito mas especifico, y en ese caso cumpliría el, requisito, y el test no estaría bien implementado. para mas información se recomienda ver la documentación [Analisis de Test LDP (caso de uso Trellis).md]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md), en la sección especifica sobre el test testTypeRdfSource.
+  En este caso, se puede considerar fallo o no depende de la interpretación que se realice de los requisitos LDP, ya que aplican 2 requisitos, que al menos en lo evaluado por el test son opuestos. En mi pion, aplica el requisito mas especifico, y en ese caso cumpliría el, requisito, y el test no estaría bien implementado. para mas información se recomienda ver la documentación [Analisis de Test LDP (caso de uso Trellis).md](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md), en la sección especifica sobre el test testTypeRdfSource.
 
 - **No advertir de las restricciones** (fallo de 3 test en 6 casos)
 
@@ -308,7 +308,7 @@ Creemos que Trellis ofrece una auditoria suficiente del dato, pudiendo reconstru
 
 Trellis mantiene un registro de cada cambio realizado sobre un recurso. Esto se almacena de manera eficiente al modelar un recurso como un flujo de cambios a lo largo del tiempo, lo que significa que se puede recuperar el estado de un recurso en cualquier momento arbitrario.
 
-Esto se gestiona siguiendo el estándar [Memento](https://tools.ietf.org/html/rfc7089), recogido en el documento  [Memento Guía y Normativa.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Memento Guía y Normativa.md)
+Esto se gestiona siguiendo el estándar [Memento](https://tools.ietf.org/html/rfc7089), recogido en el documento  [Memento Guía y Normativa.md](./Memento%20Gu%C3%ADa%20y%20Normativa.md)
 
 Por ejemplo, dado un determinado recurso, es posible realizar una negociación del instante de tiempo en el que el cliente desea obtener el recurso, por medio del uso de la cabecera **Accept-Datetime** en la petición. 
 
@@ -394,11 +394,11 @@ En adicción a la auditoria de datos ofrecida por Trellis, es posible una trazab
 
 Trellis ofrece una gran flexibilidad a la hora de construir URIs, por lo que sean los que sean los requerimientos del proyecto en lo relativo a la construcción de URIs, Trellis debería de soportarlo.
 
-Para ello Trellis se apoya en los estándares propuestos por la [Linked Data Platform](https://www.w3.org/TR/ldp/), y descritos en el documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)), donde se presenta el concepto de recursos y contenedores.
+Para ello Trellis se apoya en los estándares propuestos por la [Linked Data Platform](https://www.w3.org/TR/ldp/), y descritos en el documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md), donde se presenta el concepto de recursos y contenedores.
 
 ![recursos y contenedores](https://www.w3.org/TR/ldp/images/ldpc-hierarchy.png)
 
-Para evaluar la idoneidad del la Arquitectura de URIs, sobre la implementación de Trellis, se mapearan los requerimientos o buenas practicas recogidos en el documento [https://www.w3.org/TR/ldp/images/ldpc-hierarchy.png]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/documentacion_a_revisar/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/documentacion_a_revisar/08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md)), con las soluciones a los mismos que Trellis puede ofrecer, aunque obviamente, esta construcción, debe de realizarse por los servicios o microservicios dedicados a el proceso de inserción de datos, esta debe de ser soportada por Trellis.
+Para evaluar la idoneidad del la Arquitectura de URIs, sobre la implementación de Trellis, se mapearan los requerimientos o buenas practicas recogidos en el documento [https://www.w3.org/TR/ldp/images/ldpc-hierarchy.png](../../../../08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md), con las soluciones a los mismos que Trellis puede ofrecer, aunque obviamente, esta construcción, debe de realizarse por los servicios o microservicios dedicados a el proceso de inserción de datos, esta debe de ser soportada por Trellis.
 
 **Diseño de URIs** (se hacen anotaciones en rojo con la aportación o desde el punto de vista la funcionalidad que puede ofrecer Trellis)
 
@@ -432,9 +432,9 @@ Se define como base del diseño de URIs, la siguiente propuesta
 - Utilizar servicios dedicados para generar URIs persistentes. Algunos servicios pueden ser: purl.org, w3id.org, identifiers.org, etc.
 - Las URIs que definan propiedades deben ser dereferenciables. Al acceder al contenido de las URIs de propiedades, al menos se debería obtener un vocabulario RDFS describiendo dicha propiedad. 
 - Se recomienda que la representación RDF de los recursos contenga al menos una declaración rdf:type   &rarr; <span style="color:red"> Obligatorio según la LDP, por lo tanto Trellis lo implementa</span>
-- Representar relaciones de pertenencia a un contenedor mediante URIs jerárquicas. Por ejemplo, si existe un contenedor para representar una institución que alberga varios grupos de investigación se utilizarán URIs como [*http://example.org/institucion/*](http://example.org/institucion/) para representar la institución y: [*http://example.org/institucion/grupo1*](http://example.org/institucion/grupo1) para representar a un grupo de dicha institución.  &rarr; <span style="color:red"> La jerarquia puede ser facilmente modelado en Trellis mediante el uso de contenedores, creando asi una jerarquia de URIs</span>
-- Utilizar una barra de separación al final de las URIs que representan contenedores. Por ejemplo, es preferible [*http://example.org/contenedor/*](http://example.org/contenedor/) a [*http://example.org/contenedor*](http://example.org/contenedor), especialmente al utilizar URIs relativas. 
-- Utilizar fragmentos como identificadores de recursos. Un fragmento en una URI se introduce mediante el símbolo # y se denominan URIs hash[[1\]](#_ftn1). Cuando un cliente solicita una URI con un fragmento, el protocolo http descarta el fragmento y hace la solicitud a la servidor utilizando el resto de la URI. El resultado es que la URI original no puede utilizarse para identificar un documento Web concreto y puede utilizarse para identificar recursos que no correspondan a documentos, como personas o conceptos abstractos. Por ejemplo, la URI: [*http://example.org/contenedor#id23*](http://example.org/contenedor#id23) podría utilizarse para identificar el recurso #id23 que podría identificar recursos como personas, objetos, etc. 
+- Representar relaciones de pertenencia a un contenedor mediante URIs jerárquicas. Por ejemplo, si existe un contenedor para representar una institución que alberga varios grupos de investigación se utilizarán URIs como `http://example.org/institucion/` para representar la institución y: `http://example.org/institucion/grupo1` para representar a un grupo de dicha institución.  &rarr; <span style="color:red"> La jerarquia puede ser facilmente modelado en Trellis mediante el uso de contenedores, creando asi una jerarquia de URIs</span>
+- Utilizar una barra de separación al final de las URIs que representan contenedores. Por ejemplo, es preferible `http://example.org/contenedor/` a `http://example.org/contenedor`, especialmente al utilizar URIs relativas. 
+- Utilizar fragmentos como identificadores de recursos. Un fragmento en una URI se introduce mediante el símbolo # y se denominan URIs hash[[1\]](#_ftn1). Cuando un cliente solicita una URI con un fragmento, el protocolo http descarta el fragmento y hace la solicitud a la servidor utilizando el resto de la URI. El resultado es que la URI original no puede utilizarse para identificar un documento Web concreto y puede utilizarse para identificar recursos que no correspondan a documentos, como personas o conceptos abstractos. Por ejemplo, la URI: `http://example.org/contenedor#id23` podría utilizarse para identificar el recurso #id23 que podría identificar recursos como personas, objetos, etc. 
 - Usar purl para apuntar a direcciones url fijas.
 
 **Conclusiones**
@@ -557,7 +557,7 @@ En definitiva, proporciona un comportamiento que se ajusta a los estándares def
 
 #### Trellis
 
-Se ha creado el repositorio [asio_ldp](https://git.izertis.com/universidaddemurcia/semantmurc/asio-ldp), con la finalidad de poder alojar en el mismo, los cambios que puedan ser necesarios, sobre el servidor Trellis, usando como base la última versión (0.10).
+Se ha creado el repositorio [asio_ldp](https://github.com/HerculesCRUE/ib-asio-ldp), con la finalidad de poder alojar en el mismo, los cambios que puedan ser necesarios, sobre el servidor Trellis, usando como base la última versión (0.10).
 
 Se ha desplegado tanto en contenedores Docker, como de forma local, con el mismo resultado (en cuanto a los resultados de la evaluación del Test Suit), por lo tanto, podemos garantizar que el despliegue o la configuración del sistema de almacenamiento no altera el resultado
 
@@ -1071,5 +1071,5 @@ jsonld:
 
 Para evaluar el cumplimiento de dichos requisitos de primera mano, se ha usado el [LDP Test Suit](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html), creado exprofeso por la LDP, para evaluar el nivel de cumplimiento.
 
-Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md) y de forma mas reducida en este mismo documento en la sección [Cumplimiento LDP](#Cumplimiento LDP)
+Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md) y de forma mas reducida en este mismo documento en la sección [Cumplimiento LDP](#Cumplimiento LDP)
 

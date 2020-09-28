@@ -3,7 +3,7 @@
 | Entregable     | Documentación de la librería factoría de URIs                |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 25/05/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documentación                                                |
 | Objetivo       | El presente documento intenta determinar la idoneidad  de la aplicación del conjunto de reglas establecidas por la [LDP](https://www.w3.org/TR/ldp/), sobre las operaciones HTTP, sobre recursos semánticos basados en grafos RDF. En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO. |

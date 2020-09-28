@@ -486,7 +486,7 @@ Más información:
 
 - [https://www.w3.org/wiki/LDP_Implementations#TrellisLDP_.28Server.29](https://www.w3.org/wiki/LDP_Implementations#TrellisLDP_.28Server.29)
 
-Por otro lado se evalúa el cumplimento de Trellis sobre la LDP, con la [Suit de Test](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html) que propone la LDP, obteniendo los resultados recogidos en el [Analisis de Test LDP (caso de uso Trellis)](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md)
+Por otro lado se evalúa el cumplimento de Trellis sobre la LDP, con la [Suit de Test](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html) que propone la LDP, obteniendo los resultados recogidos en el [Analisis de Test LDP (caso de uso Trellis)](../arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 
 Los resultados obtenidos se pueden resumir en la siguiente tabla
 

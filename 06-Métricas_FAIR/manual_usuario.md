@@ -3,7 +3,7 @@
 | Documento | [Métricas FAIR](README.md) - Manual de usuario               |
 | --------- | ------------------------------------------------------------ |
 | Fecha     | 25/05/2020                                                   |
-| Proyecto  | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto  | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo    | Infraestructura Ontológica                                   |
 | Tipo      | Manual de usuario                                            |
 
@@ -98,7 +98,7 @@ El script main.py es el punto de entrada principal de la aplicación, que invoca
 
 * **Generación de visualización:** Es posible indicar que se cree la visualización mediante una invocación al Script main.py por medio del parámetro -v . Esto invocará el script `fairviz.py` se encarga de procesar el fichero CSV (generado en el punto anterior) que contiene los resultados de la evaluación de los indicadores FAIR para generar una gráfica de barras de niveles FAIR por área, así como gráficas radar de progreso por cada indicador, agrupadas por áreas.
 
-Para más información, consultar el documento de [Análisis de métodos FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md), donde se especifica la propuesta de metodología de evaluación FAIR, las referencias y el listado de indicadores, siguiendo las indicaciones del grupo de trabajo [FAIR Data Maturity Model](https://www.rd-alliance.org/groups/fair-data-maturity-model-wg) de la [RDA](https://www.rd-alliance.org/).
+Para más información, consultar el documento de [Análisis de métodos FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md), donde se especifica la propuesta de metodología de evaluación FAIR, las referencias y el listado de indicadores, siguiendo las indicaciones del grupo de trabajo [FAIR Data Maturity Model](https://www.rd-alliance.org/groups/fair-data-maturity-model-wg) de la [RDA](https://www.rd-alliance.org/).
 
 ## Formato de fichero de resultado de evaluación
 

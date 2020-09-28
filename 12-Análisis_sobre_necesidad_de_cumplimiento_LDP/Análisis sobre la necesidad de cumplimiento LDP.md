@@ -3,13 +3,13 @@
 | Entregable     | Documentación de la librería factoría de URIs                |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 25/05/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo         | Arquitectura Semántica                                       |
 | Tipo           | Documentación                                                |
 | Objetivo       | El presente documento intenta determinar la idoneidad  de la aplicación del conjunto de reglas establecidas por la [LDP](https://www.w3.org/TR/ldp/), sobre las operaciones HTTP, sobre recursos semánticos basados en grafos RDF. En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO. |
 | Estado         | Completado                                                   |
 | Próximos pasos |                                                              |
-| Documentación  | [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/10-Análisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)  [Propuesta de diseño API LDP y EndPoint SPARQL](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/10-Análisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos LDP Server/Propuesta de diseño API LDP y EndPoint SPARQL.md) |
+| Documentación  | [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)  [Propuesta de diseño API LDP y EndPoint SPARQL](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) |
 
 # Análisis sobre la necesidad de cumplimiento LDP
 
@@ -19,7 +19,7 @@ El presente documento intenta determinar la idoneidad  de la aplicación del con
 
 En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO.
 
-Para ello, este documento se basara en los principios y conclusiones expuestas en los documentos previos [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/10-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md) y [Propuesta de diseño API LDP y EndPoint SPARQL](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/10-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
+Para ello, este documento se basara en los principios y conclusiones expuestas en los documentos previos [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md) y [Propuesta de diseño API LDP y EndPoint SPARQL](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
 
 ## Drivers de decisión
 
@@ -99,7 +99,7 @@ Por otra parte el cliente que use el servidor LDP, no requerirá de un conocimie
 
 ### Basadas en los requisitos del proyecto
 
-Tal como se enuncia en las sección [Requisitos afectados por la decisión presentes en el del pliego](# Requisitos afectados por la decisión presentes en el del pliego), todas las requisitos enumerados en dicha sección, son implementados, o se favorece su cumplimiento (mirar documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/12-Análisis/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)), mediante el cumplimiento del estándar LPD, por lo que este análisis , también desde ese punto de vista, se recomienda sus uso.
+Tal como se enuncia en las sección [Requisitos afectados por la decisión presentes en el del pliego](# Requisitos afectados por la decisión presentes en el del pliego), todas las requisitos enumerados en dicha sección, son implementados, o se favorece su cumplimiento (mirar documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md), mediante el cumplimiento del estándar LPD, por lo que este análisis , también desde ese punto de vista, se recomienda sus uso.
 
 ### Basadas en la dificultad de implementación
 
@@ -141,7 +141,7 @@ Por otro lado creemos que cantidad de implementaciones de servidores que impleme
 
 #### Relativos a conflictos con otros protocolos
 
-Existen otros protocolos que pueden resultar interesantes para el proyecto ASIO, como es el caso de el estándar Memento descrito en el documento [Memento Guía y Normativa](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/10-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Memento%20Gu%C3%ADa%20y%20Normativa.md). Dicho protocolo establece los requerimientos para implementar un servidor que permita acceder a un mismo recurso en distintos estados del tiempo, con lo que realizar una consulta en un determinado espacio temporal, seria posible.
+Existen otros protocolos que pueden resultar interesantes para el proyecto ASIO, como es el caso de el estándar Memento descrito en el documento [Memento Guía y Normativa](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Memento%20Gu%C3%ADa%20y%20Normativa.md). Dicho protocolo establece los requerimientos para implementar un servidor que permita acceder a un mismo recurso en distintos estados del tiempo, con lo que realizar una consulta en un determinado espacio temporal, seria posible.
 
 El protocolo Memento, entra en conflicto, con 2 requerimientos de tipo **SHOULD** expresado por la LDP
 
@@ -167,7 +167,7 @@ Prevemos un soporte completo para recursos LDP-RS, tal como exige la LDP, pero e
 
 #### Relativos a contenedores
 
-Creemos que del esquema de URIs propuesto en el documento de [Esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md), puede inferirse una jerarquía de contenedores, que encajan de forma bastante precisa con los contenedores previstos por la LDP. 
+Creemos que del esquema de URIs propuesto en el documento de [Esquema de URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/08-Esquema_de_URIs_H%C3%A9rcules/ASIO_Izertis_ArquitecturaDeURIs.md), puede inferirse una jerarquía de contenedores, que encajan de forma bastante precisa con los contenedores previstos por la LDP. 
 
 Organizar adecuadamente la información dentro de contenedores, que además según lo previsto por la LDP, pueden estar anidados (un contenedor puede contener a otro contenedor),  hará un que proceso de recuperar la información, sea una tarea mucho optima, precisa y predecible por parte de un hipotético cliente. Por ejemplo, si suponemos que el componente **concepto** descrito en el esquema de URIs, puede representar una clase (por ejemplo la clase investigador), la acción de un cliente, para obtener todos los investigadores (instancias), se limitaría ha realizar una operación GET sobre el propio contenedor.
 

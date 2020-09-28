@@ -255,7 +255,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+En el ejemplo se puede observar que todos comparten el mismo sujeto (`http://example.org/netWorth/nw1/`) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 
@@ -854,7 +854,7 @@ La siguiente sección contiene requisitos para un Linked Data Platform sobre los
 
 ##### Requisitos Generales sobre RDF Source
 
-###### Requisito RF_02_01_01  [(4.3.1.1 LDP)](hhttps://www.w3.org/TR/ldp/#ldprs): Cumplimiento requisitos sobre recursos
+###### Requisito RF_02_01_01  [(4.3.1.1 LDP)](https://www.w3.org/TR/ldp/#ldprs): Cumplimiento requisitos sobre recursos
 
 Cada RDF Source, a su vez es un [LDP Resource](#Recursos LDP), por lo que el servidor **DEBE** aplicar toda la normativa vista en el apartado anterior. Los clientes deberán **PODER** inferir tripleta:
 

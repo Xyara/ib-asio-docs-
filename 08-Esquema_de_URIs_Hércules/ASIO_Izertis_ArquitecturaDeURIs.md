@@ -28,7 +28,7 @@ El Servicio publicación Web ofrece acceso a los recursos semánticos mediante *
 
 Todo dato o metadato alojado en el Proyecto Hércules (RDF o  NO-RDF), debe de ser identificado mediante un identificador único, inequívoco, estable, extensible, persistente en el tiempo y ofreciendo garantías de su procedencia, requisitos claves para facilitar su posterior reutilización, basada en  los identificadores de recursos uniformes (URIs).
 
-Para promover la reutilización de tales datos por agentes internos o externos, las URIs deben de ser **sencillos, escalables, manejables y persistentes**, tal y como se establece en el documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md).
+Para promover la reutilización de tales datos por agentes internos o externos, las URIs deben de ser **sencillos, escalables, manejables y persistentes**, tal y como se establece en el documento de [Buenas prácticas para URIs Hércules](../09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md).
 
 Para la composición de los identificadores de recursos uniformes se usara un esquema consistente, extensible y persistente, que será tratado en este mismo documento.
 
@@ -62,9 +62,9 @@ El diseño de un buen esquema de URIs es fundamental para asegurar la escalabili
 
 ### Requisitos u objetivos
 
-Para garantizar un buen esquema de URIs, el documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) establece los criterios a seguir, con respecto al uso de protocolos (HTTP/RDF), consistencia, extensibilidad, persistencia, etc.
+Para garantizar un buen esquema de URIs, el documento de [Buenas prácticas para URIs Hércules](../09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) establece los criterios a seguir, con respecto al uso de protocolos (HTTP/RDF), consistencia, extensibilidad, persistencia, etc.
 
-**El conjunto de buenas practicas tiene aplicación únicamente las URIs externas, para las cuales se define el esquema de URIs en este documento**. En concreto no tienen aplicación en la definición de URIs opacas de Wikibase, definidas en el [Modelo de Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md), dado que son URIs internas.
+**El conjunto de buenas practicas tiene aplicación únicamente las URIs externas, para las cuales se define el esquema de URIs en este documento**. En concreto no tienen aplicación en la definición de URIs opacas de Wikibase, definidas en el [Modelo de Multilingüismo](../04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md), dado que son URIs internas.
 
 ### Esquema de URIs
 
@@ -168,7 +168,7 @@ En el caso del proyecto Hércules, el modelo de dominio es más complejo y reque
 - **Instituciones**: universidades, centros de investigación, grupos de investigación, etc.
 - **Otras entidades**
 
-La resolución del identificador se implementara en la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator). Para ello se seguirán siempre los siguientes normas generales (ver documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md)):
+La resolución del identificador se implementara en la [Factoría de URIs](https://github.com/HerculesCRUE/ib-uris-generator). Para ello se seguirán siempre los siguientes normas generales (ver documento de [Buenas prácticas para URIs Hércules](../09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md)):
 
 1. Las referencias deben de ser opacas.
 2. Los identificadores (URIs) deben de ser persistentes.

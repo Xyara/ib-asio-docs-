@@ -179,7 +179,7 @@ El borrado de un contenedor implica actualizar los miembros que lo referencien, 
 
  El ejemplo ilustra sobre un contenedor simple con tres recursos, y alguna información propia del contenedor, como su titulo, y el hecho de que es un contenedor
 
-Petición a http://example.org/c1
+Petición a `http://example.org/c1`
 
 ```html
 GET /c1/ HTTP/1.1
@@ -205,7 +205,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijos-->
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 	<!--Tripletas de contención (indican miembros del contenedor)-->
-<http://example.org/c1/> <!--Sujeto-->
+<`http://example.org/c1/`> <!--Sujeto-->
    a ldp:BasicContainer; <!--Predicado, Objeto (es un contenedor basico)-->
    dcterms:title "A very simple container"; <!--Predicado(Titulo), Objeto (A very..)-->
    ldp:contains <r1>, <r2>, <r3>. <!--Predicado(contains), Objetos (r1,r2,r3)-->
@@ -217,9 +217,9 @@ Un POST de un nuevo recurso añadirá su URL a la lista de recursos contenidos
 
 Los **contenedores directos** permiten construcciones mas complejas, donde se puede definir condiciones jerárquicas en ambos sentidos,  es decir ldp:membershipResource apuntaría al contenedor padre y ldp:hasMemberRelation a los contenedores/recursos hijos.
 
-El ejemplo ilustra sobre un recurso raíz, **http://example.org/netWorth/nw1** que en este caso modela el balance de un individuo.
+El ejemplo ilustra sobre un recurso raíz, **`http://example.org/netWorth/nw1`** que en este caso modela el balance de un individuo.
 
-Petición a  http://example.org/netWorth/nw1/
+Petición a  `http://example.org/netWorth/nw1/`
 
 ```html
 GET /netWorth/nw1/ HTTP/1.1 
@@ -241,11 +241,11 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 
 <!--Body-->
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo Ontologia propia-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo Ontologia propia-->
 
-<http://example.org/netWorth/nw1/> <!--Sujeto (el propio contenedor)-->
+<`http://example.org/netWorth/nw1/`> <!--Sujeto (el propio contenedor)-->
    a o:NetWorth; <!--es un Networth (Balance)-->
-   o:netWorthOf <http://example.org/users/JohnZSmith>; <!--pertenece a Jonh Smith-->
+   o:netWorthOf <`http://example.org/users/JohnZSmith`>; <!--pertenece a Jonh Smith-->
    o:asset  <!--Activos-->
       <assets/a1>, <!--Activo 1-->
       <assets/a2>; <!--Activo 2-->
@@ -255,11 +255,11 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (<http://example.org/netWorth/nw1/>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 
-Petición a  http://example.org/netWorth/nw1/assets/
+Petición a  `http://example.org/netWorth/nw1/assets/`
 
 ```html
 GET /netWorth/nw1/assets/ HTTP/1.1 
@@ -282,19 +282,19 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijo dcterms-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo ontologia-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo ontologia-->
 
-<http://example.org/netWorth/nw1/assets/><!--Sujeto el contenedor directo-->
+<`http://example.org/netWorth/nw1/assets/`><!--Sujeto el contenedor directo-->
    a ldp:DirectContainer; <!--Es un Contenedor directo-->
    dcterms:title "The assets of JohnZSmith"; <!--Titulo-->
-   ldp:membershipResource <http://example.org/netWorth/nw1/>; <!--Relacion padre-->
+   ldp:membershipResource <`http://example.org/netWorth/nw1/`>; <!--Relacion padre-->
    ldp:hasMemberRelation o:asset; <!--Relacion hijos-->
    ldp:contains <a1>, <a2>. <!-- hijos-->
 ```
 
 El caso es parecido con los Pasivos
 
-Petición a  http://example.org/netWorth/nw1/assets/
+Petición a  `http://example.org/netWorth/nw1/assets/`
 
 ```html
 GET /netWorth/nw1/liabilities/ HTTP/1.1 
@@ -317,19 +317,19 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijo dcterms-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo ontologia-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo ontologia-->
 
-<http://example.org/netWorth/nw1/liabilities/><!--Sujeto el contenedor directo-->
+<`http://example.org/netWorth/nw1/liabilities/`><!--Sujeto el contenedor directo-->
    a ldp:DirectContainer; <!--Es un Contenedor directo-->
    dcterms:title "The liabilities of JohnZSmith"; <!--Titulo-->
-   ldp:membershipResource <http://example.org/netWorth/nw1/>; <!--Relacion padre-->
+   ldp:membershipResource <`http://example.org/netWorth/nw1/`>; <!--Relacion padre-->
    ldp:hasMemberRelation o:liability; <!--Relacion hijos-->
    ldp:contains <l1>, <l2>, <l3>. <!-- hijos-->
 ```
 
 Un POST de uno de los contenedores directos asset/liability sobre el contenedor, deberá crear un nuevo asset, y deberá añadirse a la lista de o:asset en el recurso nw1 y al predicado de ldp:contains
 
-Petición a  **http://example.org/netWorth/nw1/liabilities/**
+Petición a  **`http://example.org/netWorth/nw1/liabilities/`**
 
 ```html
 <!--HEADERS-->
@@ -340,7 +340,7 @@ Content-Type: text/turtle
 Content-Length: 63
 
 <!--BODY-->
-@prefix o: <http://example.org/ontology#>.
+@prefix o: <`http://example.org/ontology#`>.
 
 <> <!--Hace referencia al contenedor invocado-->
    a o:Liability.<!--Definimos el tipo-->
@@ -352,7 +352,7 @@ Respuesta
 
 ```html
 HTTP/1.1 201 Created <!--Codigo de respuesta-->
-Location: http://example.org/netWorth/nw1/liabilities/l4 <!--URL Acceso-->
+Location: `http://example.org/netWorth/nw1/liabilities/l4` <!--URL Acceso-->
 Date: Thu, 12 Jun 2014 19:56:13 GMT <!--Fecha de respuesta-->
 Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
       <http://www.w3.org/ns/ldp#Resource>; rel="type" <!--Contenido-->
@@ -360,9 +360,9 @@ Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
 
 También seria necesario actualizar los contenedores
 
-En el recurso net worth <<http://example.org/netWorth/nw1/>> **o:liability**  <liabilities/l4> 
+En el recurso net worth <`http://example.org/netWorth/nw1/`> **o:liability**  <liabilities/l4> 
 
-En el contenedor liability <<**http://example.org/netWorth/nw1/liabilities/**>> ldp:contains  <l4> 
+En el contenedor liability <<**`http://example.org/netWorth/nw1/liabilities/`**>> ldp:contains  <l4> 
 
 #### Contenedor Indirecto
 
@@ -392,11 +392,11 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijo dcterms-->
 @prefix foaf: <http://xmlns.com/foaf/0.1/>. <!--Prefijo foaf-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo ontology-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo ontology-->
 
-<http://example.org/netWorth/nw1/> <!--Sujeto el recurso-->
+<`http://example.org/netWorth/nw1/`> <!--Sujeto el recurso-->
    a o:NetWorth; <!--Es del tipo o:NetWorth-->
-   o:netWorthOf <http://example.org/users/JohnZSmith>; <!--Pertenece a JohnZSmith-->
+   o:netWorthOf <`http://example.org/users/JohnZSmith`>; <!--Pertenece a JohnZSmith-->
    o:advisor <!--Tiene como asesores-->
    	 <advisors/bob#me>,     # URI of a person <!--URL Acceso bob-->
    	 <advisors/marsha#me>. <!--URL Acceso marsha-->
@@ -426,7 +426,7 @@ Content-Length: 72
 
 <!--Prefijos-->
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix o: <http://example.org/ontology#>.
+@prefix o: <`http://example.org/ontology#`>.
 
 <> <!--Sujeto es la URI de la petición-->
    a o:Advisor;	<!--Definicion de tipo-->
@@ -438,13 +438,13 @@ Respuesta
 
 ```html
 HTTP/1.1 201 Created <!--Codigo de respuesta-->
-Location: http://example.org/netWorth/nw1/advisors/george <!--URL Recurso creado-->
+Location: `http://example.org/netWorth/nw1/advisors/george` <!--URL Recurso creado-->
 Date: Thu, 12 Jun 2014 19:56:13 GMT <!--Fecha creación-->
 Link: <http://www.w3.org/ns/ldp#RDFSource>; rel="type", <!--Contiene un RDFSource-->
       <http://www.w3.org/ns/ldp#Resource>; rel="type" <!--Contiene un Recurso-->
 ```
 
-Si todo fue bien es se crea el recurso en la URI http://example.org/netWorth/nw1/advisors/george, y se añaden las siguientes tripletas
+Si todo fue bien es se crea el recurso en la URI `http://example.org/netWorth/nw1/advisors/george`, y se añaden las siguientes tripletas
 
 En el recurso net worth <<http://example.org/netWorth/nw1/>> **o:advisor**  <liabilities/george#me> 
 
@@ -854,7 +854,7 @@ La siguiente sección contiene requisitos para un Linked Data Platform sobre los
 
 ##### Requisitos Generales sobre RDF Source
 
-###### Requisito RF_02_01_01  [(4.3.1.1 LDP)](hhttps://www.w3.org/TR/ldp/#ldprs): Cumplimiento requisitos sobre recursos
+###### Requisito RF_02_01_01  [(4.3.1.1 LDP)](https://www.w3.org/TR/ldp/#ldprs): Cumplimiento requisitos sobre recursos
 
 Cada RDF Source, a su vez es un [LDP Resource](#Recursos LDP), por lo que el servidor **DEBE** aplicar toda la normativa vista en el apartado anterior. Los clientes deberán **PODER** inferir tripleta:
 

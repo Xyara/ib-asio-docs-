@@ -127,7 +127,7 @@ Desde el punto de dista de diseño, Trellis esta disponible de forma modular, es
 
 Trellis ofrece una API LDP con un comportamiento estable desde el punto de vista del cliente independientemente del sistema de almacenamiento usado, es decir, la interacción con el cliente no se ve afectada, por lo que el cambio de diversos triple store, es siempre transparente para el cliente.  
 
-El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**](../../../00-Analisis/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
+El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**](../../00-Análisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
 
 ##### Apache Jena Fuseki
 
@@ -377,5 +377,5 @@ En definitiva, esta decisión, solo pretende una base solida, sobre la que poder
 ## Links
 
 - [Analisis de Test LDP (caso de uso Trellis)](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
-- [Propuesta de diseño API LDP y EndPoint SPARQL](../../../00-Analisis/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
+- [Propuesta de diseño API LDP y EndPoint SPARQL](../../00-Análisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
 - [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)

@@ -146,7 +146,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijos-->
 @prefix ldp: <http://www.w3.org/ns/ldp#>.
 	<!--Tripletas de contención (indican miembros del contenedor)-->
-<http://example.org/c1/> <!--Sujeto-->
+<`http://example.org/c1/`> <!--Sujeto-->
    a ldp:BasicContainer; <!--Predicado, Objeto (es un contenedor basico)-->
    dcterms:title "A very simple container"; <!--Predicado(Titulo), Objeto (A very..)-->
    ldp:contains <r1>, <r2>, <r3>. <!--Predicado(contains), Objetos (r1,r2,r3)-->
@@ -182,11 +182,11 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 
 <!--Body-->
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo Ontologia propia-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo Ontologia propia-->
 
-<http://example.org/netWorth/nw1/> <!--Sujeto (el propio contenedor)-->
+<`http://example.org/netWorth/nw1/`> <!--Sujeto (el propio contenedor)-->
    a o:NetWorth; <!--es un Networth (Balance)-->
-   o:netWorthOf <http://example.org/users/JohnZSmith>; <!--pertenece a Jonh Smith-->
+   o:netWorthOf <`http://example.org/users/JohnZSmith`>; <!--pertenece a Jonh Smith-->
    o:asset  <!--Activos-->
       <assets/a1>, <!--Activo 1-->
       <assets/a2>; <!--Activo 2-->
@@ -196,7 +196,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (<http://example.org/netWorth/nw1/>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 
@@ -223,12 +223,12 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       
 @prefix ldp: <http://www.w3.org/ns/ldp#>. <!--Prefijo ldp-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijo dcterms-->
-@prefix o: <http://example.org/ontology#>. <!--Prefijo ontologia-->
+@prefix o: <`http://example.org/ontology#`>. <!--Prefijo ontologia-->
 
-<http://example.org/netWorth/nw1/assets/><!--Sujeto el contenedor directo-->
+<`http://example.org/netWorth/nw1/assets/`><!--Sujeto el contenedor directo-->
    a ldp:DirectContainer; <!--Es un Contenedor directo-->
    dcterms:title "The assets of JohnZSmith"; <!--Titulo-->
-   ldp:membershipResource <http://example.org/netWorth/nw1/>; <!--Relacion padre-->
+   ldp:membershipResource <`http://example.org/netWorth/nw1/`>; <!--Relacion padre-->
    ldp:hasMemberRelation o:asset; <!--Relacion hijos-->
    ldp:contains <a1>, <a2>. <!-- hijos-->
 ```
@@ -260,7 +260,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
 @prefix dcterms: <http://purl.org/dc/terms/>. <!--Prefijo dcterms-->
 @prefix o: <http://example.org/ontology#>. <!--Prefijo ontologia-->
 
-<http://example.org/netWorth/nw1/liabilities/><!--Sujeto el contenedor directo-->
+<`http://example.org/netWorth/nw1/liabilities/`><!--Sujeto el contenedor directo-->
    a ldp:DirectContainer; <!--Es un Contenedor directo-->
    dcterms:title "The liabilities of JohnZSmith"; <!--Titulo-->
    ldp:membershipResource <http://example.org/netWorth/nw1/>; <!--Relacion padre-->
@@ -293,7 +293,7 @@ Respuesta
 
 ```html
 HTTP/1.1 201 Created <!--Codigo de respuesta-->
-Location: http://example.org/netWorth/nw1/liabilities/l4 <!--URL Acceso-->
+Location: `http://example.org/netWorth/nw1/liabilities/l4` <!--URL Acceso-->
 Date: Thu, 12 Jun 2014 19:56:13 GMT <!--Fecha de respuesta-->
 Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
       <http://www.w3.org/ns/ldp#Resource>; rel="type" <!--Contenido-->
@@ -379,7 +379,7 @@ Respuesta
 
 ```html
 HTTP/1.1 201 Created <!--Codigo de respuesta-->
-Location: http://example.org/netWorth/nw1/advisors/george <!--URL Recurso creado-->
+Location: `http://example.org/netWorth/nw1/advisors/george` <!--URL Recurso creado-->
 Date: Thu, 12 Jun 2014 19:56:13 GMT <!--Fecha creación-->
 Link: <http://www.w3.org/ns/ldp#RDFSource>; rel="type", <!--Contiene un RDFSource-->
       <http://www.w3.org/ns/ldp#Resource>; rel="type" <!--Contiene un Recurso-->

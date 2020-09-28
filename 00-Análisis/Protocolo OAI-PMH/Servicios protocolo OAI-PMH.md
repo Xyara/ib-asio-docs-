@@ -76,12 +76,10 @@ Enviará un XML con la siguiente estructura donde:
 
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
-\<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\"
+\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi=<http://www.w3.org/2001/XMLSchema-instance>
-xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/
-
-http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
+xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
 
 \<responseDate\>2002-06-01T19:30:00Z\</responseDate\>
 
@@ -141,13 +139,11 @@ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
 
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
-\<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\"
+\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
 
-xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/
-
-http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
+xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/" >
 
 \<responseDate\>2002-02-08T14:27:19Z\</responseDate\>
 
@@ -213,13 +209,13 @@ Enviará un XML con la siguiente estructura donde:
 
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
-\<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\"
+\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
 xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
 
-xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/
+xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
 
-http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
+http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
 \<responseDate\>2002-02-08T08:55:46Z\</responseDate\>
 
@@ -243,7 +239,7 @@ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
 
 \<metadata\>
 
-\<CVN xmlns=\"http://codes.cvn.fecyt.es/beans\"\>
+\<CVN xmlns="http://codes.cvn.fecyt.es/beans">
 
 \<CvnItemBean\>
 
@@ -356,13 +352,13 @@ CIENTIFIO\</Value\>
 
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
-\<OAI-PMH xmlns=\"http://www.openarchives.org/OAI/2.0/\"
+\<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
 
-xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-xsi:schemaLocation=\"http://www.openarchives.org/OAI/2.0/
+xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
 
-http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd\"\>
+http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 
 \<responseDate\>2002-02-08T08:55:46Z\</responseDate\>
 

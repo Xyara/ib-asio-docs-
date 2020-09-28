@@ -7,8 +7,7 @@
 | Módulo     | Infraestructura Ontológica                                   |
 | Tipo       | Documento                                                    |
 | Objetivo   | Este documento recoge la definición del esquema de URIs Hércules siguiendo las recomendaciones de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) y el [Modelo Multilingüismo](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/04-Modelo_multiling%C3%BCismo/ASIO_Izertis_ModeloMultilinguismo.md). |
-| Estado     | **100%** La denifición del esquema de URIs Hércules se considera finalizado. |
-
+| Estado     | **100%** La definición del esquema de URIs Hércules se considera finalizado. |
 
 
 # Esquema de URIs Hércules

@@ -20,7 +20,7 @@ Kekcloak provée los siguientes endpoints o protocolos:
 
 ### Configuración
 
-Será preciso seguir una serie de pasos para llegar a configurar Keycloak para su utilización, para lo cual habrá que acceder a la consola de administración de Keycloak, por ejemplo http://localhost:8080/auth, con el usuario administrador que se haya definido.
+Será preciso seguir una serie de pasos para llegar a configurar Keycloak para su utilización, para lo cual habrá que acceder a la consola de administración de Keycloak, por ejemplo `http://localhost:8080/auth`, con el usuario administrador que se haya definido.
 
 #### Creación Realm
 
@@ -65,13 +65,13 @@ Se creará un usuario con los datos necesarios. Se deberá crear también una co
 
 #### Obtención de la configuración para OpenID
 
-Una vez configurado el endopoint, se podrá obtener los datos de configuración para los clientes, para ello existe una URL en la que muestra esta información, por ejemplo si el Realm se llama "dev" sería http://localhost:8080/auth/realms/dev/.well-known/openid-configuration
+Una vez configurado el endopoint, se podrá obtener los datos de configuración para los clientes, para ello existe una URL en la que muestra esta información, por ejemplo si el Realm se llama "dev" sería `http://localhost:8080/auth/realms/dev/.well-known/openid-configuration`
 
 De aquí lo importante son los siguientes parámetros:
 
-* authorization_endpoint: http://localhost:8080/auth/realms/dev/protocol/openid-connect/auth
-* token_endpoint: http://localhost:8080/auth/realms/dev/protocol/openid-connect/token
-* jwks_uri: http://localhost:8080/auth/realms/dev/protocol/openid-connect/certs
+* authorization_endpoint: `http://localhost:8080/auth/realms/dev/protocol/openid-connect/auth`
+* token_endpoint: `http://localhost:8080/auth/realms/dev/protocol/openid-connect/token`
+* jwks_uri: `http://localhost:8080/auth/realms/dev/protocol/openid-connect/certs`
 
 ### JWKS
 

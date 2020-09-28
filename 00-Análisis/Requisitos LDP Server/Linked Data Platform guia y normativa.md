@@ -196,7 +196,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (`<http://example.org/netWorth/nw1/>`) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 
@@ -301,9 +301,9 @@ Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
 
 También seria necesario actualizar los contenedores
 
-En el recurso net worth `<http://example.org/netWorth/nw1/>` **o:liability**  <liabilities/l4> 
+En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:liability**  <liabilities/l4> 
 
-En el contenedor liability `<http://example.org/netWorth/nw1/liabilities/>` ldp:contains  <l4> 
+En el contenedor liability <<`http://example.org/netWorth/nw1/liabilities/`>> ldp:contains  <l4> 
 
 ###### Contenedor Indirecto
 
@@ -387,9 +387,9 @@ Link: <http://www.w3.org/ns/ldp#RDFSource>; rel="type", <!--Contiene un RDFSourc
 
 Si todo fue bien es se crea el recurso en la URI `http://example.org/netWorth/nw1/advisors/george`, y se añaden las siguientes tripletas
 
-En el recurso net worth `<<http://example.org/netWorth/nw1/>` **o:advisor**  <liabilities/george#me> 
+En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:advisor**  <liabilities/george#me> 
 
-En el contenedor liability `<http://example.org/netWorth/nw1/advisors/>` ldp:contains  <george> 
+En el contenedor liability <<`http://example.org/netWorth/nw1/advisors/`>> ldp:contains  <george> 
 
 En resumen, en el grafico se muestran los contenedores vistos y sus relaciones con los recursos
 

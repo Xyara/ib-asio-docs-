@@ -350,7 +350,7 @@ El endpoint SPARQL será el encargado de ofrecer a los usuarios de la plataforma
 
 ### Arquitectura hito 1
 
-En el Anexo [Arquitectura hito 1](./anexo-ASIO_Izertis_Arquitectura_hito1.md) se muestra la adaptación de esta arquitectura de cara al hito 1.
+En el Anexo [Arquitectura hito 1](./anexos/anexo-ASIO_Izertis_Arquitectura_hito1.md) se muestra la adaptación de esta arquitectura de cara al hito 1.
 
 ## Arquitectura aplicación de gestión
 
@@ -674,7 +674,7 @@ Para la creación del modelo las principales fuentes utilizadas fueron las ontol
 
 Para la definición del esquema de URIs se seguirá la propuesta desarrollada para el portal de datos de la biblioteca nacional del congreso de Chile en el año 2011 y que actualmente sigue en producción. De hecho, dicho esquema de URIs se ha mantenido en funcionamiento desde los inicios del sistema y actualmente sirve de enlace entre los diferentes componentes del sistema. Consideramos importante que se realice un diseño del esquema de URIs jerárquico y homogéneo, tratando de que se pueda mantenerse lo más estable posible en el futuro.
 
-Para más información, consultar el entregable de [esquema de URIs](../../entregables_hito_1/08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md).
+Para más información, consultar el entregable de [esquema de URIs](../../../08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md).
 
 ## Patrones arquitectónicos
 

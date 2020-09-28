@@ -6,7 +6,7 @@ El presente documento intenta determinar la idoneidad  de la aplicación del con
 
 En definitiva, el documento trata de analizar, pros y contras de su uso, ya sea de forma global o parcial, desde el punto de vista del proyecto ASIO.
 
-Para ello, este documento se basara en los principios y conclusiones expuestas en los documentos previos [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md) y [Propuesta de diseño API LDP y EndPoint SPARQL](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Propuesta de diseño API LDP y EndPoint SPARQL.md).
+Para ello, este documento se basara en los principios y conclusiones expuestas en los documentos previos [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md) y [Propuesta de diseño API LDP y EndPoint SPARQL](./Requisitos%20LDP%20Server/Propuesta%20de%20diseño%20API%20LDP%20y%20EndPoint%20SPARQL.md).
 
 ## Drivers de decisión
 
@@ -85,7 +85,7 @@ Por otra parte el cliente que use el servidor LDP, no requerirá de un conocimie
 
 ### Basadas en los requisitos del proyecto
 
-Tal como se enuncia en las sección [Requisitos afectados por la decisión presentes en el del pliego](# Requisitos afectados por la decisión presentes en el del pliego), todas las requisitos enumerados en dicha sección, son implementados, o se favorece su cumplimiento (mirar documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md)), mediante el cumplimiento del estándar LPD, por lo que este análisis , también desde ese punto de vista, se recomienda sus uso.
+Tal como se enuncia en las sección [Requisitos afectados por la decisión presentes en el del pliego](# Requisitos afectados por la decisión presentes en el del pliego), todas las requisitos enumerados en dicha sección, son implementados, o se favorece su cumplimiento (mirar documento [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](./Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)), mediante el cumplimiento del estándar LPD, por lo que este análisis , también desde ese punto de vista, se recomienda sus uso.
 
 ### Basadas en la dificultad de implementación
 

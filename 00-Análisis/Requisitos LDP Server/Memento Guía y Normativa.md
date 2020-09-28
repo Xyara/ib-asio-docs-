@@ -713,7 +713,7 @@ HTTP/1.1 200 OK
 
 - **Recursos excluidos de la negociación de contenidos:** 
 
-  Algunos recursos deben de ser excluidos de la negociación de Datetime, por ejemplo ficheros Javascript de una pagina Web. En estos casos se usara la cabecera Link  con la URI de destino http://mementoweb.org/terms/donotnegotiate.
+  Algunos recursos deben de ser excluidos de la negociación de Datetime, por ejemplo ficheros Javascript de una pagina Web. En estos casos se usara la cabecera Link  con la URI de destino `http://mementoweb.org/terms/donotnegotiate`.
 
   ```
   HTTP/1.1 200 OK

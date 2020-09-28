@@ -557,7 +557,7 @@ En definitiva, proporciona un comportamiento que se ajusta a los estándares def
 
 #### Trellis
 
-Se ha creado el repositorio [asio_ldp](https://git.izertis.com/universidaddemurcia/semantmurc/asio-ldp), con la finalidad de poder alojar en el mismo, los cambios que puedan ser necesarios, sobre el servidor Trellis, usando como base la última versión (0.10).
+Se ha creado el repositorio [asio_ldp](https://github.com/HerculesCRUE/ib-asio-ldp), con la finalidad de poder alojar en el mismo, los cambios que puedan ser necesarios, sobre el servidor Trellis, usando como base la última versión (0.10).
 
 Se ha desplegado tanto en contenedores Docker, como de forma local, con el mismo resultado (en cuanto a los resultados de la evaluación del Test Suit), por lo tanto, podemos garantizar que el despliegue o la configuración del sistema de almacenamiento no altera el resultado
 

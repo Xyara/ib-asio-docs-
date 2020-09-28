@@ -127,7 +127,7 @@ Desde el punto de dista de diseño, Trellis esta disponible de forma modular, es
 
 Trellis ofrece una API LDP con un comportamiento estable desde el punto de vista del cliente independientemente del sistema de almacenamiento usado, es decir, la interacción con el cliente no se ve afectada, por lo que el cambio de diversos triple store, es siempre transparente para el cliente.  
 
-El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Propuesta de diseño API LDP y EndPoint SPARQL.md)) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
+El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**](../ldp/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
 
 ##### Apache Jena Fuseki
 
@@ -164,7 +164,7 @@ Los requisitos [5.18](#REQ 5.18 Gestión de dataset (página 65 del pliego)), [5
 
 ##### Opción 1: Wikibase
 
-Según la [documentación](https://www.wikibase-solutions.com/articles/developer-log-oauth) disponible, [WSOAuth](https://www.mediawiki.org/wiki/Extension:WSOAuth/For_developers) permite que Wikibase delegue la autentificación a cualquier proveedor OAuth, permitiendo mediante el uso de PluggableAuth, un inicio seguro de sesión para el usuario, desde una ubicación central mediante un inicio de sesión único. 
+Según la [documentación](https://www.wikibase-solutions.com/developer-logs/oauth) disponible, [WSOAuth](https://www.mediawiki.org/wiki/Extension:WSOAuth/For_developers) permite que Wikibase delegue la autentificación a cualquier proveedor OAuth, permitiendo mediante el uso de PluggableAuth, un inicio seguro de sesión para el usuario, desde una ubicación central mediante un inicio de sesión único. 
 
 En este aspecto, mediante el uso del plugin,  Wikibase podría ser una opción viable.
 
@@ -228,7 +228,7 @@ Desde el punto de vista del cumplimento LDP, [Trellis](https://github.com/trelli
 
 Para evaluar el cumplimiento de dichos requisitos de primera mano, se ha usado el [LDP Test Suit](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html), creado exprofeso por la LDP, para evaluar el nivel de cumplimiento.
 
-Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md)
+Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](../ldp/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 
 Por otra parte nos parece muy interesante que el comportamiento del API, es en todo momento muy consistente sea cual sea el sistema de almacenamiento elegido (al menos en los probados) ya sea relacional (PostgreSQL) , en memoria o triple store (TDB o Blaze Graph), demostrándose este hecho en los resultados de los test, ya que estos **no se ven afectados** . Este hecho que permite garantizar mucha flexibilidad a la hora de cambiar el sistema de almacenamiento (requisito expresado en el pliego), sin afectar a los clientes.
 
@@ -377,6 +377,6 @@ En definitiva, esta decisión, solo pretende una base solida, sobre la que poder
 ## Links
 
 - [Trazabilidad de requisitos]([https://izertis100.sharepoint.com/sites/ProyectoHrcules-UM/_layouts/15/doc2.aspx?OR=teams&CT=1585419729807&action=edit&sourcedoc=%7BAB59423A-0EDE-4746-AD68-BEA7F4750CFD%7D](https://izertis100.sharepoint.com/sites/ProyectoHrcules-UM/_layouts/15/doc2.aspx?OR=teams&CT=1585419729807&action=edit&sourcedoc={AB59423A-0EDE-4746-AD68-BEA7F4750CFD}))
-- [Analisis de Test LDP (caso de uso Trellis)]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Analisis de Test LDP (caso de uso Trellis).md))
-- [Propuesta de diseño API LDP y EndPoint SPARQL]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Propuesta de diseño API LDP y EndPoint SPARQL.md))
-- [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM]([https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/blob/master/arquitectura_semantica/analisis_funcional/Requisitos LDP Server/Requisitos funcionales para API REST LDP en proyecto ASIO de la UM.md))
+- [Analisis de Test LDP (caso de uso Trellis)](../ldp/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
+- [Propuesta de diseño API LDP y EndPoint SPARQL](../ldp/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
+- [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](../ldp/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)

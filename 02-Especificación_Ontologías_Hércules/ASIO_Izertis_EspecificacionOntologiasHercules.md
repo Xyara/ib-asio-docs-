@@ -3,7 +3,7 @@
 | Entregable                       | Especificación de las ontologías Hércules                    |
 | -------------------------------- | ------------------------------------------------------------ |
 | Fecha                            | 25/05/2020                                                   |
-| Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto                         | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://tic.crue.org/hercules/) |
 | Módulo                           | Infraestructura Ontológica                                   |
 | Tipo                             | Entregable complementario a la documentación de la ontología, que se encuentra en la carpeta [Red de ontologías Hércules](../01-Red_de_Ontologías_Hércules). |
 | Objetivo                         | Documento donde se explica la aproximación para especificar, personalizando, las partes de la red de ontologías Hércules según los intereses del *stakeholder* en cuestión. |

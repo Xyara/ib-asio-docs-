@@ -36,11 +36,11 @@ docker-compose up -d
 
 A partir del despliegue esta disponible el End Point SPARQL.
 
-Es accesible desde el **navegador** en la ruta http://localhost:3030/
+Es accesible desde el **navegador** en la ruta `http://localhost:3030/`
 
 ![fuseki_main](https://i.ibb.co/5xhJqcf/fuseki-main.png)
 
-Y pulsando el botón query, podemos ejecutar queries SPARQL en el EndPoint http://localhost:3030/trellis
+Y pulsando el botón query, podemos ejecutar queries SPARQL en el EndPoint `http://localhost:3030/trellis`
 
 ![](https://i.ibb.co/X3M8fYS/fuseki-query.png)
 
@@ -236,7 +236,7 @@ Respuesta
 
 A partir del proyecto Trellis personalizado para le proyecto [asio-ldp](https://github.com/HerculesCRUE/ib-asio-ldp), es necesario modificar el fichero config-dev.yml (la línea resources para que apunte al Endpoint SPARQL de Fuseki con el dataset del proyecto).
 
-```bash
+```yml
 server:
   applicationConnectors:
     - type: http

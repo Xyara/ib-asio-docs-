@@ -1,6 +1,6 @@
 ![](./images/logos_feder.png)
 
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿# Despliegue en entorno de desarrollo para la Universidad de Murcia
+# Despliegue en entorno de desarrollo para la Universidad de Murcia
 
 ---
 
@@ -261,7 +261,7 @@ Los servicios desplegados son:
   Puertos: **9000 (API REST), Syslog TCP/UDP (1514),  GELF TCP/UDP (12201)**
   GRAYLOG\_PASSWORD\_SECRET: **1z3rt1sH3rcul3s?**
   GRAYLOG_ROOT_PASSWORD_SHA2: **d094d2fbb2c507c4ffe3c0073568e83f89c9993af7003efa94d93d77**
-  GRAYLOG\_HTTP\_EXTERNAL\_URI: **http://127.0.0.1:9000/**
+  GRAYLOG\_HTTP\_EXTERNAL\_URI: `http://127.0.0.1:9000/`
   Dependencias: **mongo_db, elasticsearch**
 
 #### Despliegue
@@ -614,7 +614,7 @@ Los servicios desplegados son:
 
   SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: **herc-iz-bd-desa.atica.um.es:29092**
   SPRING_KAFKA_CONSUMER_GROUP_ID: **wikibase-event-processor**
-  APP_MICROSERVICES_WIKIBASE_STORAGE_ADAPTER_BASE_URL: **http://wikibase-storage-adapter:8084**
+  APP_MICROSERVICES_WIKIBASE_STORAGE_ADAPTER_BASE_URL: `http://wikibase-storage-adapter:8084`
 
   SPRING_PROFILES_ACTIVE: **des**
 
@@ -631,11 +631,11 @@ Los servicios desplegados son:
   APP_SWAGGER_ENABLED: **true**
   APP_DATA_PATH: **""**
   APP_DATA_INITIAL: **true**
-  APP_WIKIBASE_API_URL: **http://herc-iz-bd-desa.atica.um.es:8181/api.php**
+  APP_WIKIBASE_API_URL: `http://herc-iz-bd-desa.atica.um.es:8181/api.php`
   APP_WIKIBASE_API_USERNAME: **WikibaseAdmin**
   APP_WIKIBASE_API_PASSWORD: **WikibaseAdminPass**
   APP_WIKIBASE_QUERY_DEFAULT_LANGUAGE: **es**
-  APP_WIKIBASE_SITE_URI: **http://herc-iz-bd-desa.atica.um.es:8181/entity/**
+  APP_WIKIBASE_SITE_URI: `http://herc-iz-bd-desa.atica.um.es:8181/entity/`
   SPRING_PROFILES_ACTIVE: **des**
   GRAYLOG_HOST: "herc-iz-bd-desa.atica.um.es"
 

@@ -377,6 +377,5 @@ En definitiva, esta decisión, solo pretende una base solida, sobre la que poder
 ## Links
 
 - [Analisis de Test LDP (caso de uso Trellis)](../../00-An%C3%A1lisis/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
-- [Propuesta de diseño API LDP y EndPoint SPARQL](../12-An%C3%A1lisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
 - [Propuesta de diseño API LDP y EndPoint SPARQL](../arquitectura_semantica/ldp/Requisitos%20LDP%20Server/Propuesta%20de%20diseño%20API%20LDP%20y%20EndPoint%20SPARQL.md)
 - [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](../../00-An%C3%A1lisis/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)

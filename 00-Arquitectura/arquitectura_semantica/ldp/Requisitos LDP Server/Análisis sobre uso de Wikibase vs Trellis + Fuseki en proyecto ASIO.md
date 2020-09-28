@@ -164,7 +164,7 @@ Los requisitos [5.18](#REQ 5.18 Gestión de dataset (página 65 del pliego)), [5
 
 ##### Opción 1: Wikibase
 
-Según la [documentación](https://www.wikibase-solutions.com/articles/developer-log-oauth) disponible, [WSOAuth](https://www.mediawiki.org/wiki/Extension:WSOAuth/For_developers) permite que Wikibase delegue la autentificación a cualquier proveedor OAuth, permitiendo mediante el uso de PluggableAuth, un inicio seguro de sesión para el usuario, desde una ubicación central mediante un inicio de sesión único. 
+Según la [documentación](https://www.wikibase-solutions.com/developer-logs/oauth) disponible, [WSOAuth](https://www.mediawiki.org/wiki/Extension:WSOAuth/For_developers) permite que Wikibase delegue la autentificación a cualquier proveedor OAuth, permitiendo mediante el uso de PluggableAuth, un inicio seguro de sesión para el usuario, desde una ubicación central mediante un inicio de sesión único. 
 
 En este aspecto, mediante el uso del plugin,  Wikibase podría ser una opción viable.
 

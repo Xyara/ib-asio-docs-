@@ -73,7 +73,7 @@ Enviará un XML con la siguiente estructura donde:
 
 
 
-
+```xml
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
 \<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
@@ -130,13 +130,13 @@ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 \</ListIdentifiers\>
 
 \</OAI-PMH\>
-
+```
 
 
 ### Respuesta indicando error:
 
 
-
+```xml
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
 \<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
@@ -154,7 +154,7 @@ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/" >
 \<error code=\"noRecordsMatch\"/\>
 
 \</OAI-PMH\>
-
+```
 **Servicio GetRecord**
 ------------------------------------
 
@@ -206,7 +206,7 @@ Enviará un XML con la siguiente estructura donde:
 
 
 
-
+```xml
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
 \<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
@@ -343,11 +343,11 @@ CIENTIFIO\</Value\>
 \</GetRecord\>
 
 \</OAI-PMH\>
-
+```
 
 
 ### Respuesta indicando error:
-
+```xml
 \<?xml version=\"1.0\" encoding=\"UTF-8\"?\>
 
 \<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
@@ -364,7 +364,7 @@ xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd" >
 arXiv\</error\>
 
 \</OAI-PMH\>
-
+```
 
 
 

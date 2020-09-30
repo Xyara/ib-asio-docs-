@@ -129,6 +129,30 @@ Los usuarios con rol administrador de la universidad, podrán modificar ontolog�
 
 
 
+Pantalla de Inicio
+------------------
+Los usuarios al logear en la aplicación y entrar en la pantalla de inicio se encontrarán un portal donde podrán elegir entre diferentes opciones.
+
+![Pantalla de inicio](./images/mocks/home.png)
+
+
+
+Pantalla de Proyectos
+---------------------
+
+### Pantalla de búsqueda de proyectos
+Para buscar proyectos los usuarios podrán acceder a un pantalla donde se permitirá buscar proyectos, puediendo filtrar por diferentes campos.
+
+![Pantalla PROYECTOS](./images/mocks/busquedaProyectos.png)
+
+
+### Popup de detalle de proyecto
+El usuario podrá acceder al detalle de los proyectos desde la pantalla de búsqueda, en esta pantalla se le permitirá descargar el detalle en diferentes formatos.
+
+![Pantalla detalle proyecto](./images/mocks/detalleProyecto.png)
+
+
+
 Consulta de datos
 -----------------
 

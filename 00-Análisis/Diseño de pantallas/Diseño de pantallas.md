@@ -133,6 +133,8 @@ Pantalla de Inicio
 ------------------
 Los usuarios al logear en la aplicación y entrar en la pantalla de inicio se encontrarán un portal donde podrán elegir entre diferentes opciones.
 
+Tendrán la posibilidad de buscar directamente mediante un buscador global que les llevará al detalle del objeto seleccionado.
+
 ![Pantalla de inicio](./images/mocks/home.png)
 
 

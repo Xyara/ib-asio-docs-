@@ -155,6 +155,20 @@ El usuario podrá acceder al detalle de los proyectos desde la pantalla de búsq
 
 
 
+Pantalla de Investigadores
+--------------------------
+
+### Pantalla de búsqueda de investigadores
+Para buscar invesigadores los usuarios podrán acceder a un pantalla donde se permitirá buscar este tipo de dato, puediendo filtrar por diferentes campos.
+
+![Pantalla PROYECTOS](./images/mocks/busquedaInvestigador.png)
+
+
+### Popup de detalle de investigadores
+El usuario podrá acceder al detalle de los investigadores desde la pantalla de búsqueda, en esta pantalla se le permitirá descargar el detalle en diferentes formatos.
+
+![Pantalla detalle proyecto](./images/mocks/detalleInvestigador.png)
+
 Consulta de datos
 -----------------
 

@@ -164,7 +164,13 @@ Para consultar datos, los usuarios podrán acceder a una pantalla donde se permi
 
 ![Pantalla SPARQL](./images/mocks/consulta.png)
 
+Se puede ver el resultado de diferentes maneras.
 
+![Pantalla SPARQL GRAPH](./images/mocks/consulta-grafico.png)
+
+![Pantalla SPARQL TIMELINE](./images/mocks/consulta-timeline.png)
+
+![Pantalla SPARQL MAP](./images/mocks/consulta-mapa.png)
 
 En esta pantalla habrá la opción de seleccionar una consulta de datos predeterminada y de modificarla.
 

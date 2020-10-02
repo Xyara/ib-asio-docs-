@@ -184,6 +184,8 @@ Los resultados de la consulta se podrán mostrar en diferentes formatos dependie
 
 ![Pantalla SPARQL TIMELINE](./images/mocks/consulta-timeline.png)
 
+Para el modelo de mapa se utilizará el componente externo de OpenStreetMaps, la funcionalidad quedará condicionada a lo que permita el componente.
+
 ![Pantalla SPARQL MAP](./images/mocks/consulta-mapa.png)
 
 

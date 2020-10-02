@@ -195,9 +195,9 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
 3. Invocación del proceso para la realización de backups.
 
-   > Desde que se detiene el ingestador de información `dataset-importer` hasta que se inicia el proceso de backup debe pasar un tiempo lo suficientemente largo como para que se vacíen las colas kafka con los datos de entrada para el módulo **management-system** encargado de la generación de ficheros RDF.
+   > Desde que se detiene el ingestador de información `dataset-importer` hasta que se inicia el proceso de backup debe pasar un tiempo lo suficientemente largo como para que se vacíen las colas kafka con los datos de entrada del módulo **management-system** encargado de la generación de ficheros RDF.
 
-   > Para verificar que no hay información pendiente de procesar, los modulos `management-system` y `event-processor` dispondrán de un método actuator para verificar que las colas _management-data_ y _general-data_ están vacías.
+   > Para verificar que no hay información pendiente de procesar, el módulo `delta-processor` dispondrán de un método actuator para verificar que las colas _management-data_ y _general-data_ están vacías.
 
 4. Invocación a un método REST del **triple-store-adapter** con un fichero DELTA como parámetro. Esta invocación se hará a través de un comando curl dentro de un fichero sh.
 
@@ -213,7 +213,7 @@ Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y p
 
 La adaptación de los datos del triple store (Trellis, Wikibase) se harán de forma automática a partir de los ficheros [DELTA](#DELTA) procedentes de la arquitectura ontológica.
 
-Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
+Para poder implementar esta funcionalidad es necesario crear un nuevo componente **delta-processor** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
 
 Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store-adapter. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store-adapter** con la correspondiente reducción de errores en la ejecución manual de scripts.
 

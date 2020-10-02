@@ -92,15 +92,25 @@
 | ------ | ------------------------------------------------------------ | --------- |
 | RF4.1  | La aplicación tendrá una parte pública, los usuarios públicos y todos los usuarios registrados podrán ver estos contenidos públicos. |           |
 | RF4.2  | La aplicación dispondrá de una pantalla de consultas SPARQL que será visible de forma pública y permitirá escribir en texto libre. |           |
+|        | La pantalla de consultas SPARQL dispondrá de un formulario web de gran usabilidad. |           |
+|        | La pantalla de consultas SPARQL estará basada en la interfaz implementada por Wikidata. |           |
+|        | La pantalla de consultas SPARQL mostrará un espacio para realizar las consultas, que será un editor SPARQL, el resultado de las mismas y un botón para mostrar y poder seleccionar las consultas predefinidas. |           |
 | RF4.3  | En la pantalla de consultas SPARQL se propondrán unas consultas predefinidas en función del rol de los usuarios. |           |
+|        |                                                              |           |
 | RF4.4  | Las consultas predefinidas para los usuarios de ministerios se podrán añadir/borrar mediante una pantalla y un usuario con un rol predeterminado. |           |
-| RF4.5  | Se facilitará la edición de las consultas predefinidas en la pantalla de consulta SPARQL |           |
+| RF4.5  | Se facilitará la edición de las consultas predefinidas en la pantalla de consulta SPARQL mediante el coloreado de variables y funciones conocidas y sugerencias. |           |
+|        | Al seleccionar una consulta predefinida SPARQL, esta se mostrará en el editor SPARQL y podrá ser editada. |           |
 | RF4.6  | Se harán sugerencias en la pantalla de consulta SPARQL como pueden ser autocomplete de variables, de entidades almacenadas, de prefijos y vocabularios. |           |
+|        | El editor SPARQL mostrará el texto coloreado según su significado en lenguaje SPARQL para ayudar al usuario a realizar la consulta. |           |
+|        | El editor SPARQL hará sugerencias de variables mientras se escribe el texto de estas para ayudar al usuario a realizar las consultas. |           |
 | RF4.7  | La pantalla de consultas SPARQL mostrará los datos en distintos formatos como timeline, mapa, y gráficos estadísticos. |           |
+|        | Si la consulta SPARQL no es correcta, se mostrará el error para ayudar al usuario a solventar el error. |           |
 | RF4.8  | La pantalla de consultas SPARQL constará de un asistente de consultas SPARQL. |           |
 | RF4.9  | Una vez realizada la consulta en la pantalla de consultas SPARQL, se mostrarán los datos visibles para el usuario en función de rol o de si son públicos. |           |
-| RF4.10 | El resultado de las consultas predefinidas se mostrará en un formato adecuado para estas. |           |
+| RF4.10 | El resultado de las consultas predefinidas se mostrará en un formato adecuado para estas, que podrá ser una tabla, un timeline, un mapa, una gráfica, etc |           |
+|        | Cuando se muestre el resultado de las consultas en una tabla, la cabecera será el nombre de las variables. |           |
 | RF4.11 | El resultado de las consultas se podrá descargar en ficheros de distintos formatos (por ejemplo CSV y Json). |           |
+|        | La opción pera descargar los resultados se dará en un botón o menú situado en torno al resultado de estas, fácilmente visible y accesible para el usuario. |           |
 | RF4.12 | A través del resultado de las consultas se podrá acceder a la versión HTML de los elementos mostrados en ella. |           |
 | RF4.13 | La aplicación web será capaz de mostrar los metadatos de los datasets a los que se accederá navegando a través de las consultas. |           |
 | RF4.14 | Si se accede a un elemento, a través de una consulta o de su URL asociada, se mostrarán su información de forma similar a cómo se muestran los datos en wikidata: https://www.wikidata.org/wiki/Q378619 |           |

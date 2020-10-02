@@ -131,7 +131,7 @@ Los usuarios con rol administrador de la universidad, podrán modificar ontolog�
 
 Pantalla de Inicio
 ------------------
-Los usuarios al logear en la aplicación y entrar en la pantalla de inicio se encontrarán un portal donde podrán elegir entre diferentes opciones.
+Los usuarios al entrar en la pantalla de inicio se encontrarán un portal donde podrán elegir entre diferentes opciones.
 
 Tendrán la posibilidad de buscar directamente mediante un buscador global que les llevará al detalle del objeto seleccionado.
 
@@ -180,18 +180,16 @@ Los resultados de la consulta se podrán mostrar en diferentes formatos dependie
 
 ![Pantalla SPARQL](./images/mocks/consulta.png)
 
-Si se accede a la opción de consultas predefinidas se tendrá la opción de seleccionar una consulta de datos predeterminada, de visualizarla o de modificarla.
-
 ![Pantalla SPARQL GRAPH](./images/mocks/consulta-grafico.png)
 
 ![Pantalla SPARQL TIMELINE](./images/mocks/consulta-timeline.png)
 
 ![Pantalla SPARQL MAP](./images/mocks/consulta-mapa.png)
 
-En esta pantalla habrá la opción de seleccionar una consulta de datos predeterminada y de modificarla.
+
+En esta pantalla habrá la opción de seleccionar una consulta de datos predeterminada y de modificarla, esta opción solo estará disponible para los usuarios logados y con permisos.
 
 ![Pantalla de consultas](./images/mocks/consulta-predeterminada.png)
-
 
 
 Se podrá guardar la consulta como predefinida, teniendo que confirmar el guardado:

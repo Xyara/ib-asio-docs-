@@ -79,6 +79,10 @@ El resultado de esta iteración es la regeneración de **todo el modelo de domin
 
 > El motivo por el que es necesario la regeneración de todo el modelo de dominio es debido a que la herramienta ShEx Lite no es consciente de que ha cambiado y que no en la ontología.
 
+## ShEx
+
+[ShEx Lite](https://www.weso.es/shex-lite/) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.
+
 ## Comunicación entre la infraestructura ontológica e infraestructura semántica
 
 Para que la infraestructura semántica sea consciente de que han habido cambios en la red de ontologías, la infraestructura ontológica ofrece un nuevo módulo API **exchange** con los siguientes métodos:
@@ -221,7 +225,3 @@ Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc
 
 - Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
 - Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
-
-## ShEx
-
-[ShEx Lite](https://www.weso.es/shex-lite/) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.

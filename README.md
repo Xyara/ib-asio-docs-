@@ -1,10 +1,10 @@
 # Almacenamiento y entrega de documentación
 
-[1. Entregables oficiales](#1.-entregables-oficiales)
+[1. Entregables oficiales](#1-entregables-oficiales)
 
-[2. Otros entregables](#2.-otros-entregables)
+[2. Otros entregables](#2-otros-entregables)
 
-[3. Repositorios](#3.-repositorios)
+[3. Repositorios](#3-repositorios)
 
 ## 1. Entregables oficiales
 

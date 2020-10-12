@@ -1,3 +1,5 @@
+![](./images/logos_feder.png)
+
 # Almacenamiento y entrega de documentación
 
 [1. Entregables oficiales](#1-entregables-oficiales)

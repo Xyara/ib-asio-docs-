@@ -18,8 +18,8 @@ Relación de entregables oficiales del proyecto en su estado actual.
 | [02 y 14-Especificación Ontologías Hércules](./02-Especificación_Ontologías_Hércules/ASIO_Izertis_EspecificacionOntologiasHercules.md) | N/A     | [ib-hercules-ontology](https://github.com/HerculesCRUE/ib-hercules-ontology) |
 | [03-Conversión de recursos a OWL](./03-Conversión_de_recursos_a_OWL/ASIO_Izertis_ConversionDeRecursosAOWL.md) |         | -                                                            |
 | [04-Modelo multilingüismo](./04-Modelo_multilingüismo/ASIO_Izertis_ModeloMultilinguismo.md) | N/A     | -                                                            |
-| [05-Análisis de métodos FAIR](./05-Análisis_de_métodos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) |         | -                                                            |
-| [06-Métricas FAIR](./06-Métricas_FAIR/README.md)             |         | -                                                            |
+| [05-Análisis de métodos FAIR](./05-Análisis_de_métodos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md) | N/A     | -                                                            |
+| [06-Métricas FAIR](./06-Métricas_FAIR/README.md)             |[test-fair](https://git.izertis.com/universidaddemurcia/semantmurc/asio-docs/-/blob/master/06-M%C3%A9tricas_FAIR/manual_tecnico.md#pruebas-unitarias)| -                                                            |
 | [07-Control de versiones OWL](./07-Control_de_versiones_OWL/ASIO_Izertis_ControlDeVersionesOWL.md) |         | [ib-hercules-sync](https://github.com/HerculesCRUE/ib-hercules-sync) |
 | [08 y 19-Esquema de URIs Hércules](./08-Esquema_de_URIs_Hércules/ASIO_Izertis_ArquitecturaDeURIs.md) | N/A     | -                                                            |
 | [09-Buenas prácticas para URIs Hércules](./09-Buenas_prácticas_para_URIs_Hércules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md) | N/A     | -                                                            |

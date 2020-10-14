@@ -23,4 +23,4 @@
 
 ------
 
-[[1\]](#_ftnref1) [*https://www.w3.org/TR/cooluris/#hashuri*](*https://www.w3.org/TR/cooluris/#hashuri*)
+[[1\]](#_ftnref1) [cool URIS hashuri](https://www.w3.org/TR/cooluris/#hashuri)

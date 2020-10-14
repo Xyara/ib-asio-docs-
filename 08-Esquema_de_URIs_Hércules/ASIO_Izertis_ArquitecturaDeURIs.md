@@ -28,7 +28,7 @@ El Servicio publicación Web ofrece acceso a los recursos semánticos mediante *
 
 Todo dato o metadato alojado en el Proyecto Hércules (RDF o  NO-RDF), debe de ser identificado mediante un identificador único, inequívoco, estable, extensible, persistente en el tiempo y ofreciendo garantías de su procedencia, requisitos claves para facilitar su posterior reutilización, basada en  los identificadores de recursos uniformes (URIs).
 
-Para promover la reutilización de tales datos por agentes internos o externos, las URIs deben de ser **sencillos, escalables, manejables y persistentes**, tal y como se establece en el documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/entregables_hito_1/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md).
+Para promover la reutilización de tales datos por agentes internos o externos, las URIs deben de ser **sencillos, escalables, manejables y persistentes**, tal y como se establece en el documento de [Buenas prácticas para URIs Hércules](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/09-Buenas_pr%C3%A1cticas_para_URIs_H%C3%A9rcules/ASIO_Izertis_BuenasPracticasParaURIsHercules.md).
 
 Para la composición de los identificadores de recursos uniformes se usara un esquema consistente, extensible y persistente, que será tratado en este mismo documento.
 

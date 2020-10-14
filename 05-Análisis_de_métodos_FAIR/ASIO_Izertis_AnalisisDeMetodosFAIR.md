@@ -200,8 +200,7 @@ En concreto, y en referencia al criterio definido de forma explícita en el Anex
 
 La publicación de ontologías se rije por el [modelo de cinco niveles de apertura de datos](http://5stardata.info) y el modelo Wikidata propuesto como contenedor de Ontologías en el nodo central de la arquitectura ASIO. 
 
-Los procedimientos propuestos para publicar las ontologı́as de la ROH de acuerdo a los principios FAIR se detallan, métrica a métrica, en el documento de [Métricas FAIR](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/05-An%C3%A1lisis_de_m%C3%A9todos_FAIR/ASIO_Izertis_AnalisisDeMetodosFAIR.md). De modo general, dicha publicación sigue las siguientes pautas:
-
+Los procedimientos propuestos para publicar las ontologías de la ROH de acuerdo a los principios FAIR se detallan, métrica a métrica, en el documento de [Métricas FAIR](../06-M%C3%A9tricas_FAIR/README.md). De modo general, dicha publicación sigue las siguientes pautas:
 - Todos los datos y metadatos están identificados mediante URIs PURL ([http://purl.org](http://purl.org/)).
 - Los metadatos incluyen referencias expícitas a los datos que describen.
 - Se proveen metadatos tanto a nivel de ontología como de los datos importados (OWL/SKOS, Wikibase, Trellis y Memento).

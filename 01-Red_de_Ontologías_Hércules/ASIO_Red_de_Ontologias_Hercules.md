@@ -46,7 +46,7 @@ The current working space for the ASIO ontologies can be accessed [here](https:/
 
 ## 1. Introduction
 
-The ASIO ontologies are standardised data schemas (or "vocabularies") designed to address the Research Management of the [CRUE](http://www.crue.org/SitePages/Inicio.aspx)'s Spanish University System (Sistema Universitario Español) through the particular case of the University of Murcia but always applying an encompassing model capable of addressing the rest of universities of the CRUE and even more belonging to the European level.
+The ASIO ontologies are standardised data schemas (or "vocabularies") designed to address the Research Management of the [CRUE](https://tic.crue.org/hercules/)'s Spanish University System (Sistema Universitario Español) through the particular case of the University of Murcia but always applying an encompassing model capable of addressing the rest of universities of the CRUE and even more belonging to the European level.
 
 In this brief section we are going to explain the large-scale organization of the ASIO ontology, which is split into a central and peripheral components, loosely inspiring ourselves in Fodor (1983). To do so we need to distinguish between two fundamentally different types of information processing (relying upon information architecture and datasets).
 
@@ -237,7 +237,7 @@ The [Spain's Ministry of Science, Innovation and Universities](http://www.cienci
 
 After a thorough analysis of that document, a clear hierarchical structure of domains and subdomains was identified and it was deemed as seamlessly fitting a thesaurus-like structure and hence suitable to be ontologically transformed using the W3C's standard for controlled vocabularies: [SKOS-Core](https://www.w3.org/TR/swbp-skos-core-spec/).
 
-SKOS-Core is not just the most appropriate solution for such a document featuring a level-structure thesaurus-like fully exploiting its classes `skos:Concept` (for *agglutinating* concepts) and `skos:ConceptScheme` (in order to arrange concepts *knitting* them together into schemes of concepts), but it also provides means to include models densely multilingual, as checkable with some European thesauri such as [GEMET]([ttps://www.eionet.europa.eu/gemet/en/about/](https://www.eionet.europa.eu/gemet/en/about/)) or [EuroVoc](https://data.europa.eu/euodp/en/data/dataset/eurovoc).
+SKOS-Core is not just the most appropriate solution for such a document featuring a level-structure thesaurus-like fully exploiting its classes `skos:Concept` (for *agglutinating* concepts) and `skos:ConceptScheme` (in order to arrange concepts *knitting* them together into schemes of concepts), but it also provides means to include models densely multilingual, as checkable with some European thesauri such as [GEMET](https://www.eionet.europa.eu/gemet/en/about/) or [EuroVoc](https://data.europa.eu/euodp/en/data/dataset/eurovoc).
 
 #### 4.2.3. added value
 

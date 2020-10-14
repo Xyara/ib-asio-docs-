@@ -29,7 +29,7 @@ Para el diseño de la librería se hace un proceso de fuera a dentro. Primero ve
 
 En el siguiente diagrama se puede ver que la librería es un elemento que recibe de entrada unas Shape Expressions y produce código fuente en java. Es este código en Java el modelo de dominio expresado por las Shape Expressions.
 
-![](recources/shex_lite_caja_negra.png)
+![](resources/shex_lite_caja_negra.png)
 
 ### Restricciones de diseño
 
@@ -44,7 +44,7 @@ Dentro del apartado Criteria tenemos una restricción en forma de requisito no f
 
 Para realizar el proceso descrito en el esquema anterior debemos de asegurarnos que las Shapes que nos lleguen sean correctas. Y, si no, informar al usuario del error que ha cometido en las Shapes. Ya sea sintáctico o semántico. Para ello es preciso implementar diferentes fases. Desde la entrada del código fuente hasta la salida de los modelos en Java.
 
-![](shex_lite_caja_negra.png)
+![](resources/shex_lite_caja_negra.png)
 
 El esquema anterior muestra las distintas fases de las que constará la librería. Cada una de ellas será implementada de forma independiente. Siguiendo el patrón de diseño "pipes and filters". Sin embargo también se deberá permitir al usuario final invocar un ciclo completo sin tener que pasar por todas y cada una de las fases de forma independiente.
 

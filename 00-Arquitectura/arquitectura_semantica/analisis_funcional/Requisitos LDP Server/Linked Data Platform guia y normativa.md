@@ -158,7 +158,7 @@ Un POST de un nuevo recurso añadirá su URL a la lista de recursos contenidos
 
 Los **contenedores directos** permiten construcciones mas complejas, donde se puede definir condiciones jerárquicas en ambos sentidos,  es decir ldp:membershipResource apuntaría al contenedor padre y ldp:hasMemberRelation a los contenedores/recursos hijos.
 
-El ejemplo ilustra sobre un recurso raiz, `http://example.org/netWorth/nw1` que en este caso modela el balance de un individuo.
+El ejemplo ilustra sobre un recurso raiz, **`http://example.org/netWorth/nw1`** que en este caso modela el balance de un individuo.
 
 Petición a  `http://example.org/netWorth/nw1/`
 
@@ -196,7 +196,7 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (`<http://example.org/netWorth/nw1/>`) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 

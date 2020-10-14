@@ -79,6 +79,10 @@ El resultado de esta iteración es la regeneración de **todo el modelo de domin
 
 > El motivo por el que es necesario la regeneración de todo el modelo de dominio es debido a que la herramienta ShEx Lite no es consciente de que ha cambiado y que no en la ontología.
 
+## ShEx
+
+[ShEx Lite](https://www.weso.es/shex-lite/) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.
+
 ## Comunicación entre la infraestructura ontológica e infraestructura semántica
 
 Para que la infraestructura semántica sea consciente de que han habido cambios en la red de ontologías, la infraestructura ontológica ofrece un nuevo módulo API **exchange** con los siguientes métodos:
@@ -191,17 +195,21 @@ Para llevar a cabo los cambios procedentes de la red de ontologías, es necesari
 
    > Estas modificaciones no se despliegan hasta no completar los pasos 2 y 3.
 
-2. Parada del servidor donde se encuentran alojados los microservicios de la arquitectura semántica.
+2. Parada del ingestador de datos `dataset-importer` que se encarga de alimentar el `triple-store` con información.
 
 3. Invocación del proceso para la realización de backups.
 
-   > Desde que se para el servidor hasta que se inicia el proceso de backup debe pasar un tiempo lo suficientemente largo como para que se vacíen las colas kafka con los datos de entrada para el módulo **management-system** encargado de la generación de ficheros RDF.
+   > Desde que se detiene el ingestador de información `dataset-importer` hasta que se inicia el proceso de backup debe pasar un tiempo lo suficientemente largo como para que se vacíen las colas kafka con los datos de entrada del módulo **management-system** encargado de la generación de ficheros RDF.
 
-4. Invocación desde linea de comandos del modulo **triple-store-delta** con el fichero DELTA como parámetro de entrada, para adaptar los datos del triple-store-adapter.
+   > Para verificar que no hay información pendiente de procesar, el módulo `delta-processor` dispondrán de un método actuator para verificar que las colas _management-data_ y _general-data_ están vacías.
+
+4. Invocación a un método REST del **triple-store-adapter** con un fichero DELTA como parámetro. Esta invocación se hará a través de un comando curl dentro de un fichero sh.
 
 5. Despliegue de la ETL
 
-6. Arranque del servidor, con los microservicios apuntando a la nueva versión del **dataset-domain-model-X.X.X.jar**
+   > Previamente al arranque del ingestador es necesario verificar que el paso 4 ha finalizado correctamente, para ello el módulo `delta processor` dispondrá de un método que indique el estado de la ejecución.
+
+6. Arranque del ingestador de datos `dataset-importer`, con los microservicios apuntando a la nueva versión del **domain-model-X.X.X.jar**
 
 Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y posteriormente se promocionarán al entorno final de producción.
 
@@ -209,7 +217,7 @@ Los pasos anteriormente descritos se ejecutarán en un entorno no productivo y p
 
 La adaptación de los datos del triple store (Trellis, Wikibase) se harán de forma automática a partir de los ficheros [DELTA](#DELTA) procedentes de la arquitectura ontológica.
 
-Para poder implementar esta funcionalidad es necesario crear un nuevo componente **triple-store-delta** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
+Para poder implementar esta funcionalidad es necesario crear un nuevo componente **delta-processor** el cual contendrá un algoritmo capaz de interpretar las instrucciones procedentes de los ficheros DELTA para modificar los datos del **triple-store-adapter** adaptándolos a los nuevos cambios en las ontologías.
 
 Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc** para la adaptación de los datos del triple-store-adapter. De esta forma, se consigue una automatización del proceso de transformación de datos procedentes del **triple-store-adapter** con la correspondiente reducción de errores en la ejecución manual de scripts.
 
@@ -217,7 +225,3 @@ Este nuevo módulo surge como substitución de la idea original **scripts ad-hoc
 
 - Determinación del momento en que se deben aplicar las modificaciones que surgen de cambios en la red de ontologías.
 - Modificaciones en la ETL a partir de la generación de los ficheros [DELTA](#DELTA).
-
-## ShEx
-
-[ShEx Lite](https://www.weso.es/shex-lite/) es un subconjunto de una especificación de Shape Expressions que ofrece un API para generar las clases de dominio a partir de unos datos de entrada, y el resultado se enviará a donde indique el parámetro de salida de este método.

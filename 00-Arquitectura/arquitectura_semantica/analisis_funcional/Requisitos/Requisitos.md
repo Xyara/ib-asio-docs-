@@ -29,7 +29,7 @@
 
 [Skateholders](#skateholders)
 
-[Casos de uso](./Casos%20de%20uso.md)
+[Casos de uso](./Documents/Casos%20de%20uso.md)
 
 [Requisitos no funcionales](./Documents/Requisitos%20no%20funcionales.md)
 

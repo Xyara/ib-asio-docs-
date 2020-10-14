@@ -127,8 +127,7 @@ Desde el punto de dista de diseño, Trellis esta disponible de forma modular, es
 
 Trellis ofrece una API LDP con un comportamiento estable desde el punto de vista del cliente independientemente del sistema de almacenamiento usado, es decir, la interacción con el cliente no se ve afectada, por lo que el cambio de diversos triple store, es siempre transparente para el cliente.  
 
-El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
-
+El documento [**Propuesta de diseño API LDP y EndPoint SPARQL**](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/00-An%C3%A1lisis/Requisitos%20LDP%20Server/Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md) proporciona una descripción detallada de los requisitos necesarios para el proyecto ASIO, y las consideraciones de este equipo de trabajo sobre el cumplimiento que ofrece la herramienta de dichos requisitos.
 ##### Apache Jena Fuseki
 
 [Apache Jena Fuseki](https://jena.apache.org/documentation/fuseki2/) es un servidor SPARQL que puede correr como un servicio del sistema operativo, como una aplicación Web y como un servidor independiente. Proporciona un capa de abstracción en el acceso a el sistema de almacenamiento, que por medio de el uso de [Jena text query](https://jena.apache.org/documentation/query/text-query.html) que potencialmente proporciona un protocolo, para la conexión con cualquier sistema de almacenamiento, lo que permitirá desacoplar totalmente, el EndPoint SPARQL proporcionado por Fuseki, del sistema de almacenamiento elegido. Por defecto usa sistema de almacenamiento TDB, que proporciona un sistema robusto y transaccional para el almacenamiento de datos .
@@ -228,7 +227,7 @@ Desde el punto de vista del cumplimento LDP, [Trellis](https://github.com/trelli
 
 Para evaluar el cumplimiento de dichos requisitos de primera mano, se ha usado el [LDP Test Suit](https://dvcs.w3.org/hg/ldpwg/raw-file/default/tests/ldp-testsuite.html), creado exprofeso por la LDP, para evaluar el nivel de cumplimiento.
 
-Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
+Los resultados, y las causas de los *"errores"* en los test, están descritos de forma exhaustiva en el documento [Analisis de Test LDP (caso de uso Trellis).md](../ldp/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
 
 Por otra parte nos parece muy interesante que el comportamiento del API, es en todo momento muy consistente sea cual sea el sistema de almacenamiento elegido (al menos en los probados) ya sea relacional (PostgreSQL) , en memoria o triple store (TDB o Blaze Graph), demostrándose este hecho en los resultados de los test, ya que estos **no se ven afectados** . Este hecho que permite garantizar mucha flexibilidad a la hora de cambiar el sistema de almacenamiento (requisito expresado en el pliego), sin afectar a los clientes.
 
@@ -376,6 +375,6 @@ En definitiva, esta decisión, solo pretende una base solida, sobre la que poder
 
 ## Links
 
-- [Analisis de Test LDP (caso de uso Trellis)](./Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
-- [Propuesta de diseño API LDP y EndPoint SPARQL](./Propuesta%20de%20dise%C3%B1o%20API%20LDP%20y%20EndPoint%20SPARQL.md)
-- [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](https://github.com/HerculesCRUE/ib-asio-docs-/blob/master/12-An%C3%A1lisis_sobre_necesidad_de_cumplimiento_LDP/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)
+- [Analisis de Test LDP (caso de uso Trellis)](../ldp/Requisitos%20LDP%20Server/Analisis%20de%20Test%20LDP%20(caso%20de%20uso%20Trellis).md)
+- [Propuesta de diseño API LDP y EndPoint SPARQL](.\00-Arquitectura\arquitectura_semantica\analisis_funcional\Requisitos LDP Server\Propuesta de diseño API LDP y EndPoint SPARQL.md)
+- [Requisitos funcionales para API REST LDP en proyecto ASIO de la UM](../ldp/Requisitos%20LDP%20Server/Requisitos%20funcionales%20para%20API%20REST%20LDP%20en%20proyecto%20ASIO%20de%20la%20UM.md)

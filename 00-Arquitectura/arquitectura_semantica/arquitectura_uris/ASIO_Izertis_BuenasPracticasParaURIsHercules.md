@@ -19,8 +19,4 @@
 - Utilizar fragmentos como identificadores de recursos. Un fragmento en una URI se introduce mediante el símbolo # y se denominan URIs hash[[1\]](#_ftn1). Cuando un cliente solicita una URI con un fragmento, el protocolo http descarta el fragmento y hace la solicitud a la servidor utilizando el resto de la URI. El resultado es que la URI original no puede utilizarse para identificar un documento Web concreto y puede utilizarse para identificar recursos que no correspondan a documentos, como personas o conceptos abstractos. Por ejemplo, la URI: `http://example.org/contenedor#id23` podría utilizarse para identificar el recurso #id23 que podría identificar recursos como personas, objetos, etc. 
 - Usar purl para apuntar a direcciones url fijas.
 
-
-
-------
-
-[[1\]](#_ftnref1) [cool URIS hashuri](https://www.w3.org/TR/cooluris/#hashuri)
+[[1\]](#_ftnref1) [*https://www.w3.org/TR/cooluris/#hashuri*](https://www.w3.org/TR/cooluris/#hashuri)

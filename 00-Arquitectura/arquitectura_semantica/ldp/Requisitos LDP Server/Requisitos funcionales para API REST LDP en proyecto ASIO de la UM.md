@@ -255,7 +255,9 @@ Transfer-Encoding: chunked <!--Codigifación de transferencia fragmentada-->
       <liabilities/l3>. <!--Pasivo 3-->
 ```
 
-En el ejemplo se puede observar que todos comparten el mismo sujeto (`<http://example.org/netWorth/nw1/>`) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
+
+
+En el ejemplo se puede observar que todos comparten el mismo sujeto (<`http://example.org/netWorth/nw1/`>) y varios el mismo predicado (o:asset y o:liability). Si hiciéramos un contenedor básico, se duplicaría mucha información.
 
 Accediendo a los assets
 

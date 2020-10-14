@@ -301,7 +301,7 @@ Link: <http://www.w3.org/ns/ldp#DirectContainer>; rel="type", <!--Contenedor-->
 
 También seria necesario actualizar los contenedores
 
-En el recurso net worth <<`http://example.org/netWorth/nw1/`>> **o:liability**  <liabilities/l4> 
+En el recurso net worth <`http://example.org/netWorth/nw1/`> **o:liability**  <liabilities/l4> 
 
 En el contenedor liability <<`http://example.org/netWorth/nw1/liabilities/`>> ldp:contains  <l4> 
 

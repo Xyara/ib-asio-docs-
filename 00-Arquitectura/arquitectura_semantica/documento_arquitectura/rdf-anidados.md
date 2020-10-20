@@ -121,7 +121,8 @@ Relaciones para el objeto proyecto.
          },
          {
             "className":"Autor",
-            "fieldName":"autores""ids":[
+            "fieldName":"autores",
+            "ids":[
                1,
                2
             ]
@@ -158,17 +159,17 @@ Implementación más sencilla frente a las demás opciones.
 
 ### Contras
 
-La información no está completa hasta que no termina la importación de los objetos simples y de sus relaciones.
+La información no está completa hasta que no se termina la importación de los objetos simples y de sus relaciones.
 
 Se necesita de una segunda cola para procesar la información de la relaciones.
 
 ## Opción 2
 
-Guardar las relaciones de los objetos a medida que van llegando
+Guardar las relaciones de los objetos a medida que van llegando.
 
 ### Pros
 
-No hay que esperar a que finalice el proceso de importación para tener la información completa.
+No hay que esperar a que finalice el proceso de importación para tener la información completa del objeto.
 
 No es necesario crear una cola extra.
 
@@ -191,8 +192,8 @@ Almacenamiento secundario necesario.
 
 | Solución |    Complejidad     |     Cola extra     |    Rendimiento     | Almacenamiento Secundario | Información consolidada                         |
 | -------- | :----------------: | :----------------: | :----------------: | :-----------------------: | ----------------------------------------------- |
-| Opción 1 | :heavy_check_mark: |        :x:         | :heavy_check_mark: |    :heavy_check_mark:     | al final de la importación de todos los objetos |
-| Opción 2 |        :x:         | :heavy_check_mark: |        :x:         |            :x:            | cuando se tiene toda la información del objeto  |
+| Opción 1 | :heavy_check_mark: |        :x:         | :heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos |
+| Opción 2 |        :x:         | :heavy_check_mark: |        :x:         |            :x:            | Cuando se tiene toda la información del objeto  |
 
 # Decisión final
 

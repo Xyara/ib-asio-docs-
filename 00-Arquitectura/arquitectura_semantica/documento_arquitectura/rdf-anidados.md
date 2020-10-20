@@ -189,10 +189,10 @@ Almacenamiento secundario necesario.
 
 # Tabla comparativa
 
-| Solución | Complejidad        | Cola extra         | Rendimiento        | Almacenamiento Secundario |
-| -------- | ------------------ | ------------------ | ------------------ | ------------------------- |
-| Opción 1 | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark:        |
-| Opción 2 | :x:                | :heavy_check_mark: | :x:                | :x:                       |
+| Solución |    Complejidad     |     Cola extra     |    Rendimiento     | Almacenamiento Secundario | Información consolidada                         |
+| -------- | :----------------: | :----------------: | :----------------: | :-----------------------: | ----------------------------------------------- |
+| Opción 1 | :heavy_check_mark: |        :x:         | :heavy_check_mark: |    :heavy_check_mark:     | al final de la importación de todos los objetos |
+| Opción 2 |        :x:         | :heavy_check_mark: |        :x:         |            :x:            | cuando se tiene toda la información del objeto  |
 
 # Decisión final
 

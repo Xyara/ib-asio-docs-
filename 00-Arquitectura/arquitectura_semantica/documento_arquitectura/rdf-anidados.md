@@ -8,38 +8,36 @@ Ejemplo:
 
 ```jsx
 {
-  "operation": "INSERT",
-  "data": {
-    "id": 1,
-    "nombre": "Proyecto Hercules",
-    "clase": "Proyecto",
-    "grupoInvestigacion": {
-      "id": "1",
-      "nombre": "",
-      "universidad": {
-        "id": "1",
-        "nombre": "Universidad de Murcia"
-      }
-    },
-		"autores": [
-			{
-				"id": 1,
-				"nombre": "Alejandro"
-				"universidad": {
-					"id": "1",
-	        "nombre": "Universidad de Murcia"
-				}
-			},
-			{
-				"id": 2,
-				"nombre": "Ruben"
-				"universidad": {
-					"id": "2",
-	        "nombre": "Universidad de Oviedo"
-				}
-			},
-		]
-  }
+   "operation":"INSERT",
+   "data":{
+      "id":1,
+      "nombre":"Proyecto Hercules",
+      "clase":"Proyecto",
+      "grupoInvestigacion":{
+         "id":"1",
+         "nombre":"",
+         "universidad":{
+            "id":"1",
+            "nombre":"Universidad de Murcia"
+         }
+      },
+      "autores":[
+         {
+            "id":1,
+            "nombre":"Alejandro""universidad":{
+               "id":"1",
+               "nombre":"Universidad de Murcia"
+            }
+         },
+         {
+            "id":2,
+            "nombre":"Ruben""universidad":{
+               "id":"2",
+               "nombre":"Universidad de Oviedo"
+            }
+         }
+      ]
+   }
 }
 ```
 
@@ -56,11 +54,11 @@ Proyecto
 ```jsx
 {
    "operation": "INSERT",
-	 "data" : {
+   "data" : {
       "clase": "Proyecto",
       "id": 1,
-		  "name": "Proyecto Hercules"
-	 }
+      "name": "Proyecto Hercules"
+  }
 }
 ```
 
@@ -69,11 +67,11 @@ GrupoInvestigacion
 ```jsx
 {
    "operation": "INSERT",
-	 "data" : {
+   "data" : {
       "clase": "GrupoInvestigacion",
       "id": 1,
       "name": "Europeo"
-	 }
+   }
 }
 ```
 
@@ -82,11 +80,11 @@ Universidad
 ```jsx
 {
    "operation": "INSERT",
-	 "data" : {
+   "data" : {
       "clase": "Universidad",
       "id": 1,
-		  "name": "Universidad de Murcia"
-	 }
+      "name": "Universidad de Murcia"
+   }
 }
 ```
 
@@ -95,11 +93,11 @@ Autor
 ```jsx
 {
    "operation": "INSERT",
-	 "data" : {
+   "data" : {
       "clase": "Autor",
       "id": 1,
       "name": "Alejandro"
-	 }
+   }
 }
 ```
 
@@ -109,23 +107,27 @@ Relaciones para el objeto proyecto.
 
 ```jsx
 {
-   "operation": "INSERT",
-	 "data" : {
-      "clase": "Proyecto",
-      "id": 1,
-      "linkedTo": [
-				{
-					"className": "GrupoInvestigacion",
-					"fieldName": "grupoInvestigacion",
-					"ids": [1]
-				},
-				{
-          "className" : "Autor",
-					"fieldName" : "autores"
-          "ids": [1, 2]
-				}
+   "operation":"INSERT",
+   "data":{
+      "clase":"Proyecto",
+      "id":1,
+      "linkedTo":[
+         {
+            "className":"GrupoInvestigacion",
+            "fieldName":"grupoInvestigacion",
+            "ids":[
+               1
+            ]
+         },
+         {
+            "className":"Autor",
+            "fieldName":"autores""ids":[
+               1,
+               2
+            ]
+         }
       ]
-	 }
+   }
 }
 ```
 
@@ -133,18 +135,20 @@ Relaciones para el objeto autor.
 
 ```jsx
 {
-   "operation": "INSERT",
-	 "data" : {
-      "clase": "Autor",
-      "id": 1,
-      "linkedTo": [
-				{
-					"className": "Universidad",
-					"fieldName": "universidad",
-					"ids": [1]
-				}
+   "operation":"INSERT",
+   "data":{
+      "clase":"Autor",
+      "id":1,
+      "linkedTo":[
+         {
+            "className":"Universidad",
+            "fieldName":"universidad",
+            "ids":[
+               1
+            ]
+         }
       ]
-	 }
+   }
 }
 ```
 

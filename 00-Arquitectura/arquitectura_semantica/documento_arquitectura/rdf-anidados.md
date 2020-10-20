@@ -189,11 +189,11 @@ Almacenamiento secundario necesario.
 
 # Tabla comparativa
 
-| Solución | Cola extra         | Buen Rendimiento   |
-| -------- | ------------------ | ------------------ |
-| Opción 1 | :x:                | :heavy_check_mark: |
-| Opción 2 | :heavy_check_mark: | :x:                |
+| Solución | Complejidad        | Cola extra         | Rendimiento        | Almacenamiento Secundario |
+| -------- | ------------------ | ------------------ | ------------------ | ------------------------- |
+| Opción 1 | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark:        |
+| Opción 2 | :x:                | :heavy_check_mark: | :x:                | :x:                       |
 
 # Decisión final
 
-**Opción 1**. Aunque tiene el problema de que toda la información no está lista hasta que no termina el proceso de importación. Dicha importación será un proceso batch en segundo plano que se ejecutará normalmente en un horario donde el uso de la aplicación será mínimo, con lo cual se mitiga considerablemente el hándicap de no poder consultar la información hasta que el proceso de importación finaliza completamente.
+**Opción 1**. Aunque tiene el problema de que toda la información no está lista hasta que no se termina el proceso de importación. Dicha importación será un proceso batch en segundo plano que se ejecutará normalmente en un horario donde el uso de la aplicación será mínimo, con lo cual se mitiga considerablemente el hándicap de no poder consultar la información hasta que el proceso de importación finaliza completamente.

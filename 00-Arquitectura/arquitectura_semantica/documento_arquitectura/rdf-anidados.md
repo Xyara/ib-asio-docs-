@@ -214,11 +214,11 @@ Almacenamiento secundario necesario.
 
 # Tabla comparativa
 
-| Solución |              Complejidad              |     Cola extra     |              Rendimiento              | Almacenamiento Secundario | Información consolidada                                |
-| -------- | :-----------------------------------: | :----------------: | :-----------------------------------: | :-----------------------: | ------------------------------------------------------ |
-| Opción 1 | :heavy_check_mark: :heavy_check_mark: |        :x:         | :heavy_check_mark: :heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos        |
-| Opción 2 |                  :x:                  | :heavy_check_mark: |                  :x:                  |            :x:            | Parcial cuando se tiene toda la información del objeto |
-| Opción 3 |                :x: :x:                | :heavy_check_mark: |                :x::x:                 |            :x:            | Total cuando se tiene toda la información del objeto   |
+| Solución |              Complejidad              |     Cola extra     |              Rendimiento              | Almacenamiento Secundario | Información consolidada                                         |
+| -------- | :-----------------------------------: | :----------------: | :-----------------------------------: | :-----------------------: | --------------------------------------------------------------- |
+| Opción 1 | :heavy_check_mark: :heavy_check_mark: |        :x:         | :heavy_check_mark: :heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos                 |
+| Opción 2 |                  :x:                  | :heavy_check_mark: |                  :x:                  |            :x:            | Parcial hasta que no se completa todo el proceso de importación |
+| Opción 3 |                :x: :x:                | :heavy_check_mark: |                :x: :x:                |            :x:            | Total mienstras se completa el proceso de importación           |
 
 # Decisión final
 

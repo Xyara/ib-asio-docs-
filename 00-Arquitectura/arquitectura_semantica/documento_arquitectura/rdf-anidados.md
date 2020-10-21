@@ -159,13 +159,13 @@ Relaciones para el objeto autor.
 
 ### Pros
 
-Implementación más sencilla frente a las demás opciones.
+- Implementación más sencilla frente a las demás opciones.
 
 ### Contras
 
-La información no está completa hasta que no se termina la importación de los objetos simples y de sus relaciones.
+- La información no está completa hasta que no se termina la importación de los objetos simples y de sus relaciones.
 
-Se necesita de una segunda cola para procesar la información de la relaciones.
+- Se necesita de una segunda cola para procesar la información de la relaciones.
 
 ## Opción 2
 
@@ -173,19 +173,19 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando todos
 
 ### Pros
 
-No hay que esperar a que finalice el proceso de importación para tener la información completa del objeto.
+- No hay que esperar a que finalice el proceso de importación para tener la información completa del objeto.
 
-No es necesario crear una cola extra.
+- No es necesario crear una cola extra.
 
 ### Contras
 
-Implementación más compleja.
+- Implementación más compleja.
 
-Alguna información no está accesible hasta que no se completan todas las relaciones del objeto.
+- Alguna información no está accesible hasta que no se completan todas las relaciones del objeto.
 
-Procesamiento más lento, sucesivas reiteraciones.
+- Procesamiento más lento, sucesivas reiteraciones.
 
-Almacenamiento secundario necesario.
+- Almacenamiento secundario necesario.
 
 ## Opción 3
 
@@ -193,17 +193,17 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando los c
 
 ### Pros
 
-Toda la información que se guarda está consolidada.
+- Toda la información que se guarda está consolidada.
 
-No es necesario crear una cola extra.
+- No es necesario crear una cola extra.
 
 ### Contras
 
-Implementación la más compleja de todas la soluciones propuestas.
+- Implementación la más compleja de todas la soluciones propuestas.
 
-Procesamiento el más lento de todas las soluciones propuestas.
+- Procesamiento el más lento de todas las soluciones propuestas.
 
-Almacenamiento secundario necesario.
+- Almacenamiento secundario necesario.
 
 # Opciónes descartadas
 

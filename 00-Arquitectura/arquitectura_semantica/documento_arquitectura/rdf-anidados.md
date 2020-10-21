@@ -10,7 +10,7 @@ A la hora de crear documentos RDF con objetos anidados se pueden dar situaciones
    "data":{
       "id":1,
       "nombre":"Proyecto Hercules",
-      "clase":"Proyecto",
+      "@class":"Proyecto",
       "grupoInvestigacion":{
          "id":"1",
          "nombre":"Grupo Europeo",

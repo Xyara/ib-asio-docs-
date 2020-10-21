@@ -2,7 +2,7 @@
 
 # Problema
 
-A la hora de generar documentos RDF con objetos anidados se pueden dar situaciones en las que se están intentando generar documentos RDF con objetos que hacen referencia a otros, los cuales no han sido persitidos aún. Ejemplo, supongamos que intentamos generar el RDF del primero objeto que nos llega de la cola kafka, en este caso un objeto de tipo proyecto:
+A la hora de crear documentos RDF con objetos anidados se pueden dar situaciones en las que se están intentando generar documentos RDF con objetos que hacen referencia a otros, los cuales no han sido persitidos aún. Ejemplo, supongamos que intentamos generar el RDF del primero objeto que nos llega de la cola kafka, en este caso un objeto de tipo proyecto:
 
 ```jsx
 {
@@ -41,7 +41,7 @@ A la hora de generar documentos RDF con objetos anidados se pueden dar situacion
 }
 ```
 
-Puesto que este es el primer objeto a procesar, aún no tenemos la información correspondiente a los objetos grupoInvestigación, universidad y autores, esto provoca que no podamos construir el grafo completo para este objeto proyecto. Las relaciones entre entidades se establecen mediante tripletas, donde los objetos padre he hijo deben de estar creados previamente, y han de referenciarse mediante sus URIs, las cuales son generadas por la factoría de URIs.
+Puesto que este es el primer objeto a procesar, aún no tenemos la información correspondiente a los objetos `grupoInvestigación`, `universidad` y `autores`, esto provoca que no podamos construir el grafo completo para este objeto proyecto. Las relaciones entre entidades se establecen mediante tripletas, donde los objetos padre he hijo deben de estar creados previamente, y han de referenciarse mediante sus URIs, las cuales son generadas por la factoría de URIs.
 
 Este supuesto se puede dar perfectamente ya que las colas kafka no garantizan el orden de llegada de los objetos.
 
@@ -173,7 +173,7 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando todos
 
 ### Pros
 
-- No hay que esperar a que finalice el proceso de importación para tener la información completa del objeto.
+- No hay que esperar a que finalice el proceso de importación para tener información consolidada.
 
 - No es necesario crear una cola extra.
 
@@ -218,7 +218,7 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando los c
 | -------- | :-----------------------------------: | :----------------: | :-----------------------------------: | :-----------------------: | --------------------------------------------------------------- |
 | Opción 1 | :heavy_check_mark: :heavy_check_mark: |        :x:         | :heavy_check_mark: :heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos                 |
 | Opción 2 |                  :x:                  | :heavy_check_mark: |                  :x:                  |            :x:            | Parcial hasta que no se completa todo el proceso de importación |
-| Opción 3 |                :x: :x:                | :heavy_check_mark: |                :x: :x:                |            :x:            | Total mienstras se completa el proceso de importación           |
+| Opción 3 |                :x: :x:                | :heavy_check_mark: |                :x: :x:                |            :x:            | Total mientras se completa el proceso de importación            |
 
 # Decisión final
 

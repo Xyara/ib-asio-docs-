@@ -1,10 +1,8 @@
-# Creación y almacenamiento de RDF's con objetos anidados
+# Generación y almacenamiento de documentos RDF's con objetos anidados
 
 # Problema
 
-Para generar un documento RDF necesitamos un identificador único por objeto (URI), este identificador se genera en la factoría de URI's. Dicha factoría necesita como parámetro de entrada un objeto completo incluyendo los posibles objetos anidados. Este requisito nos conduce a un problema de anidamiento múltiple de objetos, lo que nos podría llevar a trabajar con duplicidades y objetos muy pesados con la posterior penalización de rendimiento.
-
-Ejemplo:
+A la hora de generar documentos RDF con objetos anidados se pueden dar situaciones en las que se están intentando generar documentos RDF con objetos que hacen referencia a otros, los cuales no han sido persitidos aún. Ejemplo, supongamos que intentamos generar el RDF del primero objeto que nos llega de la cola kafka, en este caso un objeto de tipo proyecto:
 
 ```jsx
 {
@@ -15,7 +13,7 @@ Ejemplo:
       "clase":"Proyecto",
       "grupoInvestigacion":{
          "id":"1",
-         "nombre":"",
+         "nombre":"Grupo Europeo",
          "universidad":{
             "id":"1",
             "nombre":"Universidad de Murcia"
@@ -24,14 +22,16 @@ Ejemplo:
       "autores":[
          {
             "id":1,
-            "nombre":"Alejandro""universidad":{
+            "nombre":"Alejandro",
+            "universidad":{
                "id":"1",
                "nombre":"Universidad de Murcia"
             }
          },
          {
             "id":2,
-            "nombre":"Ruben""universidad":{
+            "nombre":"Ruben",
+            "universidad":{
                "id":"2",
                "nombre":"Universidad de Oviedo"
             }
@@ -40,6 +40,10 @@ Ejemplo:
    }
 }
 ```
+
+Puesto que este es el primer objeto a procesar, aún no tenemos la información correspondiente a los objetos grupoInvestigación, universidad y autores, esto provoca que no podamos construir el grafo completo para este objeto proyecto. Las relaciones entre entidades se establecen mediante tripletas, donde los objetos padre he hijo deben de estar creados previamente, y han de referenciarse mediante sus URIs, las cuales son generadas por la factoría de URIs.
+
+Este supuesto se puede dar perfectamente ya que las colas kafka no garantizan el orden de llegada de los objetos.
 
 # Posibles soluciones
 
@@ -165,7 +169,7 @@ Se necesita de una segunda cola para procesar la información de la relaciones.
 
 ## Opción 2
 
-Guardar las relaciones de los objetos a medida que van llegando.
+Guardar las relaciones de los objetos a medida que van llegando, aplicando todos los cambios al final de la importación.
 
 ### Pros
 
@@ -177,7 +181,27 @@ No es necesario crear una cola extra.
 
 Implementación más compleja.
 
+Alguna información no está accesible hasta que no se completan todas las relaciones del objeto.
+
 Procesamiento más lento, sucesivas reiteraciones.
+
+Almacenamiento secundario necesario.
+
+## Opción 3
+
+Guardar las relaciones de los objetos a medida que van llegando, aplicando los cambios cuando se tenga un objeto completo con todas sus relaciones.
+
+### Pros
+
+Toda la información que se guarda está consolidada.
+
+No es necesario crear una cola extra.
+
+### Contras
+
+Implementación la más compleja de todas la soluciones propuestas.
+
+Procesamiento el más lento de todas las soluciones propuestas.
 
 Almacenamiento secundario necesario.
 
@@ -190,10 +214,11 @@ Almacenamiento secundario necesario.
 
 # Tabla comparativa
 
-| Solución |    Complejidad     |     Cola extra     |    Rendimiento     | Almacenamiento Secundario | Información consolidada                         |
-| -------- | :----------------: | :----------------: | :----------------: | :-----------------------: | ----------------------------------------------- |
-| Opción 1 | :heavy_check_mark: |        :x:         | :heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos |
-| Opción 2 |        :x:         | :heavy_check_mark: |        :x:         |            :x:            | Cuando se tiene toda la información del objeto  |
+| Solución |             Complejidad              |     Cola extra     |             Rendimiento              | Almacenamiento Secundario | Información consolidada                                |
+| -------- | :----------------------------------: | :----------------: | :----------------------------------: | :-----------------------: | ------------------------------------------------------ |
+| Opción 1 | :heavy_check_mark::heavy_check_mark: |        :x:         | :heavy_check_mark::heavy_check_mark: |    :heavy_check_mark:     | Al final de la importación de todos los objetos        |
+| Opción 2 |                 :x:                  | :heavy_check_mark: |                 :x:                  |            :x:            | Parcial cuando se tiene toda la información del objeto |
+| Opción 3 |                :x::x:                | :heavy_check_mark: |                :x::x:                |            :x:            | Total cuando se tiene toda la información del objeto   |
 
 # Decisión final
 

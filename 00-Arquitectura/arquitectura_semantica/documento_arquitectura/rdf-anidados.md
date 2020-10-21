@@ -59,7 +59,7 @@ Proyecto
 {
    "operation": "INSERT",
    "data" : {
-      "clase": "Proyecto",
+      "@class": "Proyecto",
       "id": 1,
       "name": "Proyecto Hercules"
   }
@@ -72,7 +72,7 @@ GrupoInvestigacion
 {
    "operation": "INSERT",
    "data" : {
-      "clase": "GrupoInvestigacion",
+      "@class": "GrupoInvestigacion",
       "id": 1,
       "name": "Europeo"
    }
@@ -85,7 +85,7 @@ Universidad
 {
    "operation": "INSERT",
    "data" : {
-      "clase": "Universidad",
+      "@class": "Universidad",
       "id": 1,
       "name": "Universidad de Murcia"
    }
@@ -98,7 +98,7 @@ Autor
 {
    "operation": "INSERT",
    "data" : {
-      "clase": "Autor",
+      "@class": "Autor",
       "id": 1,
       "name": "Alejandro"
    }
@@ -113,7 +113,7 @@ Relaciones para el objeto proyecto.
 {
    "operation":"INSERT",
    "data":{
-      "clase":"Proyecto",
+      "@class":"Proyecto",
       "id":1,
       "linkedTo":[
          {
@@ -142,7 +142,7 @@ Relaciones para el objeto autor.
 {
    "operation":"INSERT",
    "data":{
-      "clase":"Autor",
+      "@class":"Autor",
       "id":1,
       "linkedTo":[
          {

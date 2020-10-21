@@ -169,7 +169,7 @@ Relaciones para el objeto autor.
 
 ## Opción 2
 
-Guardar las relaciones de los objetos a medida que van llegando, aplicando todos los cambios al final de la importación.
+Los POJO's llegan sin clasificar, los objetos que se puedan guardar porque no tengan relaciones con otros objetos o aquellos que sí tienen relaciones con otros pero estos ya están guardados en el sistema se procesan directamente el resto se guardan en un almacenamiento externo para su posterior procesamiento al final de la importación.
 
 ### Pros
 
@@ -185,11 +185,11 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando todos
 
 - Procesamiento más lento, sucesivas reiteraciones.
 
-- Almacenamiento secundario necesario.
+- Almacenamiento secundario necesario para guardar operaciones pendientes.
 
 ## Opción 3
 
-Guardar las relaciones de los objetos a medida que van llegando, aplicando los cambios cuando se tenga un objeto completo con todas sus relaciones.
+Análoga a la anterior opción con la diferencia de que no se espera a que finalice la importación para procesar todas las operaciones pendientes guardadas en el almacenamiento externo sino que a medida que se vayan obteniendo las relaciones pendientes de objetos se van guardando en el sistema.
 
 ### Pros
 
@@ -203,7 +203,7 @@ Guardar las relaciones de los objetos a medida que van llegando, aplicando los c
 
 - Procesamiento el más lento de todas las soluciones propuestas.
 
-- Almacenamiento secundario necesario.
+- Almacenamiento secundario necesario para guardar operaciones pendientes.
 
 # Opciónes descartadas
 

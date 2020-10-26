@@ -60,7 +60,7 @@ Proyecto
    "operation": "INSERT",
    "data" : {
       "@class": "Proyecto",
-      "id": 1,
+      "id": "1",
       "name": "Proyecto Hercules"
   }
 }
@@ -73,7 +73,7 @@ GrupoInvestigacion
    "operation": "INSERT",
    "data" : {
       "@class": "GrupoInvestigacion",
-      "id": 1,
+      "id": "1",
       "name": "Europeo"
    }
 }
@@ -86,7 +86,7 @@ Universidad
    "operation": "INSERT",
    "data" : {
       "@class": "Universidad",
-      "id": 1,
+      "id": "1",
       "name": "Universidad de Murcia"
    }
 }
@@ -99,7 +99,7 @@ Autor
    "operation": "INSERT",
    "data" : {
       "@class": "Autor",
-      "id": 1,
+      "id": "1",
       "name": "Alejandro"
    }
 }
@@ -111,24 +111,24 @@ Relaciones para el objeto proyecto.
 
 ```jsx
 {
-   "operation":"INSERT",
-   "data":{
+   "operation":"LINKED_INSERT",
+   "linkedModel":{
       "@class":"Proyecto",
-      "id":1,
+      "id":"1",
       "linkedTo":[
          {
             "className":"GrupoInvestigacion",
-            "fieldName":"grupoInvestigacion",
+            "fieldName":"grupo",
             "ids":[
-               1
+               "1"
             ]
          },
          {
             "className":"Autor",
             "fieldName":"autores",
             "ids":[
-               1,
-               2
+               "1",
+               "2"
             ]
          }
       ]
@@ -136,20 +136,20 @@ Relaciones para el objeto proyecto.
 }
 ```
 
-Relaciones para el objeto autor.
+Relaciones para el objeto grupoInvestigacion.
 
 ```jsx
 {
-   "operation":"INSERT",
-   "data":{
-      "@class":"Autor",
+   "operation":"LINKED_INSERT",
+   "linkedModel":{
+      "@class":"GrupoInvestigacion",
       "id":1,
       "linkedTo":[
          {
             "className":"Universidad",
-            "fieldName":"universidad",
+            "fieldName":"uni",
             "ids":[
-               1
+               "1"
             ]
          }
       ]

@@ -18,8 +18,6 @@
 
 [5. Detalle de proyecto](#detalle de proyecto)
 
-[5. Fechas estimadas de entrega](#fechas-estimadas-de-entrega)
-
 
 
 
@@ -180,18 +178,5 @@ Se responden a las siguientes preguntas de competencia:
 |                                                              |
 |                                                              |
 |                                                              |
-
-Fechas estimadas de entrega
-===================
-
-| Entregable                                                   | Entrega            |
-| ------------------------------------------------------------ | ------------------ |
-| Home                                                         | Hito 2 - Diciembre |
-| Buscador                                                     | Hito 2 - Fin       |
-| Pantalla SparQL                                              | Hito 2 - Diciembre |
-| Pantallas de detalle de categorías: Centros de investigación y Acciones de transferencia | Hito 2 - Diciembre |
-| Resto apartados                                              | Hito 2 - Fin       |
-
-
 
 

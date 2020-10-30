@@ -77,9 +77,18 @@ Dentro del propio Home se podrán ver:
 Buscador
 ===================
 
-En la pantalla home de la aplicación se mostrará un buscador para datos públicos del dataset importado a ASIO.
+En la pantalla home de la aplicación se mostrará un buscador para datos públicos del dataset importado a ASIO. Este buscador constará de un único campos de texto y realizará la búsqueda en los campos de las  categorías creadas en la aplicación:
 
-En este buscador se podrá seleccionar la categoría donde se desea buscar la información...¿?
+- Estructuras de investigación
+- Personal investigador
+- Categorías
+- Producción científica
+- Acciones de investigación
+- Estadísticas e indicadores
+
+
+
+Al realizar una búsqueda, la página redireccionará  a otra nueva página, donde se mostrarán los resultados en una tabla.
 
 
 
@@ -175,13 +184,13 @@ Se responden a las siguientes preguntas de competencia:
 Fechas estimadas de entrega
 ===================
 
-| Entregable      | Entrega            |
-| --------------- | ------------------ |
-| Home            | Hito 2 - Diciembre |
-| Buscador        | Hito 2 - Fin       |
-| Pantalla SparQL | Hito 2 - Diciembre |
-| Categorías      | Hito 2 - Diciembre |
-| Resto apartados | Hito 2 - Fin       |
+| Entregable                                                   | Entrega            |
+| ------------------------------------------------------------ | ------------------ |
+| Home                                                         | Hito 2 - Diciembre |
+| Buscador                                                     | Hito 2 - Fin       |
+| Pantalla SparQL                                              | Hito 2 - Diciembre |
+| Pantallas de detalle de categorías: Centros de investigación y Acciones de transferencia | Hito 2 - Diciembre |
+| Resto apartados                                              | Hito 2 - Fin       |
 
 
 

@@ -92,7 +92,7 @@ Se podrá acceder a ella a través de la pantalla home, o del menú superior. En
 
 
 
-![Centros de investigación](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\mocks\universidades.png)
+![Centros de investigación](./images/mocks/universidades.png)
 
 
 
@@ -111,7 +111,7 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación.
 
-![Detalle de centro de investigación](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\mocks\detalle-universidad.png)
+![Detalle de centro de investigación](./images/mocks/detalle-universidad.png)
 
 
 
@@ -153,11 +153,18 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 ## Detalle de proyecto
 
-![Detalle proyecto](C:\Users\pteran\Documents\reposgit\asio-docs\00-Análisis\Diseño de pantallas\images\mocks\detalle-proyecto.png)
+![Detalle proyecto](./images/mocks/detalle-proyecto.png)
 
 
 
+Se responden a las siguientes preguntas de competencia:
 
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ13. Como investigador, personal no investigador de la universidad requiero insertar/modificar los datos relacionados con los proyectos de investigación, incluyendo los entregables que se hayan generado en la fase de propuesta. El usuario tendrá acceso a esta información según el nivel de acceso que se le haya proporcionado previamente según su rol, según niveles de confidencialidad de ser el caso. Entre los datos que se proporcionarán por cada proyecto se tendrá al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación de la entidad: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/> |
+|                                                              |
+|                                                              |
+|                                                              |
 
 Fechas estimadas de entrega
 ===================

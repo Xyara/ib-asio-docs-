@@ -16,6 +16,12 @@
 
 [4. Acciones de transferencia](#acciones-de-transferencia)
 
+[5. Detalle de proyecto](#detalle de proyecto)
+
+[5. Fechas estimadas de entrega](#fechas-estimadas-de-entrega)
+
+
+
 
 
 Home

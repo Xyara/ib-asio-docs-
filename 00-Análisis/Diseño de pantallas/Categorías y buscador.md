@@ -48,8 +48,8 @@ Dentro del propio Home se podrán ver:
     - Libros
     - Congresos
   - Acciones de investigación
-    - Acciones de transferencia
-    - Startups / spinoffs
+    - Proyectos
+    - Acciones de transferencia / Startups / spinoffs
     - Patentes
   - Estadísticas e indicadores
     - Indicadores / tendencias (trends)
@@ -87,6 +87,10 @@ En la pantalla home de la aplicación se mostrará un buscador para datos públi
 
 
 Al realizar una búsqueda, la página redireccionará  a otra nueva página, donde se mostrarán los resultados en una tabla.
+
+
+
+![Resultados del buscador](./images/mocks/buscador.png)
 
 
 
@@ -143,22 +147,28 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-# Acciones de transferencia
+# Acciones de investigación
+
+Por ahora hemos categorizado las acciones de investigación en tres subcategorías:
+
+- Proyectos
+- Acciones de transferencia / Startups / spinoffs
+- Patentes
+
+Estas podrán ser seleccionables en el menú superior, o en el filtro de la propia categoría acciones de investigación.
+
+![Acciones de investigación](./images/mocks/acciones-de-investigacion.png)
 
 
 
+En esta página se trata de mostrar la información de las preguntas de competencia relacionadas con proyectos. 
 
-
-
-
-
-
-| Pregunta de competencia |
-| ----------------------- |
-|                         |
-|                         |
-|                         |
-|                         |
+| Pregunta de competencia                                      |
+| ------------------------------------------------------------ |
+| CQ10. Como investigador y personal no investigador de la universidad requiero obtener un listado de los proyectos adjudicados/desarrollados, de un centro/estructura de investigación, de un área/disciplina, en un determinado año de búsqueda en los que se tenga acceso al detalle de al menos:<br/>○	Nombre del proyecto<br/>○	Palabras claves<br/>○	Tipo de participación: coordinador o participante<br/>○	Tipo de proyecto: competitivo o no competitivo<br/>○	Tipo de financiamiento: público o privado.<br/>○	Tipo de convocatoria: nacional, H2020, etc.<br/>○	Número y listado de personas involucradas en el proyecto<br/>○	Nombre(s) del investigador(s) principal<br/>○	Entregables/memoria del proyecto<br/>○	Producción científica relacionada con el proyecto<br/>○	Entidades colaboradoras/participantes<br/>○	Cuantía<br/>○	etc. |
+| CQ46. Estado del arte: ¿puedo ver los resultados de proyectos por temática concreta de proyectos desarrollados en la red, diferenciando a nivel regional, nacional, europeo? |
+|                                                              |
+|                                                              |
 
 
 

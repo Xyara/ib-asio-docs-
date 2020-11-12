@@ -12,11 +12,15 @@
 
 [2. Buscador](#buscador)
 
-[3. Centros de investigación](#centros-de-investigación)
+[3. Categorías](#categorías)
 
-[4. Acciones de transferencia](#acciones-de-transferencia)
+[3.1. Centros de investigación](#centros-de-investigación)
 
-[5. Detalle de proyecto](#detalle de proyecto)
+[3.2. Detalle de centro de investigación](#detalle-de-centro-de-investigación)
+
+[3.3. Acciones de transferencia](#acciones-de-transferencia)
+
+[3.4 Detalle de proyecto](#detalle de proyecto)
 
 
 
@@ -30,7 +34,6 @@ El home de la web dispondrá de un menú superior con los accesos a las diferent
 Dentro del propio Home se podrán ver:
 
 - Buscador general de datos públicos
-- Los servicios de los que dispone la web, como las consultas SparQL.
 - Las categorías, que serían:
   - Estructuras de investigación:
     - Centros
@@ -55,6 +58,7 @@ Dentro del propio Home se podrán ver:
     - Indicadores / tendencias (trends)
     - Financiación (funding) / calidad / estadísticas
     - Búsqueda de partners / estado de la técnica (state of the art)
+- Los servicios de los que dispone la web, como las consultas SparQL y gestiones propias de usuarios administradores. Por ejemplo la gestión de usuarios, que sólo sería visible para usuarios de tipo Gestor Asio.
 - Al final de la página se mostrarán los enlaces a información del proyecto en general:
   - Repositorios
   - Validadores
@@ -94,7 +98,21 @@ Al realizar una búsqueda, la página redireccionará  a otra nueva página, don
 
 
 
-# Centros de investigación
+
+
+# Categorías
+
+
+
+En cada categoría se mostrarán una serie de filtros, algunos comunes para varias categorías.
+
+Para el filtro por áreas, se utilizará un componente para mostrar un árbol y se utilizará el módulo vertical "[subject áreas](https://github.com/weso/hercules-ontology/blob/master/src/asio-module-subjectareas.ttl)":
+
+![](./images/areas.png)
+
+
+
+## Centros de investigación
 
 
 
@@ -126,7 +144,7 @@ La información que se mostrará en esta página tratará de responder, entre ot
 
 ## Detalle de centro de investigación
 
-Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación.
+Pulsando sobre un centro de investigación en la pantalla de esta categoría, la web nos redirigirá a la información de ese centro de investigación. Para facilitar la visualización de los datos sobre el centro de investigación, la información se mostrará agrupada por [tabs](https://getbootstrap.com/docs/4.0/components/navs/).
 
 ![Detalle de centro de investigación](./images/mocks/detalle-universidad.png)
 
@@ -147,13 +165,13 @@ En esta pantalla se responderá a las siguientes preguntas de competencia:
 
 
 
-# Acciones de investigación
+## Acciones de investigación
 
-Por ahora hemos categorizado las acciones de investigación en tres subcategorías:
+Se mostrará un filtro, en forma de árbol al igual que las áreas, en el que se mostrarán los distintos tipos y subtipos de acciones de investigación posibles, todas subclases de la clase [Document](https://github.com/weso/hercules-ontology/blob/master/src/asio-core.ttl) de la ontología.
 
-- Proyectos
-- Acciones de transferencia / Startups / spinoffs
-- Patentes
+![](./images/document-protege.png)
+
+
 
 Estas podrán ser seleccionables en el menú superior, o en el filtro de la propia categoría acciones de investigación.
 
